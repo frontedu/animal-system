@@ -1,0 +1,83 @@
+:root{
+    --btn-primary: #FFD351;
+    --btn-secondary: #FFD35150;
+}
+
+body.lps{
+    font-family: 'Mulish', sans-serif;
+}
+
+nav.bg-dark :is(.navbar-brand, .nav-link){
+    font-family: system-ui !important;
+}
+
+body.lps nav #navbarNav .nav-link{
+    border-radius: 64px !important;
+}
+
+body.lps nav #navbarNav .nav-link div{
+    font-weight: 600;
+    color: black;
+    font-size: 1.5rem;
+}
+
+body.lps nav #navbarNav .nav-link.signs div{
+    font-weight: 800;
+}
+
+body.lps nav #navbarNav .nav-link.signs div:before{
+    content: "";
+    position: absolute;
+    top: 24%;
+    left: 20%;
+    width: 66%;
+    height: 28px;
+    z-index: -1;
+    transition: all 125ms;
+}
+
+body.lps main a{
+    font-size: 36px;
+    font-weight: 800;
+    color: black;
+}
+
+body.lps main a:before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 3%;
+    width: 95%;
+    height: 120%;
+    z-index: -1;
+    transition: all 125ms;
+    background-color: var(--btn-primary);
+}
+
+body.lps main a:hover:before{
+    left: 10%;
+    top: 15%;
+    background: var(--btn-secondary);
+}
+
+body.lps nav #navbarNav .nav-link.signs.s1 div:before{
+    background-color: var(--btn-secondary);
+}
+
+body.lps nav #navbarNav .nav-link.signs.s2 div:before{
+    background-color: var(--btn-primary);
+}
+
+body.lps nav #navbarNav .nav-link.signs:hover div:before{
+    top: 33%;
+    left: 33%;
+}
+
+body.lps nav #navbarNav .nav-link:not(.signs):hover{
+    background-color: #f1f1f1;
+}
+
+body.lps main h1{
+    font-size: 72px;
+    font-weight: 900;
+}
