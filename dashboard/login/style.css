@@ -1,0 +1,133 @@
+body{
+    font-family: 'Roboto','Segoe UI', 'Open Sans', sans-serif;
+}
+
+.container-principal {
+    max-width: 1000px;
+    margin: 0.5em 0 0.5em 0;
+    padding: 1rem;
+}
+
+.row {
+    max-width: 100%;
+    padding: 0 2em;
+}
+
+.container-singup {
+    padding: 0.5em 1em;
+    flex-direction: stretch;
+    background-color: rgba(254, 224, 200, 1);
+    border-radius: 0.8em;
+}
+
+h1 {    
+    font-size: 2.5em;
+    line-height: 3rem;
+    margin: 1rem 0;
+    color: rgba(127, 20, 20, 1);
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5rem;
+    margin: 0.5rem 0;
+    color: rgba(80, 43, 43, 1);
+
+}
+
+input{
+    border-radius: 10px;
+    box-shadow: none;
+    height: 2.5em;
+    margin: 0.5rem 0;
+    max-width: 100%;
+    width: 500px;
+    border-style: none;
+    padding: 20px;
+}
+
+.btn {
+    width: 200px;
+}
+
+.btn-link {
+    margin: 0.5em 0;
+    color: rgba(80, 43, 43, 1);
+    padding: 0 0 0.5em 0;
+    margin: 0;
+}
+
+.btn-primary{
+    background-color: #A02C2C;
+    border-color: rgba(127, 20, 20, 1);
+    font-weight: 700;
+    margin-right: 1em;
+    border-radius: 10px;
+}
+
+.btn-primary:hover {
+    color: #A02C2C;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid #A02C2C;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(156, 156, 255, 1);
+    color:rgba(156, 156, 255, 1);
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: rgba(156, 156, 255, 1);
+    border-color: rgba(156, 156, 255, 1);
+}
+
+#div-button {
+    margin-bottom: 0.4em;
+}
+
+.container-gatos {   
+    margin: 0 auto;
+}
+
+#img-gatos{
+    margin: 0 auto;
+}
+
+
+
+.bar{
+    background-color: rgba(156, 156, 255, 1);
+    max-height: 10em;
+    height: 8px;
+}
+
+footer {
+    min-height: auto;
+}
+
+.logo-animal-corp > div > img{
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    align-content: space-around;
+    justify-content: center;
+}
+
+#logo-animalsytem{
+    max-width: 200px;
+    align-self: center;
+}
+
+#logo-instagram-footer {
+    margin-left: 5px;
+    padding-left: 10px;
+}
+
+#logo-facebook-footer {
+    margin-left: 5px;
+    padding: 10px;
+}
