@@ -153,11 +153,16 @@ input[type='radio']:checked:after {
     margin-left: 10px;
 }
 
-.form-telefone .btn-adicionar {
+.btn-adicionar {
     border: 1px solid var(--cor-laranja-principal);
     color: var(--cor-laranja-principal);
     font-weight: 700;
     outline: none;
+}
+
+.btn-adicionar:hover {
+    color: white;
+    background-color: rgba(255, 128, 1, 0.792);
 }
 
 .form-telefone .ramal {
@@ -178,7 +183,7 @@ input[type='radio']:checked:after {
     text-align: center;
 }
 
-.form-telefone .table>:not(:first-child) {
+.table>:not(:first-child) {
     border-top: none;
 }
 
@@ -222,4 +227,47 @@ input[type='radio']:checked:after {
 .btn-salvar:hover {
     color: white;
     background-color: rgba(255, 128, 1, 0.792);
+}
+
+.form-anexar-documentos .form-group {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.subtitle-documentos {
+    margin-left: 3rem;
+}
+
+.adicionar-documentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adicionar-documentos .upload-files {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around !important;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.adicionar-documentos .upload-files .adicionar {
+    border: 1px solid var(--cor-laranja-principal);
+    border-radius: 10px;
+    padding: 0.6rem;
+    color: var(--cor-laranja-principal);
+    font-weight: bold;
+    transition: all 200ms;
+    font-size: 18px;
+}
+
+.adicionar-documentos .upload-files .adicionar:hover {
+    cursor: pointer;
+    background-color: rgb(255, 128, 1);
+    color: white;
+}
+
+table .no-social-media-column {
+    height: 80px;
 }

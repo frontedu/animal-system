@@ -20,7 +20,7 @@
         </div>
         <div class="title-container">
             <h1>Cadastro de Prestador</h1>
-            <h2>Pessoa Física</h2>
+            <h2>Pessoa Jurídica</h2>
         </div>
         <div class="logo-secundaria">
             <img src="/assets/images/logo-secundaria.png" alt="">
@@ -29,21 +29,21 @@
 
     <form>
         <fieldset>
-            <legend>Identificação</legend>
+            <legend>Identificação da Empresa</legend>
 
             <div class="input-container">
                 <div class="form-group mb-4">
-                    <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                    <label for="razao-social">Razão Social</label>
+                    <input type="text" class="form-control" id="razao-social" placeholder="Razão social da empresa">
                 </div>
 
                 <div class="form-group mb-4">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                    <label for="email">Email da empresa</label>
+                    <input type="email" class="form-control" id="email" placeholder="E-mail da empresa">
                 </div>
 
                 <div class="form-group mb-4">
-                    <label for="codigo">Informe o código que foi enviado para seu e-mail</label>
+                    <label for="codigo">Informe o código enviado para o e-mail</label>
                     <input type="text" class="form-control" id="codigo" placeholder="Código">
                 </div>
 
@@ -61,79 +61,52 @@
 
                 <div class="row">
                     <div class="form-group col-6">
-                        <label for="cpf">CPF</label>
-                        <input type="text" class="form-control" id="cpf" placeholder="CPF">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" class="form-control" id="cnpj" placeholder="CNPJ">
                     </div>
-                </div>
-            </div>
-        </fieldset>
 
-        <fieldset class="documento-profissional">
-            <legend>Documento Profissional</legend>
-
-            <div class="d-flex flex-row justify-content-around">
-                <div class="radio-button-container">
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="profissao" id="veterinario" checked>
-                        <label class="form-check-label" for="veterinario">
-                          Veterinário
-                        </label>
-                    </div>
-        
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="profissao" id="motorista">
-                        <label class="form-check-label" for="motorista">
-                          Motorista
-                        </label>
-                    </div>
-        
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="profissao" id="esteticista">
-                        <label class="form-check-label" for="esteticista">
-                          Esteticista
-                        </label>
+                    <div class="form-group col-6">
+                        <label for="inscricao-estadual">Inscrição Estadual</label>
+                        <input type="text" class="form-control" id="inscricao-estadual" placeholder="Inscrição Estadual">
                     </div>
                 </div>
 
-                <div class="documento-profissional-input-container">
-                    <div class="form-group mb-2">
-                        <label for="crmv" class="col-2">CRMV: </label>
-                        <input type="text" class="form-control col-6" id="crmv" >
+                <div class="row align-items-end mt-4">
+                    <div class="form-group col-4">
+                        <label for="rede-social">Rede Social</label>
+                        <select class="form-select" id="rede-social">
+                            <option selected>Selecione</option>
+                            <option value="1">Opção 1</option>
+                            <option value="2">Opção 2</option>
+                            <option value="3">Opção 3</option>
+                        </select>  
                     </div>
 
-                    <div class="form-group  mb-2">
-                        <label for="cnh" class="col-2">CNH: </label>
-                        <input type="text" class="form-control col-6" id="cnh" disabled>
-                    </div>
-
-                    <div class="form-group  mb-2">
-                        <label for="rg" class="col-2">RG: </label>
-                        <input type="text" class="form-control col-6" id="rg" disabled>
-                    </div>
-                </div>
-            </div>
-
-            <div class="anexos-container">
-                <h5 class="title">Anexar Documentos</h5>
-
-                <div class="modelo">
-                    <p class="col-5">Tire uma selfie segurando o seu documento ao lado do seu rosto conforme modelo ao lado</p>
-
-                    <div >
-                        <img src="/assets/images/modelo-selfie.png" alt="" class="modelo-img">
+                    <div class="form-group col-8">
+                        <input type="text" class="form-control" id="inscricao-estadual" placeholder="Informe o endereço">
                     </div>
                 </div>
 
-                <div class="upload-files">
-                    <div class="selected-file col-5">
-                        Documento anexo
-                    </div>
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th scope="col">Rede Social</th>
+                            <th scope="col">Endereço</th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td class="no-social-media-column">Nenhuma rede social cadastrada</td>
+                            </tr>
+                        </tbody>
+                    </thead>
+                </table>
 
-                    <div class="adicionar">
-                        Adicionar
-                        <img src="/assets/images/file.png" alt="">
+                <div class="row justify-content-end">
+                    <div class="col-3">
+                        <button type="button" class="btn btn-adicionar col-10">Adicionar</button>
                     </div>
-                </div>
+                </div>  
             </div>
         </fieldset>
     </form>
@@ -233,9 +206,38 @@
         </fieldset>
     </form>
 
+    <form class="form-anexar-documentos">
+        <fieldset>
+            <legend class="mb-4">Anexar Documentos</legend>
+
+            <h5 class="subtitle-documentos">Documentos:</h5>
+
+            <div class="d-flex flex-column align-items-center">
+                <div class="form-group col-8">
+                    <label for="contrato-social" class="col-3">Contrato Social</label>
+                    <input type="text" class="form-control" id="contrato-social">
+                </div>
+                <div class="form-group col-8">
+                    <label for="rg-socios" class="col-3">RG dos Sócios</label>
+                    <input type="text" class="form-control" id="rg-socios">
+                </div>
+            </div>
+
+            <div class="adicionar-documentos">
+                <div class="upload-files">
+                    <div class="adicionar">
+                        Adicionar <br> Documentos
+                        <img src="/assets/images/file.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
     <div class="button-salvar-container">
         <input type="button" value="Salvar" class="btn btn-salvar col-4">
     </div>
+
 
     <script src="https://unpkg.com/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>       
     <script src="/assets/js/main.js"></script>
