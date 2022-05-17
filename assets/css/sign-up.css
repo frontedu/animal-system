@@ -1,0 +1,273 @@
+* {
+    --cor-bg-cinza: rgba(247, 246, 246, 1);
+    --cor-laranja-principal: rgba(255, 127, 1, 1);
+}
+
+body {
+    background-color: var(--cor-bg-cinza);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: var(--cor-laranja-principal);
+    padding: 2rem;
+}
+
+header .logo-principal img {
+    width: 160px;
+}
+
+header .logo-secundaria {
+    align-self: end;
+}
+
+header .title-container > *  {
+    font-weight: 700;
+}
+
+header .title-container h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+header .title-container h2 {
+    text-align: center;
+    font-size: 30;
+}
+
+form {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+    width: 70vw;
+    background-color: #FFF;
+}
+
+form legend {
+    background-color: var(--cor-laranja-principal);
+    width: 100%;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+}
+
+form .input-container {
+    padding: 1rem;
+}
+
+form .documento-profissional {
+    border: 1px solid rgba(216, 217, 218, 1);
+    margin: 1rem;
+    padding-bottom: 1rem;
+}
+
+.radio-button-container {
+    border: 1px solid rgba(216, 217, 218, 1);
+    width: 150px;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -4px;
+    left: 0px;
+    position: relative;
+    background-color: #000000;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+.documento-profissional-input-container .form-group {
+    display: flex;
+    align-items: center;
+}
+
+.documento-profissional-input-container .form-group label {
+    margin-right: 1rem;
+}
+
+.anexos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.anexos-container .title {
+    font-weight: 400;
+}
+
+.anexos-container .modelo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.anexos-container img.modelo-img {
+    width: 70px;
+    height: 50px;
+}
+
+.anexos-container .upload-files {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around !important;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.anexos-container .upload-files .selected-file {
+    border: 1px solid rgba(216, 217, 218, 1);
+    border-radius: 10px;
+    padding: 0.8rem;
+}
+
+.anexos-container .upload-files .adicionar {
+    border: 1px solid var(--cor-laranja-principal);
+    border-radius: 10px;
+    padding: 0.6rem;
+    color: var(--cor-laranja-principal);
+    font-weight: bold;
+    transition: all 200ms;
+    font-size: 18px;
+}
+
+.anexos-container .upload-files .adicionar:hover {
+    cursor: pointer;
+    background-color: rgb(255, 128, 1);
+    color: white;
+}
+
+.anexos-container .upload-files .adicionar img {
+    height: 28px;
+    margin-left: 10px;
+}
+
+.btn-adicionar {
+    border: 1px solid var(--cor-laranja-principal);
+    color: var(--cor-laranja-principal);
+    font-weight: 700;
+    outline: none;
+}
+
+.btn-adicionar:hover {
+    color: white;
+    background-color: rgba(255, 128, 1, 0.792);
+}
+
+.form-telefone .ramal {
+    margin-left: 1rem;
+    margin-top: 1rem !important;
+}
+
+.form-telefone .table-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-telefone table {
+    margin-top: 2rem;
+}
+
+.form-telefone table th {
+    text-align: center;
+}
+
+.table>:not(:first-child) {
+    border-top: none;
+}
+
+.form-telefone table  .no-data-column {
+    background-color: var(--cor-bg-cinza);
+}
+
+
+.form-endereco .cep-help {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.form-endereco .cep-help:hover {
+    text-decoration: underline;
+}
+
+.form-endereco .cep-help img {
+    margin-left: 5px;
+}
+
+.button-salvar-container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.btn-salvar {
+    background-color: var(--cor-laranja-principal);
+    color: white;
+    font-weight: 700;
+}
+
+.btn-salvar:hover {
+    color: white;
+    background-color: rgba(255, 128, 1, 0.792);
+}
+
+.form-anexar-documentos .form-group {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.subtitle-documentos {
+    margin-left: 3rem;
+}
+
+.adicionar-documentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adicionar-documentos .upload-files {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around !important;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.adicionar-documentos .upload-files .adicionar {
+    border: 1px solid var(--cor-laranja-principal);
+    border-radius: 10px;
+    padding: 0.6rem;
+    color: var(--cor-laranja-principal);
+    font-weight: bold;
+    transition: all 200ms;
+    font-size: 18px;
+}
+
+.adicionar-documentos .upload-files .adicionar:hover {
+    cursor: pointer;
+    background-color: rgb(255, 128, 1);
+    color: white;
+}
+
+table .no-social-media-column {
+    height: 80px;
+}
