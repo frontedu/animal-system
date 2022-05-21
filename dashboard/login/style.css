@@ -27,7 +27,7 @@ h1 {
 }
 
 p {
-    font-size: 1em;
+    font-size: 0.8em;
     line-height: 1.5rem;
     margin: 0.5rem 0;
     color: rgba(80, 43, 43, 1);
@@ -40,9 +40,9 @@ input{
     height: 2.5em;
     margin: 0.5rem 0;
     max-width: 100%;
-    width: 500px;
+    width: 550px;
     border-style: none;
-    padding: 20px;
+    padding: 1.2rem;
 }
 
 .btn-link {
@@ -78,10 +78,6 @@ input{
     border-color: rgba(156, 156, 255, 1);
 }
 
-#div-button {
-    margin-bottom: 0.4em;
-}
-
 .container-gatos {   
     margin: 0 auto;
 }
@@ -89,8 +85,6 @@ input{
 #img-gatos{
     margin: 0 auto;
 }
-
-
 
 .bar{
     background-color: rgba(156, 156, 255, 1);
