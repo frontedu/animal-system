@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="style.css" />
 
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
 </head>
 
@@ -52,34 +52,67 @@
             </div>
         </div>
     </nav>
+    <main class="container-fluid">
+        <div class="container py-3 my-3 mx-auto">
+            <div class="row">
+                <div class="col-6 align-self-center">
+                    <div class="container-signup">
+                        <h1>Seja bem-vindo ao AnimalSystem</h1>
+                        <p class="h6">Entre com seu usuário e senha</p>
 
-    <div class="container py-5 my-5 mx-auto">
-        <div class="row">
-            <div class="col-5 align-self-center">
-                <div class="container-signup">
-                    <h1>Seja bem-vindo ao AnimalSystem</h1>
-                    <p class="h6">Entre com seu usuário e senha</p>
-    
-                    <input type="text" id="" name="usuario-input" placeholder="usuario:" />
-                    <br />
-                    <input type="password" id="lname" name="usuario-password" placeholder="senha:" /><br /><br />
-    
-                    <button type="button" class="btn btn-link mb-2 px-0">
-                        esqueci minha senha
-                    </button>
-    
-                    <div class="buttons row px-2">
-                            <button class="btn btn-primary col-6">entrar</button>
-                            <button class="btn btn-secondary col-6">cadastrar</button>
+                        <input type="text" id="" name="usuario-input" placeholder="usuario:" />
+                        <br />
+                        <input type="password" id="lname" name="usuario-password" placeholder="senha:" /><br />
+
+                        <button type="button" class="btn btn-link mb-3 p-0">
+                            esqueci minha senha
+                        </button>
+
+
+                        <div class="row m-0 pb-3 justify-content-md-evenly">
+                            <button class="btn btn-primary col-5 mx-0">entrar</button>
+                            <button class="btn btn-secondary col-5 mx-0">cadastrar</button>
+                        </div>
+
+
+                        <div class="row m-0 pb-3 justify-content-md-evenly">
+                            <p>Você é Pessoa Físca ou Jurídica? </p>
+                            <button class="btn btn-block btn-primary col-5 mx-0">Física</button>
+                            <button class="btn btn-block btn-secondary col-5 mx-0">Jurídica</button>
+                        </div>
+
+                        <div class="buttons row pb-3 mx-auto justify-content-md-evenly" id="opcao-cadastro">
+                            <p>Você deseja receber seu login por e-mail ou whatsapp? </p>
+                            <button class="btn btn-primary col-5 mx-0">Física</button>
+                            <button class="btn btn-secondary col-5 mx-0">Jurídica</button>
+                        </div>
+
+                        <div id="confirmacao-envio">
+                            <img src="../../assets/images/x-encerrar.png" alt="">
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                            <p>
+                                <small>
+                                    A solicitação foi cadastrada com sucesso, acesse o e-mail para atualizar seu
+                                    cadastro
+                                </small>
+                            </p>
+                        </div>
+
+
                     </div>
                 </div>
-            </div>
 
-            <div class="col-7 align-self-center justify-content-around container-gatos">
-                <img class="float-end w-75" src="../../assets/images/svg/Ilustracao_Gatos.svg" alt="imagem-login" id="img-gatos" />
+                <div class="col-6 align-self-center justify-content-end container-gatos">
+                    <img class="float-end w-75" src="../../assets/images/svg/Ilustracao_Gatos.svg" alt="imagem-login"
+                        id="img-gatos" />
+                </div>
+
+
+
             </div>
         </div>
-    </div>
+
+    </main>
 
 
     <script src="https://unpkg.com/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
