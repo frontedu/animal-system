@@ -31,9 +31,6 @@
 
 body.lps {
     font-family: 'Mulish', sans-serif;
-    display: grid;
-    grid-template-rows: 1fr 10rem auto;
-    grid-template-areas: "main"".""footer";
     overflow-x: hidden;
     min-height: 100vh;
 }
