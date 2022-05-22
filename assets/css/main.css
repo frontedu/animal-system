@@ -3,12 +3,13 @@
     --btn-secondary: #FFD35150;
     --purpura: #9C9CFF;
     --turquesa: #00B5B5;
+    --coral: #FF8080;
+    --footer-fundo: var(--purpura);
 }
 
 .pace {
     -webkit-pointer-events: none;
     pointer-events: none;
-
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -30,27 +31,32 @@
 
 body.lps {
     font-family: 'Mulish', sans-serif;
+    display: grid;
+    grid-template-rows: 1fr 10rem auto;
+    grid-template-areas: "main"".""footer";
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 nav.bg-dark :is(.navbar-brand, .nav-link) {
     font-family: system-ui !important;
 }
 
-body.lps nav #navbarNav .nav-link {
+body.lps nav #navbar .nav-link {
     border-radius: 64px !important;
 }
 
-body.lps nav #navbarNav .nav-link div {
+body.lps nav #navbar .nav-link div {
     font-weight: 600;
     color: black;
     font-size: 1.5rem;
 }
 
-body.lps nav #navbarNav .nav-link.signs div {
+body.lps nav #navbar .nav-link.signs div {
     font-weight: 800;
 }
 
-body.lps nav #navbarNav .nav-link.signs div:before {
+body.lps nav #navbar .nav-link.signs div:before {
     content: "";
     position: absolute;
     top: 24%;
@@ -61,13 +67,13 @@ body.lps nav #navbarNav .nav-link.signs div:before {
     transition: all 125ms;
 }
 
-body.lps main a {
+body.lps :is(main, #trial, #accordion) a {
     font-size: 36px;
     font-weight: 800;
     color: black;
 }
 
-body.lps main a:before {
+body.lps :is(main, #trial, #accordion) a:before {
     content: "";
     position: absolute;
     top: 0%;
@@ -79,26 +85,26 @@ body.lps main a:before {
     background-color: var(--btn-primary);
 }
 
-body.lps main a:hover:before {
+body.lps :is(main, #trial, #accordion) a:hover:before {
     left: 10%;
     top: 15%;
     background: var(--btn-secondary);
 }
 
-body.lps nav #navbarNav .nav-link.signs.s1 div:before {
+body.lps nav #navbar .nav-link.signs.s1 div:before {
     background-color: var(--btn-secondary);
 }
 
-body.lps nav #navbarNav .nav-link.signs.s2 div:before {
+body.lps nav #navbar .nav-link.signs.s2 div:before {
     background-color: var(--btn-primary);
 }
 
-body.lps nav #navbarNav .nav-link.signs:hover div:before {
+body.lps nav #navbar .nav-link.signs:hover div:before {
     top: 33%;
     left: 33%;
 }
 
-body.lps nav #navbarNav .nav-link:not(.signs):hover {
+body.lps nav #navbar .nav-link:not(.signs):hover {
     background-color: #f1f1f1;
 }
 
@@ -146,7 +152,7 @@ body.lps .para-voce ul.ul2 li {
     background-color: #2FADAD;
 }
 
-body.lps .para-voce li[info]::after {
+body.lps .para-voce li[info]:after {
     content: attr(info);
     display: inline;
     position: absolute;
@@ -164,7 +170,7 @@ body.lps .para-voce li[info]::after {
     transition: opacity 250ms, top 250ms;
 }
 
-body.lps .para-voce li[info]::before {
+body.lps .para-voce li[info]:before {
     content: '';
     display: block;
     position: absolute;
@@ -183,16 +189,16 @@ body.lps .para-voce li:hover {
     cursor: help;
 }
 
-body.lps .para-voce li:hover::after,
-body.lps .para-voce li:hover::before {
+body.lps .para-voce li:hover:after,
+body.lps .para-voce li:hover:before {
     opacity: 1;
 }
 
-body.lps .para-voce li:hover::after {
+body.lps .para-voce li:hover:after {
     top: 50px;
 }
 
-body.lps .para-voce li:hover::before {
+body.lps .para-voce li:hover:before {
     top: 40px;
 }
 
@@ -202,25 +208,241 @@ body.lps .para-voce ol {
     padding: 0;
 }
 
-.fade-list {
+body.lps .fade-list {
     visibility: hidden;
 }
 
-.fade-list>li {
+body.lps .fade-list>li {
     visibility: visible;
 }
 
-.fade-list>li {
+body.lps .fade-list>li {
     transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
 }
 
-.fade-list:hover>li {
+body.lps .fade-list:hover>li {
     opacity: 0.4;
     transform: scale(0.9);
 }
 
-.fade-list>li:hover {
+body.lps .fade-list>li:hover {
     opacity: 1;
     transform: scale(1);
     transition-delay: 0ms, 0ms;
+}
+
+body.lps #dispositivos .grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px;
+    height: 100%;
+}
+
+body.lps :is(#dispositivos, #trial, #accordion) h2 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 80px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.017em;
+    color: #000000;
+}
+
+body.lps :is(#trial, #accordion) p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.017em;
+    color: #000000;
+}
+
+
+body.lps #dispositivos :is(#item-0, #item-2, #item-3) {
+    border: 16px solid #000000;
+    transition: all 155ms;
+    border-radius: 120px;
+}
+
+body.lps #dispositivos #item-0 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 7;
+    grid-column-end: 4;
+    border-radius: 112px !important;
+}
+
+body.lps #dispositivos #item-1 {
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-row-end: 3;
+    grid-column-end: 11;
+}
+
+body.lps #dispositivos #item-2 {
+    grid-row-start: 3;
+    grid-column-start: 4;
+    grid-row-end: 7;
+    grid-column-end: 8;
+}
+
+body.lps #dispositivos #item-3 {
+    grid-row-start: 3;
+    grid-column-start: 8;
+    grid-row-end: 7;
+    grid-column-end: 11;
+}
+
+body.lps #dispositivos #item-0:hover {
+    border-color: var(--turquesa);
+}
+
+body.lps #dispositivos #item-2:hover {
+    border-color: var(--purpura);
+}
+
+body.lps #dispositivos #item-3:hover {
+    border-color: var(--coral);
+}
+
+body.lps #accordion .accordion-item:is(:first-of-type, :last-of-type, ),
+body.lps #accordion .accordion-button:not(.collapsed) {
+    border-radius: 0;
+}
+
+body.lps #accordion .accordion-button:not(.collapsed) {
+    background-color: #B4ECEC;
+    box-shadow: 0px 2px 0px #000 !important;
+}
+
+body.lps #accordion .accordion-button:not(.collapsed)::after {
+    filter: brightness(0);
+}
+
+body.lps #accordion .accordion-item {
+    border: solid 2px black;
+    margin: 12px 0;
+}
+
+body.lps #accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+body.lps #accordion .accordion-item button {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.017em;
+    color: #000000;
+}
+
+body.lps #accordion .accordion-item .accordion-body {
+    font-size: 24px;
+}
+
+body.lps #accordion .accordion-item .accordion-button {
+    padding: 16px 32px;
+}
+
+
+/* FOOTER PADRÃO DAS LPS */
+body .footer {
+    z-index: 1;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+}
+
+body .footer .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: var(--footer-fundo);
+    filter: url("#blob");
+}
+
+body .footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-fundo);
+    border-radius: 100%;
+    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+}
+
+body .footer .content {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+    padding: 2rem;
+    background: var(--footer-fundo);
+}
+
+body .footer .content a,
+body .footer .content p {
+    color: #f5f7fa;
+    text-decoration: none;
+}
+
+body .footer .content b {
+    color: white;
+}
+
+body .footer .content p {
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+body .footer .content>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body .footer .content>div>div {
+    margin: 0.25rem 0;
+}
+
+body .footer .content>div>div>* {
+    margin-right: 0.5rem;
+}
+
+body .footer .content>div .image {
+    align-self: center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.25rem 0;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes bubble-size {
+
+    0%,
+    75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+
+    100% {
+        bottom: var(--distance, 10rem);
+    }
 }
