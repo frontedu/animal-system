@@ -1,68 +1,48 @@
-// var div_cadastro = document.getElementById("opcao-cadastro");
-// var btn_cadastrar = document.getElementsByClassName("cadastrar");
-
-// function mostrarOpcoesDeCadastro() {
-//     div_cadastro.style.display =  "flex";
-// }
-
-
 $(document).ready(() => {
 
-  $("input[name='usuario-input']").focus();
-
   $("#cadastrar").click(function () {
-    $("#opcao-cadastro").css("display", "flex");
+    $("#container-opcao-cadastro").toggle("slow")
   });
 
   $("#reenviar-senha").click(function () {
-    $("#opcao-senha").css("display", "flex");
+    $("#opcao-senha").toggle("slow")
   })
 
-  // $("#cadastrar").on("click", function () {
-  //   $("#opcao-cadastro").css("display", "flex");
-  // });
+  $("#btn-email").on("click", function (event) {
 
-  // $("#reenviar-senha").on("click", function () {
-  //   $("#opcao-senha").css("display", "flex");
-  // });
+    if ($("#envio-senha").css("display", "none"))
+      $("#envio-senha").css("display", "block")
 
-  $("#reenviar-senha").click(function (event) {
-    $("#opcao-senha").css("display", "flex");
+    if ($("#div-reenvio-whats").css("display", "block"))
+      $("#div-reenvio-whats").css("display", "none");
+
+    if ($("#div-reenvio-email").css("display", "none")) {
+      $("#div-reenvio-email").css("display", "block");
+      $("#mensagem-email").css("padding-bottom", "0px").css("margin-bottom", "0px");
+
+    }  
+    if ($("#div-btn-enviar-senha").css("display", "none"))
+      $("#div-btn-enviar-senha").css("display", "flex");    
+   
   })
 
-  // $("#btn-e-mail").click(function () {
-  $("#btn-e-mail").on("click", function () {
-    $("#input-envio-senha").css("display", "none");
-    $("#input-envio-senha").css("display", "flex");
-    $("#p-whatsapp").css("display", "none");
-    $("#input-whatsapp").css("display", "none");
+  $("#btn-whatsapp").on("click", function (event) {
 
-    
-    $("#input-envio-senha").prepend("<input type='email' id='input-email' placeholder='e-mail@e-mail.com.br' required>")
-    .focus()
-    .css("margin-top", "0px");
-  
-    $("#input-envio-senha").prepend("<p id='p-e-mail'> Informe o e-mail cadastrado no sistema: </p")
-    .css("display", "block")
-    .css("padding-botton", "0px");
-    
+    if ($("#envio-senha").css("display", "none"))
+      $("#envio-senha").css("display", "block")
+
+    if ($("#div-reenvio-email").css("display", "block"))
+      $("#div-reenvio-email").css("display", "none");
+
+    if ($("#div-reenvio-whats").css("display", "none")) {
+      $("#div-reenvio-whats").css("display", "block");
+      $("#mensagem-whatsapp").css("padding-bottom", "0px").css("margin-bottom", "0px");
+    }
+
+    if ($("#div-btn-enviar-senha").css("display", "none"))
+      $("#div-btn-enviar-senha").css("display", "flex");
+
   })
 
-  // $("#btn-whatsapp").click(function () {
-  $("#btn-whatsapp").on("click", function () {
-    $("#input-envio-senha").css("display", "none");
-    $("#input-envio-senha").css("display", "flex");
-    $("#p-e-mail").css("display", "none");
-    $("input-email").css("display", "none");
 
-    
-    $("#input-envio-senha").prepend("<input type='tel' id='input-whatsapp' placeholder='(34)99999-9999' required>");
-    
-    $("#input-envio-senha").prepend("<p id='p-whatsapp'> Informe o seu número de whatsapp cadastrado no sistema: </p")
-      .css("display", "block")
-      .css("padding-botton", "0px")
-      .css("margin-botton", "0px");
-    
-      $("#input-envio-senha").focus();
-  })
-})
+});

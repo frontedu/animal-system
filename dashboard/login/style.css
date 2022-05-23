@@ -1,5 +1,5 @@
-:is(h1, p, input, button){
-    font-family: 'Roboto','Segoe UI', 'Open Sans', sans-serif;
+:is(h1, p, input, button) {
+    font-family: 'Roboto', 'Segoe UI', 'Open Sans', sans-serif;
 }
 
 .container-principal {
@@ -15,11 +15,11 @@
     border-radius: 0.8em;
 }
 
-.container-signup p{
+.container-signup p {
     color: #502B2B;
 }
 
-h1 {    
+h1 {
     font-size: 2.5em;
     line-height: 3rem;
     margin: 1rem 0;
@@ -35,7 +35,7 @@ p {
 
 }
 
-input{
+input {
     border-radius: 10px;
     box-shadow: none;
     height: 2.5em;
@@ -44,6 +44,11 @@ input{
     width: 550px;
     border-style: none;
     padding: 1.2rem;
+}
+
+input:focus {
+    /* border-color: #A02C2C; */
+    color: rgba(80, 43, 43, 1);
 }
 
 .btn-link {
@@ -70,7 +75,7 @@ input{
 .btn-secondary {
     background: rgba(255, 255, 255, 1);
     border: 2px solid rgba(156, 156, 255, 1);
-    color:rgba(156, 156, 255, 1);
+    color: rgba(156, 156, 255, 1);
     font-weight: 700;
     border-radius: 10px;
 }
@@ -81,9 +86,13 @@ input{
     border-color: rgba(156, 156, 255, 1);
 }
 
-#opcao-cadastro {
+#container-opcao-cadastro{
     display: none;
 }
+/* 
+#opcao-cadastro {
+    display: none;
+} */
 
 #opcao-senha {
     display: none;
@@ -97,26 +106,32 @@ input{
     display: none;
 }
 
-
-
-.container-gatos {   
+.container-gatos {
     margin: 0 auto;
 }
 
-#img-gatos{
+#img-gatos {
     margin: 0 auto;
 }
 
-.bar{
+.bar {
     background-color: rgba(156, 156, 255, 1);
     max-height: 10em;
     height: 8px;
 }
 
-.logo-animal-corp > div > img{
+.logo-animal-corp>div>img {
     margin: 0;
     padding: 0;
     vertical-align: middle;
     align-content: space-around;
     justify-content: center;
 }
+
+/* .flexbox {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+} */

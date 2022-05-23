@@ -60,7 +60,7 @@
                         <h1>Seja bem-vindo ao AnimalSystem</h1>
                         <p class="h6">Entre com seu usuário e senha</p>
 
-                        <input type="text" id="" name="usuario-input" placeholder="usuario:" />
+                        <input type="text" id="" name="usuario-input" placeholder="usuario:" autofocus />
                         <br />
                         <input type="password" id="lname" name="usuario-password" placeholder="senha:" /><br />
 
@@ -74,38 +74,73 @@
                             <button class="btn btn-secondary col-5 mx-0" id="cadastrar">cadastrar</button>
                         </div>
 
-
-                        <div class="row m-0 pb-3 justify-content-md-evenly" id="opcao-cadastro">
-                            <p>Você é Pessoa Físca ou Jurídica? </p>
-                            <button class="btn btn-block btn-primary col-5 mx-0" onclick="window.location.href='/dashboard/sign-up/pessoa-fisica/index.html'">Física</button>
-                            <button class="btn btn-block btn-secondary col-5 mx-0" onclick="window.location.href='/dashboard/sign-up/pessoa-juridica/index.html'">Jurídica</button>
-                        </div>
-
-                        <div class="buttons row pb-3 mx-auto justify-content-md-evenly" id="opcao-senha">
-                            <p>Você deseja receber seu login por e-mail ou whatsapp? </p>
+                        <div id="container-opcao-cadastro" class="container p-0">
                             
-                            <button class="btn btn-primary col-5 mx-0" name="btn-e-mail" id="btn-e-mail">e-mail</button>
-                            <button class="btn btn-secondary col-5 mx-0" name="btn-whatsapp" id="btn-whatsapp">whatsapp</button>
+                            <div id="opcao-cadastro" class="row m-0 pb-3 justify-content-md-evenly" >
 
-                        </div>
+                                <p>Você é Pessoa Físca ou Jurídica? </p>
 
-                        
-                        <div id="input-envio-senha">
-
-                            <div class="row m-0 pb-3 justify-content-md-evenly" div="form-enviar-senha">
-                                <button class="btn btn-primary col-5 mx-0" id="enviar-senha">enviar</button>
-                                <button class="btn btn-primary col-5 mx-0 " style="visibility:hidden">enviar</button>
+                                <button class="btn btn-block btn-primary col-5 mx-0"
+                                    onclick="window.location.href='/dashboard/sign-up/pessoa-fisica/index.html'">Física</button>
+                                <button class="btn btn-block btn-secondary col-5 mx-0"
+                                    onclick="window.location.href='/dashboard/sign-up/pessoa-juridica/index.html'">Jurídica</button>
                             </div>
-                            
+                        </div>    
+
+                        <div id="opcao-senha" class="container p-0">
+
+                            <div class="container p-0 m-0">
+
+                                <p>Você deseja receber seu login por e-mail ou whatsapp? </p>
+
+
+                                <div class="buttons row m-0 pb-3 mx-auto justify-content-md-evenly">
+
+                                    <button class="btn btn-primary col-5 mx-0" name="btn-email"
+                                        id="btn-email">e-mail</button>
+                                    <button class="btn btn-secondary col-5 mx-0" name="btn-whatsapp"
+                                        id="btn-whatsapp">whatsapp</button>
+
+                                </div>
+
+                                <div id="envio-senha" style="display:none">
+                                    
+                                    <div id="div-reenvio-email" style="display:none">
+                                        <p id='mensagem-email'>Informe o e-mail cadastrado no sistema: </p>
+                                        <input type="email" id="input-email" placeholder="email@email.com.br"
+                                            name="usuario-input" autofocus required />
+                                    </div>
+
+                                    <div id="div-reenvio-whats" style="display:none">
+                                        <p id="mensagem-whatsapp"> Informe o seu número de whatsapp cadastrado no
+                                            sistema:</p>
+
+                                        <input type='tel' id='input-whatsapp' placeholder='(34)99999-9999' required>
+
+                                    </div>
+
+                                    <div id="div-btn-enviar-senha" class="row m-0 pb-3 justify-content-md-evenly"
+                                        style="display:none">
+
+                                        <button class="btn btn-primary col-5 mx-0" id="btn-enviar-senha">enviar</button>
+                                        <button class="btn btn-secondary col-5 mx-0 "
+                                            style="visibility:hidden">enviar</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
                         </div>
+
+
 
                         <div id="confirmacao-envio">
-                        
+
                             <img src="../../assets/images/x-encerrar.png" alt="">
                             <button type="button" class="btn-close" aria-label="Close"></button>
                             <p>
                                 <small>
-                                    A solicitação foi cadastrada com sucesso, acesse o e-mail para atualizar seu
+                                    A solicitação foi cadastrada com sucesso, acesse o email para atualizar seu
                                     cadastro
                                 </small>
                             </p>
