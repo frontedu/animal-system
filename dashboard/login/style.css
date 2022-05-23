@@ -51,11 +51,13 @@ input{
     margin: 0;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #A02C2C;
     border-color: rgba(127, 20, 20, 1);
     font-weight: 700;
     border-radius: 10px;
+    color: rgba(241, 239, 239, 1);
+
 }
 
 .btn-primary:hover {
@@ -78,6 +80,18 @@ input{
     border-color: rgba(156, 156, 255, 1);
 }
 
+#opcao-cadastro {
+    display: none;
+}
+
+#opcao-senha {
+    display: none;
+}
+
+#confirmacao-envio {
+    display: none;
+}
+
 .container-gatos {   
     margin: 0 auto;
 }
@@ -92,29 +106,10 @@ input{
     height: 8px;
 }
 
-footer {
-    min-height: auto;
-}
-
 .logo-animal-corp > div > img{
     margin: 0;
     padding: 0;
     vertical-align: middle;
     align-content: space-around;
     justify-content: center;
-}
-
-#logo-animalsytem{
-    max-width: 200px;
-    align-self: center;
-}
-
-#logo-instagram-footer {
-    margin-left: 5px;
-    padding-left: 10px;
-}
-
-#logo-facebook-footer {
-    margin-left: 5px;
-    padding: 10px;
 }
