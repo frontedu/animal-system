@@ -28,9 +28,10 @@ h1 {
 
 p {
     font-size: 0.8em;
-    line-height: 1.5rem;
+    line-height: 1rem;
     margin: 0.5rem 0;
     color: rgba(80, 43, 43, 1);
+    display: block;
 
 }
 
@@ -88,9 +89,15 @@ input{
     display: none;
 }
 
+#input-envio-senha {
+    display: none;
+}
+
 #confirmacao-envio {
     display: none;
 }
+
+
 
 .container-gatos {   
     margin: 0 auto;
