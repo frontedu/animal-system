@@ -57,13 +57,12 @@ input:focus {
     margin: 0;
 }
 
-.btn-primary {
+.btn-primary, .btn-primary:focus {
     background-color: #A02C2C;
     border-color: rgba(127, 20, 20, 1);
     font-weight: 700;
     border-radius: 10px;
     color: rgba(241, 239, 239, 1);
-
 }
 
 .btn-primary:hover {
@@ -72,7 +71,7 @@ input:focus {
     border: 2px solid #A02C2C;
 }
 
-.btn-secondary {
+.btn-secondary, .btn-primary:focus  {
     background: rgba(255, 255, 255, 1);
     border: 2px solid rgba(156, 156, 255, 1);
     color: rgba(156, 156, 255, 1);
@@ -89,10 +88,6 @@ input:focus {
 #container-opcao-cadastro{
     display: none;
 }
-/* 
-#opcao-cadastro {
-    display: none;
-} */
 
 #opcao-senha {
     display: none;
@@ -104,6 +99,33 @@ input:focus {
 
 #confirmacao-envio {
     display: none;
+    border: 1rem solid rgba(3, 124, 124, 0.795); 
+    background-color: rgb(0, 181, 181);
+    border-radius: 1em;
+    padding: 0.8em;    
+}
+
+#confirmacao-envio > p {
+    padding-left: 3em;
+    margin: 0 auto;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.921)
+}
+
+#btn-fechar-popup {
+    display: inline-block;
+    position: relative;
+    top: -0.5rem;
+    left: 0.5em;
+    width: 30px;
+    height: 30px;    
+}
+
+#btn-fechar-popup:hover{
+    /* background-color: rgba(3, 124, 124, 0.795);  */
+    color: yellow;
+    transition-duration: 0.8s;
+    transform: scale(1.5);
 }
 
 .container-gatos {

@@ -5,10 +5,14 @@ $(document).ready(() => {
   });
 
   $("#reenviar-senha").click(function () {
-    $("#opcao-senha").toggle("slow")
+
+    $("#opcao-senha").toggle("slow");
+    $("#container-opcao-cadastro").hide();
   })
 
   $("#btn-email").on("click", function (event) {
+
+    $("#container-opcao-cadastro").hide();
 
     if ($("#envio-senha").css("display", "none"))
       $("#envio-senha").css("display", "block")
@@ -28,6 +32,8 @@ $(document).ready(() => {
 
   $("#btn-whatsapp").on("click", function (event) {
 
+    $("#container-opcao-cadastro").hide();
+
     if ($("#envio-senha").css("display", "none"))
       $("#envio-senha").css("display", "block")
 
@@ -41,8 +47,14 @@ $(document).ready(() => {
 
     if ($("#div-btn-enviar-senha").css("display", "none"))
       $("#div-btn-enviar-senha").css("display", "flex");
-
   })
 
+  $("#btn-enviar-senha").on("click", function() {
+    $("#confirmacao-envio").css("display", "flex")
+  })
+
+  $("#btn-fechar-popup").on("click", function(){
+    $("#confirmacao-envio").css("display", "none")
+  })
 
 });

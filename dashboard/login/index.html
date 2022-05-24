@@ -75,8 +75,8 @@
                         </div>
 
                         <div id="container-opcao-cadastro" class="container p-0">
-                            
-                            <div id="opcao-cadastro" class="row m-0 pb-3 justify-content-md-evenly" >
+
+                            <div id="opcao-cadastro" class="row m-0 pb-3 justify-content-md-evenly">
 
                                 <p>Você é Pessoa Físca ou Jurídica? </p>
 
@@ -85,7 +85,7 @@
                                 <button class="btn btn-block btn-secondary col-5 mx-0"
                                     onclick="window.location.href='/dashboard/sign-up/pessoa-juridica/index.html'">Jurídica</button>
                             </div>
-                        </div>    
+                        </div>
 
                         <div id="opcao-senha" class="container p-0">
 
@@ -104,7 +104,7 @@
                                 </div>
 
                                 <div id="envio-senha" style="display:none">
-                                    
+
                                     <div id="div-reenvio-email" style="display:none">
                                         <p id='mensagem-email'>Informe o e-mail cadastrado no sistema: </p>
                                         <input type="email" id="input-email" placeholder="email@email.com.br"
@@ -123,6 +123,7 @@
                                         style="display:none">
 
                                         <button class="btn btn-primary col-5 mx-0" id="btn-enviar-senha">enviar</button>
+
                                         <button class="btn btn-secondary col-5 mx-0 "
                                             style="visibility:hidden">enviar</button>
                                     </div>
@@ -132,17 +133,11 @@
 
                         </div>
 
-
-
-                        <div id="confirmacao-envio">
-
-                            <img src="../../assets/images/x-encerrar.png" alt="">
-                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        <div id="confirmacao-envio" class="border border-4 border-info">
+                            <img src="../../assets/images/x-encerrar.svg" alt="" id="btn-fechar-popup">
                             <p>
-                                <small>
-                                    A solicitação foi cadastrada com sucesso, acesse o email para atualizar seu
-                                    cadastro
-                                </small>
+                                A solicitação foi cadastrada com sucesso, acesse o email para atualizar seu
+                                cadastro
                             </p>
                         </div>
 
