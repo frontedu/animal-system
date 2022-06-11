@@ -1,0 +1,25 @@
+/*!
+ *
+ * Bryntum Calendar 5.0.5 (TRIAL VERSION)
+ *
+ * Copyright(c) 2022 Bryntum AB
+ * https://bryntum.com/contact
+ * https://bryntum.com/license
+ *
+ */
+{
+  "name": "@bryntum/calendar",
+  "version": "5.0.5",
+  "description": "Bryntum Calendar JavaScript component",
+  "author": {
+    "name": "Bryntum",
+    "url": "https://bryntum.com",
+    "email": "info@bryntum.com"
+  },
+  "homepage": "https://bryntum.com",
+  "license": "Commercial",
+  "devDependencies": {},
+  "main": "calendar.module.js",
+  "types": "./calendar.d.ts",
+  "type": "module"
+}

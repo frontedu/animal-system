@@ -1,0 +1,20 @@
+{
+    "[data-ref=\"sidebar\"]" : {
+        "maxWidth" : "21em",
+        "align" : {
+            "align" : "l-r0",
+            "anchorPosition" : { "y" : 37 }
+        },
+        "title" : "Date picker removed from sidebar",
+        "content" : "UI customization includes removing provided items"
+    },
+    ".calendar-event-log .b-panel-header" : {
+        "maxWidth" : "21em",
+        "align" : {
+            "align" : "l-r",
+            "offset" : [10]
+        },
+        "title" : "Logging Panel added to the Sidebar",
+        "content" : "Any event interactions are logged here"
+    }
+}

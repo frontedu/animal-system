@@ -1,0 +1,718 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CalendarIntervalMixin | scheduling-engine</title>
+	<meta name="description" content="Documentation for scheduling-engine">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">scheduling-engine</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_lib_engine_calendar_calendarintervalmixin_.html">&quot;lib/Engine/calendar/CalendarIntervalMixin&quot;</a>
+				</li>
+				<li>
+					<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html">CalendarIntervalMixin</a>
+				</li>
+			</ul>
+			<h1>Class CalendarIntervalMixin</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>This is a calendar interval mixin.</p>
+					</div>
+					<p>Can be either a static time interval (if <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#startdate">startDate</a>/<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#enddate">endDate</a> are specified) or recurrent time interval
+					(<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentstartdate">recurrentStartDate</a>/<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentenddate">recurrentEndDate</a>).</p>
+					<p>By default it defines a non-working period (<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#isworking">isWorking</a> field has default value <code>false</code>),
+					but can also define an explicit working time, for example to override some previous period.</p>
+					<p>You probably don&#39;t need to create instances of this mixin directly, instead you pass its configuration object to the <a href="_lib_engine_quark_model_abstractcalendarmixin_.abstractcalendarmixin.html#addinterval">AbstractCalendarMixin.addInterval</a></p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html" class="tsd-signature-type">AbstractPartOfProjectModelMixin</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">CalendarIntervalMixin</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#_project" class="tsd-kind-icon">$project</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#cls" class="tsd-kind-icon">cls</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#enddate" class="tsd-kind-icon">end<wbr>Date</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#iconcls" class="tsd-kind-icon">icon<wbr>Cls</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#isworking" class="tsd-kind-icon">is<wbr>Working</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentenddate" class="tsd-kind-icon">recurrent<wbr>End<wbr>Date</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentstartdate" class="tsd-kind-icon">recurrent<wbr>Start<wbr>Date</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#startdate" class="tsd-kind-icon">start<wbr>Date</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#getassignmentstore" class="tsd-kind-icon">get<wbr>Assignment<wbr>Store</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#getcalendarmanagerstore" class="tsd-kind-icon">get<wbr>Calendar<wbr>Manager<wbr>Store</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#getdependencystore" class="tsd-kind-icon">get<wbr>Dependency<wbr>Store</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#geteventstore" class="tsd-kind-icon">get<wbr>Event<wbr>Store</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#getproject" class="tsd-kind-icon">get<wbr>Project</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#getresourcestore" class="tsd-kind-icon">get<wbr>Resource<wbr>Store</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#isrecurrent" class="tsd-kind-icon">is<wbr>Recurrent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#isstatic" class="tsd-kind-icon">is<wbr>Static</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#joinproject" class="tsd-kind-icon">join<wbr>Project</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#leaveproject" class="tsd-kind-icon">leave<wbr>Project</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-private"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#parsedateschedule" class="tsd-kind-icon">parse<wbr>Date<wbr>Schedule</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#setproject" class="tsd-kind-icon">set<wbr>Project</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="_project" class="tsd-anchor"></a>
+					<h3>$project</h3>
+					<div class="tsd-signature tsd-kind-icon">$project<span class="tsd-signature-symbol">:</span> <a href="_lib_engine_quark_model_abstractprojectmixin_.abstractprojectmixin.html" class="tsd-signature-type">AbstractProjectMixin</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html">AbstractPartOfProjectModelMixin</a>.<a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html#_project">$project</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts#L23">Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts:23</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The <a href="_lib_engine_quark_model_abstractprojectmixin_.abstractprojectmixin.html">project</a> instance, this entity belongs to.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="cls" class="tsd-anchor"></a>
+					<h3>cls</h3>
+					<div class="tsd-signature tsd-kind-icon">cls<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html">CalendarIntervalMixin</a>.<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#cls">cls</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/calendar/CalendarIntervalMixin.ts#L96">Engine/lib/Engine/calendar/CalendarIntervalMixin.ts:96</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A CSS class to add to the element visualizing this interval.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="enddate" class="tsd-anchor"></a>
+					<h3>end<wbr>Date</h3>
+					<div class="tsd-signature tsd-kind-icon">end<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html">CalendarIntervalMixin</a>.<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#enddate">endDate</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/calendar/CalendarIntervalMixin.ts#L61">Engine/lib/Engine/calendar/CalendarIntervalMixin.ts:61</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The end date of the fixed (not recurrent) time interval.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="iconcls" class="tsd-anchor"></a>
+					<h3>icon<wbr>Cls</h3>
+					<div class="tsd-signature tsd-kind-icon">icon<wbr>Cls<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html">CalendarIntervalMixin</a>.<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#iconcls">iconCls</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/calendar/CalendarIntervalMixin.ts#L102">Engine/lib/Engine/calendar/CalendarIntervalMixin.ts:102</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A CSS class used to add an icon to the element visualizing this interval.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="isworking" class="tsd-anchor"></a>
+					<h3>is<wbr>Working</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Working<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html">CalendarIntervalMixin</a>.<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#isworking">isWorking</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/calendar/CalendarIntervalMixin.ts#L87">Engine/lib/Engine/calendar/CalendarIntervalMixin.ts:87</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The &quot;is working&quot; flag, which defines what kind of interval this is - either working or non-working. Default value is <code>false</code>,
+							denoting non-working intervals.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html">CalendarIntervalMixin</a>.<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#name">name</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/calendar/CalendarIntervalMixin.ts#L49">Engine/lib/Engine/calendar/CalendarIntervalMixin.ts:49</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the recurrent time interval. Might be used in the UI when visualizing intervals.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="recurrentenddate" class="tsd-anchor"></a>
+					<h3>recurrent<wbr>End<wbr>Date</h3>
+					<div class="tsd-signature tsd-kind-icon">recurrent<wbr>End<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html">CalendarIntervalMixin</a>.<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentenddate">recurrentEndDate</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/calendar/CalendarIntervalMixin.ts#L80">Engine/lib/Engine/calendar/CalendarIntervalMixin.ts:80</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The end date of the recurrent time interval. Should be specified as any expression, recognized
+							by the excellent <a href="http://bunkat.github.io/later/">later</a> library.</p>
+						</div>
+						<p>The field can also accept &quot;EOD&quot; string as a value. In this case the interval is calculated based
+							on the <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentstartdate">start date schedule</a> only. And then <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#enddate">endDate</a> is calculated
+							as the end of the <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#startdate">startDate</a> day. For example in this case if <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#startdate">startDate</a> is calculated as <code>2021-09-23T00:00:00</code>
+						the <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#enddate">endDate</a> will get <code>2021-09-24T00:00:00</code>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="recurrentstartdate" class="tsd-anchor"></a>
+					<h3>recurrent<wbr>Start<wbr>Date</h3>
+					<div class="tsd-signature tsd-kind-icon">recurrent<wbr>Start<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html">CalendarIntervalMixin</a>.<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentstartdate">recurrentStartDate</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/calendar/CalendarIntervalMixin.ts#L68">Engine/lib/Engine/calendar/CalendarIntervalMixin.ts:68</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The start date of the recurrent time interval. Should be specified as any expression, recognized
+							by the excellent <a href="http://bunkat.github.io/later/">later</a> library.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="startdate" class="tsd-anchor"></a>
+					<h3>start<wbr>Date</h3>
+					<div class="tsd-signature tsd-kind-icon">start<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html">CalendarIntervalMixin</a>.<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#startdate">startDate</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/calendar/CalendarIntervalMixin.ts#L55">Engine/lib/Engine/calendar/CalendarIntervalMixin.ts:55</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The start date of the fixed (not recurrent) time interval.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getassignmentstore" class="tsd-anchor"></a>
+					<h3>get<wbr>Assignment<wbr>Store</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Assignment<wbr>Store<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"assignmentStore"</span><span class="tsd-signature-symbol">]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html">AbstractPartOfProjectModelMixin</a>.<a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html#getassignmentstore">getAssignmentStore</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts#L67">Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts:67</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Convenience method to get the instance of the assignment store in the <a href="_lib_engine_quark_model_abstractprojectmixin_.abstractprojectmixin.html">project</a> instance, this entity belongs to.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"assignmentStore"</span><span class="tsd-signature-symbol">]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getcalendarmanagerstore" class="tsd-anchor"></a>
+					<h3>get<wbr>Calendar<wbr>Manager<wbr>Store</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Calendar<wbr>Manager<wbr>Store<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"calendarManagerStore"</span><span class="tsd-signature-symbol">]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html">AbstractPartOfProjectModelMixin</a>.<a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html#getcalendarmanagerstore">getCalendarManagerStore</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts#L107">Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts:107</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Convenience method to get the instance of the calendar manager store in the <a href="_lib_engine_quark_model_abstractprojectmixin_.abstractprojectmixin.html">project</a> instance, this entity belongs to.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"calendarManagerStore"</span><span class="tsd-signature-symbol">]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getdependencystore" class="tsd-anchor"></a>
+					<h3>get<wbr>Dependency<wbr>Store</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Dependency<wbr>Store<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"dependencyStore"</span><span class="tsd-signature-symbol">]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html">AbstractPartOfProjectModelMixin</a>.<a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html#getdependencystore">getDependencyStore</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts#L76">Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts:76</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Convenience method to get the instance of the dependency store in the <a href="_lib_engine_quark_model_abstractprojectmixin_.abstractprojectmixin.html">project</a> instance, this entity belongs to.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"dependencyStore"</span><span class="tsd-signature-symbol">]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="geteventstore" class="tsd-anchor"></a>
+					<h3>get<wbr>Event<wbr>Store</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Event<wbr>Store<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"eventStore"</span><span class="tsd-signature-symbol">]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html">AbstractPartOfProjectModelMixin</a>.<a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html#geteventstore">getEventStore</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts#L87">Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts:87</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Convenience method to get the instance of the event store in the <a href="_lib_engine_quark_model_abstractprojectmixin_.abstractprojectmixin.html">project</a> instance, this entity belongs to.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"eventStore"</span><span class="tsd-signature-symbol">]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getproject" class="tsd-anchor"></a>
+					<h3>get<wbr>Project</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Project<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html">AbstractPartOfProjectModelMixin</a>.<a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html#getproject">getProject</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts#L57">Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts:57</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The method to get the <a href="_lib_engine_quark_model_abstractprojectmixin_.abstractprojectmixin.html">project</a> instance, this entity belongs to.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getresourcestore" class="tsd-anchor"></a>
+					<h3>get<wbr>Resource<wbr>Store</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Resource<wbr>Store<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"resourceStore"</span><span class="tsd-signature-symbol">]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html">AbstractPartOfProjectModelMixin</a>.<a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html#getresourcestore">getResourceStore</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts#L97">Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts:97</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Convenience method to get the instance of the resource store in the <a href="_lib_engine_quark_model_abstractprojectmixin_.abstractprojectmixin.html">project</a> instance, this entity belongs to.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"resourceStore"</span><span class="tsd-signature-symbol">]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="isrecurrent" class="tsd-anchor"></a>
+					<h3>is<wbr>Recurrent</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Recurrent<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html">CalendarIntervalMixin</a>.<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#isrecurrent">isRecurrent</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/calendar/CalendarIntervalMixin.ts#L141">Engine/lib/Engine/calendar/CalendarIntervalMixin.ts:141</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Whether this interval is recurrent (both <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentstartdate">recurrentStartDate</a> and <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentenddate">recurrentEndDate</a> are present and parsed correctly
+									by the <code>later</code> library)</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="isstatic" class="tsd-anchor"></a>
+					<h3>is<wbr>Static</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Static<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html">CalendarIntervalMixin</a>.<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#isstatic">isStatic</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/calendar/CalendarIntervalMixin.ts#L149">Engine/lib/Engine/calendar/CalendarIntervalMixin.ts:149</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Whether this interval is static - both <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#startdate">startDate</a> and <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#enddate">endDate</a> are present.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="joinproject" class="tsd-anchor"></a>
+					<h3>join<wbr>Project</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">join<wbr>Project<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html">AbstractPartOfProjectModelMixin</a>.<a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html#joinproject">joinProject</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/quark/model/mixin/AbstractPartOfProjectModelMixin.ts#L67">Engine/lib/Engine/quark/model/mixin/AbstractPartOfProjectModelMixin.ts:67</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Template method, which is called when model is joining the project (through joining some store that
+									has already joined the project)</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="leaveproject" class="tsd-anchor"></a>
+					<h3>leave<wbr>Project</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">leave<wbr>Project<span class="tsd-signature-symbol">(</span>isReplacing<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html">AbstractPartOfProjectModelMixin</a>.<a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html#leaveproject">leaveProject</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/quark/model/mixin/AbstractPartOfProjectModelMixin.ts#L73">Engine/lib/Engine/quark/model/mixin/AbstractPartOfProjectModelMixin.ts:73</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Template method, which is called when model is leaving the project (through leaving some store usually)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> isReplacing: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-private">
+					<a name="parsedateschedule" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> parse<wbr>Date<wbr>Schedule</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Date<wbr>Schedule<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html">CalendarIntervalMixin</a>.<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#parsedateschedule">parseDateSchedule</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/calendar/CalendarIntervalMixin.ts#L159">Engine/lib/Engine/calendar/CalendarIntervalMixin.ts:159</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Helper method to parse <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentstartdate">recurrentStartDate</a> and <a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentenddate">recurrentEndDate</a> field values.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>Processed schedule ready to be used by later.schedule() method.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setproject" class="tsd-anchor"></a>
+					<h3>set<wbr>Project</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Project<span class="tsd-signature-symbol">(</span>project<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html">AbstractPartOfProjectModelMixin</a>.<a href="_lib_engine_quark_model_mixin_abstractpartofprojectmodelmixin_.abstractpartofprojectmodelmixin.html#setproject">setProject</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/bryntum/bryntum-suite/blob/9b347c487c/Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts#L49">Engine/lib/Engine/quark/AbstractPartOfProjectGenericMixin.ts:49</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The method to set the <a href="_lib_engine_quark_model_abstractprojectmixin_.abstractprojectmixin.html">project</a> instance, this entity belongs to.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>project: <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"project"</span><span class="tsd-signature-symbol">]</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/_lib_engine_calendar_calendarintervalmixin_.html">&quot;lib/<wbr>Engine/calendar/<wbr>Calendar<wbr>Interval<wbr>Mixin&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html" class="tsd-kind-icon">Calendar<wbr>Interval<wbr>Mixin</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#_project" class="tsd-kind-icon">$project</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#cls" class="tsd-kind-icon">cls</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#enddate" class="tsd-kind-icon">end<wbr>Date</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#iconcls" class="tsd-kind-icon">icon<wbr>Cls</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#isworking" class="tsd-kind-icon">is<wbr>Working</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentenddate" class="tsd-kind-icon">recurrent<wbr>End<wbr>Date</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#recurrentstartdate" class="tsd-kind-icon">recurrent<wbr>Start<wbr>Date</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#startdate" class="tsd-kind-icon">start<wbr>Date</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#getassignmentstore" class="tsd-kind-icon">get<wbr>Assignment<wbr>Store</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#getcalendarmanagerstore" class="tsd-kind-icon">get<wbr>Calendar<wbr>Manager<wbr>Store</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#getdependencystore" class="tsd-kind-icon">get<wbr>Dependency<wbr>Store</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#geteventstore" class="tsd-kind-icon">get<wbr>Event<wbr>Store</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#getproject" class="tsd-kind-icon">get<wbr>Project</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#getresourcestore" class="tsd-kind-icon">get<wbr>Resource<wbr>Store</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#isrecurrent" class="tsd-kind-icon">is<wbr>Recurrent</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#isstatic" class="tsd-kind-icon">is<wbr>Static</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#joinproject" class="tsd-kind-icon">join<wbr>Project</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#leaveproject" class="tsd-kind-icon">leave<wbr>Project</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-private">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#parsedateschedule" class="tsd-kind-icon">parse<wbr>Date<wbr>Schedule</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_lib_engine_calendar_calendarintervalmixin_.calendarintervalmixin.html#setproject" class="tsd-kind-icon">set<wbr>Project</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

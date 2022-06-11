@@ -1,0 +1,15 @@
+/**
+ * Main application sass file that contains all the application styling
+ */
+
+// import example styles
+@import '~@bryntum/demo-resources/scss/example.scss';
+
+.hourField {
+    width: auto;
+    margin-right: 2em;
+
+    .b-field-inner {
+        width: 5em;
+    }
+}

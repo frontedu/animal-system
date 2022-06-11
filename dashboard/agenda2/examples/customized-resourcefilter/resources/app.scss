@@ -1,0 +1,37 @@
+// Chips don't wrap.
+[data-ref="resourceFilter"] .b-chip {
+    white-space : nowrap;
+}
+
+.resource-type {
+    font-size: 80%;
+}
+
+$day-event-arrow-height : 7px!default;
+
+// Make overnight events have arrow shape at top and bottom where they wrap.
+.b-dayview-day-detail {
+    .b-cal-event-wrap {
+        &.b-allday {
+            .b-cal-event-body {
+                padding-top : 0.7em
+            }
+            &:before, &:after {
+                content : none!important;
+            }
+        }
+        &.b-starts-above:not(.b-ends-below) {
+            clip-path: polygon(50% 0%, 100% $day-event-arrow-height, 100% 100%, 0% 100%, 0% $day-event-arrow-height);
+        }
+        &.b-ends-below:not(.b-starts-above) {
+            clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - $day-event-arrow-height), 50% 100%, 0% calc(100% - $day-event-arrow-height));
+        }
+        &:is(.b-starts-above,.b-ends-below) {
+            clip-path: polygon(50% 0%, 100% $day-event-arrow-height, 100% calc(100% - $day-event-arrow-height), 50% 100%, 0% calc(100% - $day-event-arrow-height), 0% $day-event-arrow-height);
+        }
+    }
+}
+
+.b-sidebar .custom-resource-filter .b-selected-icon{
+    margin-inline-end: 0.8em;
+}

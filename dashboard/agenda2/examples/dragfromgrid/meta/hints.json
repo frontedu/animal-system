@@ -1,0 +1,12 @@
+{
+    ".b-grid-row[data-index=\"2\"]" : {
+        "title": "",
+        "content": "Drag and drop these events into the calendar to schedule them",
+        "align": "r-l"
+    },
+    ".b-grid-row[data-id=\"1013\"]" : {
+        "title": "",
+        "content": "Drop this event into the YearView and see all occurrences appear immediately",
+        "align": "r-l"
+    }
+}

@@ -1,0 +1,14 @@
+.b-grid-row .b-cal-event-wrap,
+.b-cal-event-wrap {
+  transition: opacity 0.4s;
+}
+
+.b-highlighting .b-cal-event-wrap {
+  opacity: 0.2;
+}
+.b-highlighting .b-cal-event-wrap.b-match {
+  opacity: 1;
+  z-index: 10;
+}
+
+/*# sourceMappingURL=app.css.map */

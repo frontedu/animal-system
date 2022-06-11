@@ -1,0 +1,27 @@
+@import '~@bryntum/calendar/calendar.material.css';
+@import '~@bryntum/demo-resources/scss/example.scss';
+
+.b-cal-event {
+    transition: opacity 0.4s, box-shadow 0.4s;
+}
+
+.b-highlighting {
+    .b-cal-event-wrap {
+        opacity: 0.3;
+
+        &.b-match {
+            opacity: 1;
+            outline: 1px dotted red;
+            outline-offset: -1px;
+            background-color: #d2827640;
+            z-index: 10;
+        }
+    }
+    .b-dayview {
+        .b-cal-event-wrap.b-match {
+            .b-cal-event {
+                margin: 1px;
+            }
+        }
+    }
+}

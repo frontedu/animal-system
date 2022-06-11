@@ -1,0 +1,241 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>GettingStartedGuide | scheduling-engine</title>
+	<meta name="description" content="Documentation for scheduling-engine">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">scheduling-engine</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_docs_src_getting_started_.html">&quot;docs_src/getting_started&quot;</a>
+				</li>
+				<li>
+					<a href="_docs_src_getting_started_.gettingstartedguide.html">GettingStartedGuide</a>
+				</li>
+			</ul>
+			<h1>Class GettingStartedGuide</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#getting-started-with-bryntum-scheduling-engine" id="getting-started-with-bryntum-scheduling-engine" style="color: inherit; text-decoration: none;">
+							<h2>Getting started with Bryntum Scheduling Engine</h2>
+						</a>
+						<a href="#introduction" id="introduction" style="color: inherit; text-decoration: none;">
+							<h3>Introduction</h3>
+						</a>
+						<p>Scheduling engine is written in TypeScript. It uses mixins extensively for code structuring, instead of classic single class inheritance.
+							Please refer to these blog posts: <a href="https://bryntum.com/blog/the-mixin-pattern-in-typescript-all-you-need-to-know/">part1</a>,
+							<a href="https://bryntum.com/blog/the-mixin-pattern-in-typescript-all-you-need-to-know-part-2/">part2</a> to become familiar with the mixin pattern.
+						See also <a href="https://bryntum.github.io/chronograph/docs/modules/_src_class_bettermixin_.html#mixin">Chronograph docs</a></p>
+						<p>The core of the engine make use of <a href="https://github.com/bryntum/chronograph">ChronoGraph</a> for the reactive calculations. ChronoGraph is
+							an extremely fast, open-source, reactive computational engine. Please refer to its <a href="https://bryntum.github.io/chronograph/docs/index.html">documentation</a>
+						to become familiar with the reactivity concept.</p>
+						<a href="#logical-structure" id="logical-structure" style="color: inherit; text-decoration: none;">
+							<h3>Logical structure</h3>
+						</a>
+						<p>The scheduling logic is divided into 3 layers. Each layer extends the previous and includes all its features.</p>
+						<ul>
+							<li>Scheduler basic</li>
+							<li>Scheduler Pro</li>
+							<li>Gantt</li>
+						</ul>
+						<p>The central part of every layer, is entity called &quot;Project&quot;. Project consists from several collections
+							of other entities. Collections are created as instances of the
+							<a href="https://bryntum.com/docs/grid/api/Core/data/Store">Store</a> class from the
+							Bryntum Core package, and individual entities are represented with
+						<a href="https://bryntum.com/docs/grid/api/Core/data/Model">Model</a> class.</p>
+						<p>The primary collections of the Project are:</p>
+						<ul>
+							<li><p>Calendar manager store. This is a tree store, keeping all calendars of the Project.
+								The collection is represented with the <a href="_lib_engine_quark_store_chronocalendarmanagerstoremixin_.chronocalendarmanagerstoremixin.html">ChronoCalendarManagerStoreMixin</a>. The base entity is represented with the <a href="_lib_engine_quark_model_scheduler_basic_basecalendarmixin_.basecalendarmixin.html">BaseCalendarMixin</a>.</p>
+							</li>
+							<li><p>Resources store. This is a flat or tree store, keeping all resources of the Project.
+								The collection is represented with the <a href="_lib_engine_quark_store_chronoresourcestoremixin_.chronoresourcestoremixin.html">ChronoResourceStoreMixin</a>. The base entity is represented with the <a href="_lib_engine_quark_model_scheduler_basic_baseresourcemixin_.baseresourcemixin.html">BaseResourceMixin</a>.</p>
+							</li>
+							<li><p>Event store. This is a flat or tree store, keeping all events of the Project.
+								The collection is represented with the <a href="_lib_engine_quark_store_chronoeventstoremixin_.chronoeventstoremixin.html">ChronoEventStoreMixin</a>. The base entity is represented with the <a href="_lib_engine_quark_model_scheduler_basic_baseeventmixin_.baseeventmixin.html">BaseEventMixin</a>.</p>
+							</li>
+							<li><p>Assignment store. This is a flat store, keeping all assignments of the Project.
+								The collection is represented with the <a href="_lib_engine_quark_store_chronoassignmentstoremixin_.chronoassignmentstoremixin.html">ChronoAssignmentStoreMixin</a>. The base entity is represented with the <a href="_lib_engine_quark_model_scheduler_basic_baseassignmentmixin_.baseassignmentmixin.html">BaseAssignmentMixin</a>.</p>
+							</li>
+							<li><p>Dependency store. This is a flat store, keeping all dependencies of the Project.
+								The collection is represented with the <a href="_lib_engine_quark_store_chronodependencystoremixin_.chronodependencystoremixin.html">ChronoDependencyStoreMixin</a>. The base entity is represented with the <a href="_lib_engine_quark_model_scheduler_basic_basedependencymixin_.basedependencymixin.html">BaseDependencyMixin</a>.</p>
+							</li>
+						</ul>
+						<p>The Project itself is represented with the <a href="_lib_engine_quark_model_abstractprojectmixin_.abstractprojectmixin.html">AbstractProjectMixin</a>. It is a regular <code>Model</code>, so it is capable of storing any project-wide
+						configuration options.</p>
+						<p>The classes mentioned above are base, meaning that they are gradually extended with new features.</p>
+						<a href="#scheduler-basic-layer" id="scheduler-basic-layer" style="color: inherit; text-decoration: none;">
+							<h3>Scheduler basic layer</h3>
+						</a>
+						<p>At this layer there are the following features:</p>
+						<ul>
+							<li>Project has a calendar.</li>
+							<li>Event has a calendar.</li>
+							<li>Resource has a calendar</li>
+							<li>Events are connected with dependencies, which, however are purely visual decoration and do not affect the schedule.</li>
+						</ul>
+						<p>The project class of this layer: <a href="_lib_engine_quark_model_scheduler_basic_schedulerbasicprojectmixin_.schedulerbasicprojectmixin.html">SchedulerBasicProjectMixin</a>
+						The event class of this layer: <a href="_lib_engine_quark_model_scheduler_basic_schedulerbasicevent_.schedulerbasicevent.html">SchedulerBasicEvent</a></p>
+						<a href="#scheduler-pro-layer" id="scheduler-pro-layer" style="color: inherit; text-decoration: none;">
+							<h3>Scheduler Pro layer</h3>
+						</a>
+						<p>At this layer there are the following features:</p>
+						<ul>
+							<li>Dependencies start affecting the schedule</li>
+							<li>Event has a constraint</li>
+							<li>Event has a percent done value</li>
+							<li>The event/resource assignments have &quot;units&quot; field</li>
+						</ul>
+						<p>The project class of this layer: <a href="_lib_engine_quark_model_scheduler_pro_schedulerproprojectmixin_.schedulerproprojectmixin.html">SchedulerProProjectMixin</a>
+						The event class of this layer: <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html">SchedulerProEvent</a></p>
+						<a href="#gantt-layer" id="gantt-layer" style="color: inherit; text-decoration: none;">
+							<h3>Gantt layer</h3>
+						</a>
+						<p>At this layer there are the following features:</p>
+						<ul>
+							<li>Project can be scheduled in backward direction</li>
+							<li>Project has critical paths</li>
+							<li>Event has effort</li>
+							<li>Event has one of 3 scheduling modes - &quot;FixedDuration/FixedEffort/FixedUnits&quot;</li>
+						</ul>
+						<p>The project class of this layer: <a href="_lib_engine_quark_model_gantt_ganttprojectmixin_.ganttprojectmixin.html">GanttProjectMixin</a>
+						The event class of this layer: <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html">GanttEvent</a></p>
+						<a href="#creating-a-project" id="creating-a-project" style="color: inherit; text-decoration: none;">
+							<h3>Creating a project</h3>
+						</a>
+						<p>A project can be instantiated as any other class:</p>
+						<pre><code class="language-ts"><span class="hljs-keyword">const</span> project = <span class="hljs-keyword">new</span> SchedulerProProjectMixin({
+    <span class="hljs-attr">eventsData</span>          : [ { <span class="hljs-attr">id</span> : <span class="hljs-string">&#x27;e1&#x27;</span>, <span class="hljs-attr">name</span> : <span class="hljs-string">&#x27;Event1&#x27;</span> }, { <span class="hljs-attr">id</span> : <span class="hljs-string">&#x27;e2&#x27;</span>, <span class="hljs-attr">name</span> : <span class="hljs-string">&#x27;Event2&#x27;</span> } ],
+    <span class="hljs-attr">resourcesData</span>       : [ { <span class="hljs-attr">id</span> : <span class="hljs-string">&#x27;r1&#x27;</span>, <span class="hljs-attr">name</span> : <span class="hljs-string">&#x27;Resource1&#x27;</span> } ],
+
+    <span class="hljs-attr">assignmentsData</span>     : [ { <span class="hljs-attr">id</span> : <span class="hljs-string">&#x27;a1&#x27;</span>, <span class="hljs-attr">event</span> : <span class="hljs-string">&#x27;e1&#x27;</span>, <span class="hljs-attr">resource</span> : <span class="hljs-string">&#x27;r1&#x27;</span> } ],
+    <span class="hljs-attr">dependenciesData</span>    : [ { <span class="hljs-attr">id</span> : <span class="hljs-string">&#x27;d1&#x27;</span>, <span class="hljs-attr">fromEvent</span> : <span class="hljs-string">&#x27;e1&#x27;</span>, <span class="hljs-attr">toEvent</span> : <span class="hljs-string">&#x27;e2&#x27;</span> } ]
+})</code></pre>
+						<a href="#copyright-and-license" id="copyright-and-license" style="color: inherit; text-decoration: none;">
+							<h2>COPYRIGHT AND LICENSE</h2>
+						</a>
+						<p>Copyright (c) 2018-2020, Bryntum</p>
+						<p>All rights reserved.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">GettingStartedGuide</span>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/_docs_src_getting_started_.html">&quot;docs_<wbr>src/getting_<wbr>started&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="_docs_src_getting_started_.gettingstartedguide.html" class="tsd-kind-icon">Getting<wbr>Started<wbr>Guide</a>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

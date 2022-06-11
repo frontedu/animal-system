@@ -1,0 +1,15 @@
+{
+  ".b-checkbox-label": {
+    "title": "Tootlip text",
+    "content": "Hover me to show tooltip"
+  },
+  ".b-numberfield": {
+    "title": "Custom width",
+    "content": "Element has custom width per locale"
+  },
+  "[data-ref=infoButton]": {
+    "title": "Change locale",
+    "content": "By clicking this button and selecting one",
+    "align": "t100-b100"
+  }
+}

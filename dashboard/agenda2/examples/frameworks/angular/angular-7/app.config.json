@@ -1,0 +1,4 @@
+{
+  "title": "Angular 7 Calendar basic demo using HttpClient",
+  "description": "This demo shows you how use the Calendar web component in Angular 7. Data is loaded from server with HttpClient."
+}

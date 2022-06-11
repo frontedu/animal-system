@@ -1,0 +1,6 @@
+{
+    ".b-list-item[data-id=\"3\"]" : {
+        "align"   : "l-r",
+        "content" : "<code>resourceFilter</code> was configured with <code>selection : [2, 3, 4]</code> to override the default of selecting all resources upon startup"
+    }
+}

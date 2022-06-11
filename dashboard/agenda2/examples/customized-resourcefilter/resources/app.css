@@ -1,0 +1,29 @@
+[data-ref=resourceFilter] .b-chip {
+  white-space: nowrap;
+}
+
+.resource-type {
+  font-size: 80%;
+}
+
+.b-dayview-day-detail .b-cal-event-wrap.b-allday .b-cal-event-body {
+  padding-top: 0.7em;
+}
+.b-dayview-day-detail .b-cal-event-wrap.b-allday:before, .b-dayview-day-detail .b-cal-event-wrap.b-allday:after {
+  content: none !important;
+}
+.b-dayview-day-detail .b-cal-event-wrap.b-starts-above:not(.b-ends-below) {
+  clip-path: polygon(50% 0%, 100% 7px, 100% 100%, 0% 100%, 0% 7px);
+}
+.b-dayview-day-detail .b-cal-event-wrap.b-ends-below:not(.b-starts-above) {
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7px), 50% 100%, 0% calc(100% - 7px));
+}
+.b-dayview-day-detail .b-cal-event-wrap:is(.b-starts-above, .b-ends-below) {
+  clip-path: polygon(50% 0%, 100% 7px, 100% calc(100% - 7px), 50% 100%, 0% calc(100% - 7px), 0% 7px);
+}
+
+.b-sidebar .custom-resource-filter .b-selected-icon {
+  margin-inline-end: 0.8em;
+}
+
+/*# sourceMappingURL=app.css.map */

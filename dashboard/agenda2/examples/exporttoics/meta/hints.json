@@ -1,0 +1,6 @@
+{
+  ".b-cal-event"        : {
+    "title"   : "Export to .ics",
+    "content" : "Double click to show an editor with an export button."
+  }
+}

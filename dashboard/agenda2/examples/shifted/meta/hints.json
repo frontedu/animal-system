@@ -1,0 +1,14 @@
+{
+  "#title": {
+    "title": "Shifted Days",
+    "content": "This example shows how to shift day start times from midnight to 6PM."
+  },
+  ".b-weekview .b-dayview-timeaxis-time-00": {
+    "title": "Midnight",
+    "content": "Midnight is just another time in the shifted day."
+  },
+  "[data-date='2020-10-12'] .b-day-name-date": {
+    "title": "Spanning Day Column",
+    "content": "Notice how day columns span two days."
+  }
+}

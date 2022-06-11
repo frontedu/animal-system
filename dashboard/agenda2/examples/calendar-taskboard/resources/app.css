@@ -1,0 +1,76 @@
+.b-taskboardbase {
+  --taskboard-background: #fff;
+  --taskboard-column-gap: 0;
+  --taskboard-column-background: #fff;
+  --taskboard-column-header-background: #fff;
+  --taskboard-column-header-text-align: center;
+  --taskboard-card-border-top-radius: 0;
+  --taskboard-card-border-bottom-radius: 0;
+  --taskboard-card-box-shadow: null;
+  --taskboard-card-border-left: 3px solid currentColor;
+  --taskboard-card-background: linear-gradient(#ffffffe6, #ffffffe6), currentColor;
+  --taskboard-card-hover-background: linear-gradient(#ffffff99, #ffffff99), currentColor;
+  --taskboard-card-selected-background: linear-gradient(#ffffff77, #ffffff77), currentColor;
+  --taskboard-card-hover-transform: null;
+  --taskboard-card-selected-transform: null;
+  --taskboard-swimlane-header-background: #f3f4f566;
+  --border-color: #ddd;
+}
+
+.b-taskboard-column-headers {
+  flex: 0 0 88px;
+}
+
+.b-taskboard-column {
+  border-inline-end: 1px solid var(--border-color);
+}
+
+.b-taskboard-swimlane-header {
+  border-block: 1px solid var(--border-color);
+}
+
+.b-taskboard-swimlane.b-last {
+  flex: 1;
+}
+.b-taskboard-swimlane.b-last .b-taskboard-swimlane-body {
+  flex: 1;
+}
+
+.time {
+  font-size: 0.8em;
+}
+
+.title {
+  font-size: 1.4em;
+  text-transform: none;
+}
+
+.b-slidetoggle {
+  height: auto;
+}
+
+.b-theme-classic-dark .b-taskboardbase {
+  --taskboard-background: #222;
+  --taskboard-column-background: #222;
+  --taskboard-column-header-background: #222;
+  --border-color: #393939;
+  --taskboard-swimlane-header-background: #36363666;
+  --taskboard-card-background: linear-gradient(#00000080, #00000080), currentColor;
+  --taskboard-card-hover-background: linear-gradient(#00000060, #00000060), currentColor;
+  --taskboard-card-selected-background: linear-gradient(#00000040, #00000040), currentColor;
+}
+
+.b-theme-material .b-taskboard .b-toolbar {
+  height: 65px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.todo-counter i {
+  margin-inline-end: 0.5em;
+}
+
+.resource-tasks > * > .b-panel-content {
+  padding: 0;
+}
+
+/*# sourceMappingURL=app.css.map */

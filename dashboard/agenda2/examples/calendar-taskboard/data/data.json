@@ -1,0 +1,197 @@
+{
+    "success"   : true,
+    "resources" : {
+        "rows" : [
+            {
+                "id"         : "johan",
+                "name"       : "Johan",
+                "eventColor" : "blue",
+                "image"      : "angelo.jpg"
+            },
+            {
+                "id"         : "alex",
+                "name"       : "Alexey",
+                "eventColor" : "orange",
+                "image"      : "dave.jpg"
+            },
+            {
+                "id"         : "sergey",
+                "name"       : "Sergey",
+                "eventColor" : "green",
+                "image"      : "steve.jpg"
+            }
+        ]
+    },
+    "tasks"     : {
+        "rows" : [
+            {
+                "id"         : 1,
+                "name"       : "Car maintenance",
+                "startDate"  : "2021-11-15T08:00",
+                "endDate"    : "2021-11-15T10:00",
+                "resourceId" : "johan",
+                "progress"   : "in-progress"
+            },
+            {
+                "id"         : 2,
+                "name"       : "Meet Sergey",
+                "startDate"  : "2021-11-17T08:00",
+                "endDate"    : "2021-11-17T10:00",
+                "resourceId" : "alex",
+                "progress"   : "todo"
+            },
+            {
+                "id"         : 3,
+                "name"       : "Haircut",
+                "startDate"  : "2021-11-19T08:00",
+                "endDate"    : "2021-11-19T09:00",
+                "resourceId" : "sergey",
+                "progress"   : "done"
+            },
+            {
+                "id"         : "4",
+                "name"       : "Buy present",
+                "startDate"  : "2021-11-15T12:00",
+                "endDate"    : "2021-11-15T01:00",
+                "resourceId" : "johan",
+                "progress"   : "done"
+            },
+            {
+                "id"         : "5",
+                "name"       : "Buy flowers",
+                "startDate"  : "2021-11-15T15:00",
+                "endDate"    : "2021-11-15T16:00",
+                "resourceId" : "johan",
+                "progress"   : "done"
+            },
+            {
+                "id"         : "6",
+                "name"       : "Veronica's party",
+                "startDate"  : "2021-11-15T17:00",
+                "endDate"    : "2021-11-15T20:00",
+                "resourceId" : "johan",
+                "progress"   : "done"
+            },
+            {
+                "id"         : "7",
+                "name"       : "Dentist visit",
+                "startDate"  : "2021-11-15T12:00",
+                "endDate"    : "2021-11-15T14:00",
+                "resourceId" : "alex",
+                "progress"   : "todo"
+            },
+            {
+                "id"         : "8",
+                "name"       : "Train to Pula",
+                "startDate"  : "2021-11-17T12:00",
+                "endDate"    : "2021-11-17T16:00",
+                "resourceId" : "johan",
+                "progress"   : "todo"
+            },
+            {
+                "id"         : "9",
+                "name"       : "Bike ride",
+                "startDate"  : "2021-11-19T11:00",
+                "endDate"    : "2021-11-19T13:00",
+                "resourceId" : "alex",
+                "progress"   : "done"
+            },
+            {
+                "id"         : "10",
+                "name"       : "Hackathon event",
+                "startDate"  : "2021-11-19T14:00",
+                "endDate"    : "2021-11-19T19:00",
+                "resourceId" : "johan",
+                "progress"   : "todo"
+            },
+            {
+                "id"         : "11",
+                "name"       : "Meet Johan",
+                "startDate"  : "2021-11-17T17:00",
+                "endDate"    : "2021-11-17T19:00",
+                "resourceId" : "alex",
+                "progress"   : "todo"
+            },
+            {
+                "id"         : "12",
+                "name"       : "Shave dog",
+                "startDate"  : "2021-11-16T09:00",
+                "endDate"    : "2021-11-16T12:00",
+                "resourceId" : "sergey",
+                "progress"   : "done"
+            },
+            {
+                "id"         : "13",
+                "name"       : "Product presentation",
+                "startDate"  : "2021-11-18T09:00",
+                "endDate"    : "2021-11-18T12:00",
+                "resourceId" : "sergey",
+                "progress"   : "todo"
+            },
+            {
+                "id"         : "14",
+                "name"       : "Flight to Pula",
+                "startDate"  : "2021-11-16T16:00",
+                "endDate"    : "2021-11-16T21:00",
+                "resourceId" : "sergey",
+                "progress"   : "in-progress"
+            },
+            {
+                "id"         : "15",
+                "name"       : "Visit restaurant",
+                "startDate"  : "2021-11-18T18:00",
+                "endDate"    : "2021-11-18T21:00",
+                "resourceId" : "johan",
+                "progress"   : "todo"
+            },
+            {
+                "id"         : "16",
+                "name"       : "Sightseeing tour",
+                "startDate"  : "2021-11-20T09:00",
+                "endDate"    : "2021-11-20T17:00",
+                "resourceId" : "johan",
+                "progress"   : "in-progress"
+            },
+            {
+                "id"         : "17",
+                "name"       : "Drive to Pula",
+                "startDate"  : "2021-11-16T12:30",
+                "endDate"    : "2021-11-16T14:00",
+                "resourceId" : "alex",
+                "progress"   : "in-progress"
+            },
+            {
+                "id"         : "18",
+                "name"       : "Online webinar",
+                "startDate"  : "2021-11-18T13:00",
+                "endDate"    : "2021-11-18T16:00",
+                "resourceId" : "johan",
+                "progress"   : "todo"
+            },
+            {
+                "id"         : "19",
+                "name"       : "Sightseeing tour",
+                "startDate"  : "2021-11-20T09:00",
+                "endDate"    : "2021-11-20T17:00",
+                "resourceId" : "sergey",
+                "progress"   : "todo"
+            },
+            {
+                "id"         : "20",
+                "name"       : "Sightseeing tour",
+                "startDate"  : "2021-11-20T09:00",
+                "endDate"    : "2021-11-20T17:00",
+                "resourceId" : "alex",
+                "progress"   : "done"
+            },
+            {
+                "id"         : "21",
+                "name"       : "Book Villa",
+                "startDate"  : "2021-11-16T14:15",
+                "endDate"    : "2021-11-16T17:00",
+                "resourceId" : "johan",
+                "progress"   : "todo"
+            }
+        ]
+    }
+}

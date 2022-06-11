@@ -1,0 +1,6 @@
+{
+    "[data-ref=transactionsCombo]": {
+        "title": "Undo/redo",
+        "content": "After you change events in the calendar, you can use these controls to undo or redo your actions"
+    }
+}

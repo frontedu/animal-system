@@ -1,0 +1,11 @@
+{
+    "delay" : 1000,
+    "[data-ref=fit]" : {
+        "maxWidth" : "21em",
+        "align" : {
+            "align" : "l-r"
+        },
+        "title" : "Fit to available space",
+        "content" : "This demo renders the timeline to exactly fit the available space and monitors resizing automatically"
+    }
+}

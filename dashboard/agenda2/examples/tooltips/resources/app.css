@@ -1,0 +1,54 @@
+.b-sch-event.b-sch-event-wrap.b-sch-style-plain {
+  border-right: 1px solid #fff;
+}
+
+.resource-image {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+
+.b-sch-event-tooltip {
+  min-width: 190px;
+}
+
+.b-sch-event-tooltip dl,
+.b-sch-event-tooltip dt,
+.b-sch-event-tooltip dd {
+  padding: 0;
+  margin: 0;
+}
+
+.b-sch-event-tooltip dd {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0.3em;
+  line-height: 1em;
+}
+
+.b-sch-event-tooltip dt {
+  font-weight: bold;
+}
+
+.b-sch-event-tooltip dt:not(:first-child) {
+  margin-top: 1em;
+}
+
+.b-sch-event-tooltip dd .image {
+  height: 250px;
+}
+
+@media (max-height: 800px) {
+  .b-sch-event-tooltip dd .image {
+    height: 150px;
+  }
+}
+@media (max-width: 320px) {
+  .b-sch-event-tooltip dd .image {
+    height: 100px;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

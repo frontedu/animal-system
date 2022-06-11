@@ -1,0 +1,163 @@
+{
+    "success"     : true,
+    "resources"   : {
+        "rows" : [
+            {
+                "id"         : "r1",
+                "name"       : "Celia",
+                "city"       : "Barcelona",
+                "eventColor" : "red",
+                "image"      : "celia.jpg"
+            },
+            {
+                "id"         : "r2",
+                "name"       : "Lee",
+                "city"       : "London",
+                "eventColor" : "purple",
+                "image"      : "lee.jpg"
+            },
+            {
+                "id"         : "r3",
+                "name"       : "Macy",
+                "city"       : "New York",
+                "eventColor" : "blue",
+                "image"      : "macy.jpg"
+            },
+            {
+                "id"         : "r4",
+                "name"       : "Madison",
+                "city"       : "Barcelona",
+                "eventColor" : "teal",
+                "image"      : "madison.jpg"
+            },
+            {
+                "id"         : "r5",
+                "name"       : "Rob",
+                "city"       : "Rome",
+                "eventColor" : "green",
+                "image"      : "rob.jpg"
+            },
+            {
+                "id"         : "r6",
+                "name"       : "Dave",
+                "city"       : "Barcelona",
+                "eventColor" : "yellow",
+                "image"      : "dave.jpg"
+            },
+            {
+                "id"         : "r7",
+                "name"       : "Dan",
+                "city"       : "London",
+                "eventColor" : "deep-orange",
+                "image"      : "dan.jpg"
+            }
+        ]
+    },
+    "events"      : {
+        "rows" : [
+            {
+                "id"        : 1,
+                "startDate" : "2020-12-31T10:00",
+                "endDate"   : "2020-12-31T12:00",
+                "iconCls"   : "b-fa b-fa-utensils",
+                "name"      : "Cook lunch"
+            },
+            {
+                "id"         : 2,
+                "startDate"  : "2021-01-01T13:00",
+                "endDate"    : "2021-01-01T15:00",
+                "name"       : "Set up tent",
+                "iconCls"    : "b-fa b-fa-campground",
+                "eventColor" : "indigo"
+            },
+            {
+                "id"         : 3,
+                "startDate"  : "2020-12-29T8:00",
+                "endDate"    : "2020-12-29T11:00",
+                "name"       : "Get firewood",
+                "iconCls"    : "b-fa b-fa-tree",
+                "eventColor" : "cyan"
+            },
+            {
+                "id"         : 4,
+                "startDate"  : "2020-12-30T10:00",
+                "endDate"    : "2020-12-30T13:00",
+                "iconCls"    : "b-fa b-fa-tint",
+                "name"       : "Boil water",
+                "eventColor" : "blue"
+            },
+            {
+                "id"         : 5,
+                "startDate"  : "2021-01-02T13:00",
+                "endDate"    : "2021-01-02T15:00",
+                "name"       : "Make fire",
+                "iconCls"    : "b-fa b-fa-fire-alt",
+                "eventColor" : "violet"
+            }
+        ]
+    },
+    "assignments" : {
+        "rows" : [
+            {
+                "id"         : 1,
+                "resourceId" : "r1",
+                "eventId"    : 1
+            },
+            {
+                "id"         : 2,
+                "resourceId" : "r2",
+                "eventId"    : 1
+            },
+            {
+                "id"         : 3,
+                "resourceId" : "r3",
+                "eventId"    : 1
+            },
+            {
+                "id"         : 4,
+                "resourceId" : "r4",
+                "eventId"    : 2
+            },
+            {
+                "id"         : 5,
+                "resourceId" : "r5",
+                "eventId"    : 2
+            },
+            {
+                "id"         : 6,
+                "resourceId" : "r6",
+                "eventId"    : 3
+            },
+            {
+                "id"         : 7,
+                "resourceId" : "r7",
+                "eventId"    : 3
+            },
+            {
+                "id"         : 8,
+                "resourceId" : "r4",
+                "eventId"    : 4
+            },
+            {
+                "id"         : 9,
+                "resourceId" : "r3",
+                "eventId"    : 4
+            },
+            {
+                "id"         : 10,
+                "resourceId" : "r1",
+                "eventId"    : 2
+            },
+            {
+                "id"         : 11,
+                "resourceId" : "r6",
+                "eventId"    : 5
+            },
+            {
+                "id"         : 12,
+                "resourceId" : "r3",
+                "eventId"    : 5
+            }
+        ]
+    }
+}

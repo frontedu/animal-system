@@ -1,0 +1,20 @@
+/**
+ * Application global styles
+ */
+@import '~@bryntum/calendar/calendar.stockholm.css';
+@import '~@bryntum/demo-resources/scss/example.scss';
+
+// hide default view selector
+[data-ref='modeSelector'].b-buttongroup {
+    display : none;
+}
+
+.active-view {
+    margin-right : 0.6em;
+    font-size    : 1.2em;
+    font-weight  : 400;
+    color        : #4f5964;
+    label {
+        opacity : 0.6;
+    }
+}

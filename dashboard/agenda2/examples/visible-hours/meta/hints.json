@@ -1,0 +1,15 @@
+{
+    "delay" : 1000,
+    ".b-weekview .b-dayview-timeaxis-time:nth-child(3)" : {
+        "maxWidth" : "21em",
+        "align" : {
+            "align" : "l-r"
+        },
+        "title" : "Custom day duration",
+        "content" : "This demo renders only hours from 4am to 10pm and initially scrolls to 7am through <code>dayStartTime</code>, <code>dayEndTime</code> and <code>visibleStartTime</code> configs"
+    },
+    "[data-ref=\"coreHoursOverlayDay\"]" : {
+        "align" : "l-r",
+        "content" : "The <code>coreHours</code> config may be set to overlay the day section"
+    }
+}

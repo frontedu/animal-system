@@ -1,0 +1,6 @@
+{
+    "bryntum-calendar": {
+        "title": "Custom element",
+        "content": "The calendar below is created using a custom element called &lt;bryntum-calendar&gt;. See source for details"
+    }
+}

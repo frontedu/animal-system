@@ -1,0 +1,348 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>GanttEventsScheduling | scheduling-engine</title>
+	<meta name="description" content="Documentation for scheduling-engine">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">scheduling-engine</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_docs_src_gantt_events_scheduling_.html">&quot;docs_src/gantt_events_scheduling&quot;</a>
+				</li>
+				<li>
+					<a href="_docs_src_gantt_events_scheduling_.gantteventsscheduling.html">GanttEventsScheduling</a>
+				</li>
+			</ul>
+			<h1>Class GanttEventsScheduling</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#gantt-event-scheduling" id="gantt-event-scheduling" style="color: inherit; text-decoration: none;">
+							<h1>Gantt event scheduling</h1>
+						</a>
+						<a href="#manually-scheduled-events" id="manually-scheduled-events" style="color: inherit; text-decoration: none;">
+							<h2>Manually scheduled events</h2>
+						</a>
+						<p>An event can be either <strong>automatically</strong> (default) or <strong>manually</strong> scheduled. This is defined by the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#manuallyscheduled">manuallyScheduled</a> event flag.
+						Events that are manually scheduled are not affected by the automatic rescheduling process, they are meant to be adjusted manually by a user.</p>
+						<a href="#inactive-tasks" id="inactive-tasks" style="color: inherit; text-decoration: none;">
+							<h2>Inactive tasks</h2>
+						</a>
+						<p>Please note that any event can be excluded from the scheduling process by deactivating it.
+							This can be done by setting its <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#inactive">inactive</a> field to <code>true</code>.
+						Such <strong>inactive events</strong> do not push their linked tasks nor do they rollup their attributes to parent events.</p>
+						<a href="#automatic-event-scheduling" id="automatic-event-scheduling" style="color: inherit; text-decoration: none;">
+							<h2>Automatic event scheduling</h2>
+						</a>
+						<p>The Gantt scheduling engine will update start and end dates of automatically scheduled events based on their constraints, links and position in the task hierarchy.
+							This means that the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#startdate">startDate</a> and <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#enddate">endDate</a> will be revalidated and
+						might be recalculated as soon as the event is added or loaded to a project.</p>
+						<a href="#project-direction" id="project-direction" style="color: inherit; text-decoration: none;">
+							<h3>Project direction</h3>
+						</a>
+						<p>The Gantt engine supports both forward and backward scheduling, controlled by
+						the <a href="_lib_engine_quark_model_gantt_ganttprojectmixin_.ganttprojectmixin.html#direction">project direction</a> config.</p>
+						<a href="#forward-scheduled-project" id="forward-scheduled-project" style="color: inherit; text-decoration: none;">
+							<h4>Forward scheduled project</h4>
+						</a>
+						<p>In a forward scheduled project (default), the Gantt engine schedules events as soon as possible (ASAP).
+							For such projects, the <a href="_lib_engine_quark_model_gantt_ganttprojectmixin_.ganttprojectmixin.html#startdate">start date</a> is mandatory and sets an implicit <a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#startnoearlierthan">Start no earlier than</a> constraint
+						(see constraint details in below chapters) inherited by all events. This means any event having no restrictions will fall back to that date.</p>
+						<p>The <a href="_lib_engine_quark_model_gantt_ganttprojectmixin_.ganttprojectmixin.html#enddate">end date</a> of a forward scheduled project is a calculated value equal to the latest <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#enddate">end date</a> of its events.</p>
+						<a href="#backward-scheduled-project" id="backward-scheduled-project" style="color: inherit; text-decoration: none;">
+							<h4>Backward scheduled project</h4>
+						</a>
+						<p>In a backward scheduled project, the Gantt engine schedules events as late as possible (ALAP).
+							In such a project, the <a href="_lib_engine_quark_model_gantt_ganttprojectmixin_.ganttprojectmixin.html#enddate">end date</a> value is mandatory and the <a href="_lib_engine_quark_model_gantt_ganttprojectmixin_.ganttprojectmixin.html#startdate">start date</a> is calculated as the earliest <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#startdate">start date</a> of the project events.
+							The project <a href="_lib_engine_quark_model_gantt_ganttprojectmixin_.ganttprojectmixin.html#enddate">end date</a> creates an implicit <a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#finishnolaterthan">Finish no later than</a> constraint inherited by all events.
+						This means that any event with no restrictions will fall back to finish on that date.</p>
+						<a href="#propagating-changes-through-event-dependencies" id="propagating-changes-through-event-dependencies" style="color: inherit; text-decoration: none;">
+							<h3>Propagating changes through event dependencies</h3>
+						</a>
+						<p>When an Event changes, its linked tasks will be rescheduled automatically.
+							In forward scheduled projects, successors react on their predecessor changes and in backward scheduled projects,
+						the predecessors react to changes made in their successors.</p>
+						<p>How dependent events will be updated after a modification depends on the <a href="_lib_engine_quark_model_scheduler_pro_schedulerprodependencymixin_.schedulerprodependencymixin.html#type">dependency type</a>.
+						The Gantt engine supports the following four types of dependencies:</p>
+						<ul>
+							<li>Finish-to-Start (default)</li>
+							<li>Start-to-Start</li>
+							<li>Finish-to-Finish</li>
+							<li>Start-to-Finish</li>
+						</ul>
+						<a href="#finish-to-start" id="finish-to-start" style="color: inherit; text-decoration: none;">
+							<h4>Finish-to-Start</h4>
+						</a>
+						<img src="../media/dependency-fs.png" alt="Finish-to-Start dependency" class="b-">
+						<p>The default type of a dependency is &quot;Finish-to-Start&quot; (FS). This type of dependency restricts the dependent event
+						to not start earlier than the end date of the preceding event.</p>
+						<a href="#start-to-start" id="start-to-start" style="color: inherit; text-decoration: none;">
+							<h4>Start-to-Start</h4>
+						</a>
+						<img src="../media/dependency-ss.png" alt="Start-to-Start dependency" class="b-">
+						<p>With this dependency type, the succeeding event is delayed to not start earlier than the start of the preceding event.</p>
+						<a href="#finish-to-finish" id="finish-to-finish" style="color: inherit; text-decoration: none;">
+							<h4>Finish-to-Finish</h4>
+						</a>
+						<img src="../media/dependency-ff.png" alt="Finish-to-Finish dependency" class="b-">
+						<p>The succeeding event cannot finish before the completion of the preceding event.</p>
+						<a href="#start-to-finish" id="start-to-finish" style="color: inherit; text-decoration: none;">
+							<h4>Start-to-Finish</h4>
+						</a>
+						<img src="../media/dependency-sf.png" alt="Start-to-Finish dependency" class="b-">
+						<p>The finish of the succeeding event is constrained by the start of the preceding event. The successor cannot finish
+						before the predecessor starts.</p>
+						<a href="#dependency-lead-and-lag" id="dependency-lead-and-lag" style="color: inherit; text-decoration: none;">
+							<h4>Dependency lead and lag</h4>
+						</a>
+						<p>A <a href="_lib_engine_quark_model_scheduler_pro_schedulerprodependencymixin_.schedulerprodependencymixin.html">dependency</a> can have a <a href="_lib_engine_quark_model_scheduler_pro_schedulerprodependencymixin_.schedulerprodependencymixin.html#lag">lag (or lead)</a> value which
+						can delay the succeeding event by the number of <a href="_lib_engine_quark_model_scheduler_pro_schedulerprodependencymixin_.schedulerprodependencymixin.html#lagunit">lag units</a> specified.</p>
+						<img src="engine/media/dependency-lag.png" alt="Dependency lag" class="b-">
+						<p>Lead (or &quot;negative lag&quot;) will accelerate the succeeding event by the number of time units specified.</p>
+						<img src="engine/media/dependency-lead.png" alt="Dependency lead" class="b-">
+						<p><strong>Please note</strong>, the <a href="_lib_engine_quark_model_scheduler_pro_schedulerprodependencymixin_.schedulerprodependencymixin.html#lag">lag</a> value specifies the amount of <strong>working time</strong>. The
+							calendar controlling which time to use is defined by the <a href="_lib_engine_quark_model_scheduler_pro_schedulerprodependencymixin_.schedulerprodependencymixin.html#calendar">calendar</a> field. By
+						default, the successor calendar is used.</p>
+						<a href="#event-constraint-effect-on-the-scheduling" id="event-constraint-effect-on-the-scheduling" style="color: inherit; text-decoration: none;">
+							<h3>Event constraint effect on the scheduling</h3>
+						</a>
+						<p>An event constraint defines boundaries for the schedulable date range of an event and it is taken into account
+						when the engine schedules the project events.</p>
+						<p>A constraint is a combination of two event properties: <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#constrainttype">constraintType</a> and <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#constraintdate">constraintDate</a>.
+							The date range specified by a constraint, restricts the event start / end dates to be <strong>not earlier than</strong>,
+						<strong>not later than</strong> or <strong>equal</strong> to the provided <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#constraintdate">constraintDate</a>.</p>
+						<p>As mentioned above, an event having no restrictions is scheduled on the project start for forward projects
+							(and on the project end date for backward projects). When an event is manually dragged by a user in a Gantt chart,
+							the Gantt enforces the position by setting a constraint on the event.
+						In a forward scheduled project it uses:</p>
+						<ul>
+							<li><a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#startnoearlierthan">Start no earlier than</a> (SNET) constraint when the event is moved by changing its <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#startdate">start date</a></li>
+							<li><a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#finishnoearlierthan">Finish no earlier than</a> (FNET) constraint when the event is moved by changing its <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#enddate">end date</a>.</li>
+						</ul>
+						<p>And for a backward scheduled project it uses:</p>
+						<ul>
+							<li><a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#startnolaterthan">Start no later than</a> (SNLT) constraint when the event is moved by changing its <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#startdate">start date</a></li>
+							<li><a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#finishnolaterthan">Finish no later than</a> (FNLT) constraint when the event is moved by changing its <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#enddate">end date</a>.</li>
+						</ul>
+						<p>The way a constraint affects an event depends on its <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#constrainttype">type</a>. There are two group of
+						constraints available:</p>
+						<ul>
+							<li>Inflexible constraints.</li>
+							<li>Semi-flexible constraints.</li>
+						</ul>
+						<a href="#inflexible-constraints" id="inflexible-constraints" style="color: inherit; text-decoration: none;">
+							<h4>Inflexible constraints</h4>
+						</a>
+						<p>There are two constraint types in this group: <a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#muststarton">Must start on</a> (MSO) and <a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#mustfinishon">Must finish on</a> (MFO).
+						They force an event to start / finish exactly on the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#constraintdate">date</a> provided.</p>
+						<a href="#semi-flexible-constraints" id="semi-flexible-constraints" style="color: inherit; text-decoration: none;">
+							<h4>Semi-flexible constraints</h4>
+						</a>
+						<p>These constraints share the same priority with event dependencies. They all work together respecting the event working time:</p>
+						<ul>
+							<li><a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#startnoearlierthan">Start no earlier than</a> (SNET) - restricts the event to start on or after the specified date.</li>
+							<li><a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#finishnoearlierthan">Finish no earlier than</a> (FNET) - restricts the event to finish on or after the specified date.</li>
+							<li><a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#startnolaterthan">Start no later than</a> (SNLT) - restricts the event to start before (or on) the specified date.</li>
+							<li><a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#finishnolaterthan">Finish no later than</a> (FNLT) - restricts the event to finish before (or on) the specified date.</li>
+						</ul>
+						<p>Effectively, the event start/end dates are calculated as aggregated values taking into account both dependencies
+							and such constraints. The earliest start date for an event is computed as the latest of the earliest start allowed by
+						its constraint and the earliest start allowed by its dependencies.</p>
+						<p>An example: Event A has two incoming dependencies which don&#39;t allow it to start earlier than <em>01/18/2017</em> and the event
+							has a SNET constraint which forces it to start not earlier than <em>01/17/2017</em>. In this case, the resulting earliest
+							start date of the event is <em>01/18/2017</em>. If we change the constraint date to <em>01/19/2017</em> the resulting earliest start
+						date will become <em>01/19/2017</em>.</p>
+						<a href="#taking-into-account-the-project-hierarchy" id="taking-into-account-the-project-hierarchy" style="color: inherit; text-decoration: none;">
+							<h2>Taking into account the project hierarchy</h2>
+						</a>
+						<p>When scheduling events, the Gantt engine takes the hierarchy into account by following these two principles:</p>
+						<ul>
+							<li>Each event inherits its parent (<em>summary</em>) event restrictions (dependencies and constraints).</li>
+							<li>A summary event <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#startdate">start date</a> and <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#enddate">end date</a> should match the minimum
+								<a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#startdate">start date</a> and maximum <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#enddate">end date</a> of its children respectively. Its
+								<a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a> equals the sum of the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a> values of all its children.
+								The <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#percentdone">% completed</a> value of a parent event is derived from its children,
+							summarizing the completed duration divided by the total duration of all children.</li>
+						</ul>
+						<p><strong>FYI:</strong> calculation of % done for parent tasks can be disabled by setting
+						<a href="_lib_engine_quark_model_gantt_ganttprojectmixin_.ganttprojectmixin.html#autocalculatepercentdoneforparenttasks">autoCalculatePercentDoneForParentTasks</a> to <code>false</code>.</p>
+						<p>Following the above rules, the Gantt engine recalculates summary events when their children are updated. The same
+						goes for the reverse case, child events will react to changes to constraints and dependencies of their parents.</p>
+						<a href="#event-scheduling-mode" id="event-scheduling-mode" style="color: inherit; text-decoration: none;">
+							<h2>Event scheduling mode</h2>
+						</a>
+						<p>Unlike the dependencies and constraints affecting the event position on the time axis,
+							the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#schedulingmode">scheduling mode</a> specifies how the event´s own properties depend on each other.
+						It defines which properties are <strong>fixed</strong> (provided by user) and which ones should be <strong>calculated</strong>.</p>
+						<p>There are four <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#schedulingmode">scheduling modes</a> available in the Gantt engine:</p>
+						<ul>
+							<li>Normal (default mode).</li>
+							<li>Fixed Duration</li>
+							<li>Fixed Effort</li>
+							<li>Fixed Units</li>
+						</ul>
+						<p>There is also an additional <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effortdriven">effortDriven</a> flag allowing to fix
+							the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">event effort</a> value. When set, it tells the event to preserve its <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a>
+						value and instead recalculate other properties.</p>
+						<a href="#normal" id="normal" style="color: inherit; text-decoration: none;">
+							<h3>Normal</h3>
+						</a>
+						<p>In the Normal mode (default), the event is scheduled based on information about its start / end dates.
+						The event <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a> and <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#assigned">assignments</a> are not calculated in this mode.</p>
+						<p>This mode is always used for summary events.</p>
+						<p>The <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effortdriven">effortDriven</a> flag is not used in this mode.</p>
+						<a href="#fixed-duration" id="fixed-duration" style="color: inherit; text-decoration: none;">
+							<h3>Fixed Duration</h3>
+						</a>
+						<p>Fixed Duration mode means that the event has fixed <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#startdate">start</a> and <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#enddate">end</a> dates
+							and <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#duration">duration</a>, but its <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a> is computed dynamically
+						based on the assigned resources.</p>
+						<p>A typical example of such an event is a meeting. Meetings typically have pre-defined start and end dates and the
+							more people are participating in the meeting, the more effort is spent on the event.
+						When duration of such event increases, its effort gets increased too.</p>
+						<p>Changes to the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a> of such an event will cause assignment units recalculation and vice-versa
+						(assignments change will cause recalculation of the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a>).</p>
+						<p>Enabling <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effortdriven">effortDriven</a> for an event will change that behavior and force the event to
+							<strong>always</strong> recalculate its assignment units whenever the event changes its <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#duration">duration</a> or
+						<a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a>.</p>
+						<p><strong>NOTE:</strong> calculations provided by this mode work only if the event has at least one resource assigned.</p>
+						<a href="#fixed-effort" id="fixed-effort" style="color: inherit; text-decoration: none;">
+							<h3>Fixed Effort</h3>
+						</a>
+						<p>Fixed Effort mode means that event has a fixed <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a> and computed <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#duration">duration</a>.
+						The more resources are assigned to the event, the less the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#duration">duration</a> will be.</p>
+						<p>A typical example is a &quot;paint the walls&quot; task - several painters will complete it faster.</p>
+						<p>Enabling the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effortdriven">effortDriven</a> flag makes no sense in this mode.</p>
+						<p><strong>NOTE:</strong> calculations provided by this mode work only if the event has at least one resource assigned.</p>
+						<a href="#fixed-units" id="fixed-units" style="color: inherit; text-decoration: none;">
+							<h3>Fixed Units</h3>
+						</a>
+						<p>Fixed Units mode means, that event has fixed <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#assigned">assignments</a> and computed <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#duration">duration</a>
+						or <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a>.</p>
+						<p>Changes to the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a> of such an event will cause <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#duration">duration</a> recalculation and
+						vice-versa (<a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#duration">duration</a> change will cause recalculation of <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a>).</p>
+						<p>Changes of the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#assigned">assignment</a> of such an event will cause <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effort">effort</a> recalculation
+						and <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#duration">duration</a> recalculation if the <a href="_lib_engine_quark_model_gantt_ganttevent_.ganttevent.html#effortdriven">effortDriven</a> flag is enabled.</p>
+						<p><strong>NOTE:</strong> calculations provided by this mode work only if the event has at least one resource assigned.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">GanttEventsScheduling</span>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/_docs_src_gantt_events_scheduling_.html">&quot;docs_<wbr>src/gantt_<wbr>events_<wbr>scheduling&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="_docs_src_gantt_events_scheduling_.gantteventsscheduling.html" class="tsd-kind-icon">Gantt<wbr>Events<wbr>Scheduling</a>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

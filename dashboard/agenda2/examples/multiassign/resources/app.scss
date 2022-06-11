@@ -1,0 +1,38 @@
+.b-cal-event {
+    .b-cal-event-icon {
+        &:before {
+            font-size : 1em;
+        }
+    }
+
+    .b-cal-event-name {
+        margin-inline-start : 0;
+        flex : 1;
+    }
+
+    small {
+        display       : block;
+        margin-bottom : 1em;
+    }
+
+    .b-cal-event-resource-avatars {
+        display         : flex;
+        align-items     : center;
+        justify-content : flex-end;
+        padding         : 0.5em 0;
+
+        img {
+            width         : 2em;
+            height        : 2em;
+            border-color  : inherit!important;
+            margin-left   : -0.6em;
+            transition    : transform .2s;
+        }
+
+        img:hover {
+            transform : scale(2);
+            z-index   : 1;
+        }
+    }
+}
+

@@ -1,0 +1,28 @@
+<bryntum-demo-header
+    link = "../../../../../#example-frameworks-angular-filtering"
+></bryntum-demo-header>
+
+<div class = "demo-toolbar align-right">
+    <bryntum-text-field
+        label = "Filter tasks by name"
+        clearable = true
+        keyStrokeChangeDelay = 100
+        [triggers] = "filterTriggers"
+        (onChange) = "onFindChange($event)"
+    ></bryntum-text-field>
+    <bryntum-text-field
+        label = "Highlight tasks"
+        clearable = true
+        keyStrokeChangeDelay = 100
+        [triggers] = "highlightTriggers"
+        (onChange) = "onHighlightChange($event)"
+    ></bryntum-text-field>
+</div>
+
+<bryntum-calendar
+    [crudManager] = "calendarConfig.crudManager"
+    [eventEditFeature] = "calendarConfig.features.eventEdit"
+    [date] = "calendarConfig.date"
+    [modes] = "calendarConfig.modes"
+    (onCatchAll) = "onCalendarEvents($event)"
+></bryntum-calendar>

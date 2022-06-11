@@ -1,0 +1,14 @@
+:host {
+    font-family    : Roboto, sans-serif;
+    height         : 100%;
+    display        : flex;
+    flex-direction : column;
+}
+
+ion-toolbar  {
+    padding             : 1.5em .5em 1.5em 4em;
+    background          : url(~@bryntum/demo-resources/images/logo_bryntum_bw.png) #2667C8;
+    background-repeat   : no-repeat;
+    background-size     : 30px;
+    background-position : center left 1.5em;
+}

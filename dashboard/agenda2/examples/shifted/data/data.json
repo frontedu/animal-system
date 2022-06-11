@@ -1,0 +1,182 @@
+{
+    "success"    : true,
+    "resources"  : {
+        "rows" : [
+            {
+                "id"         : "assembly",
+                "name"       : "Assembly team",
+                "eventColor" : "blue"
+            },
+            {
+                "id"         : "meetingRoom",
+                "name"       : "Meeting Room",
+                "eventColor" : "orange"
+            },
+            {
+                "id"         : "michael",
+                "name"       : "Michael Johnson",
+                "eventColor" : "deep-orange"
+            }
+        ]
+    },
+    "events" : {
+        "rows"    : [
+            {
+                "id"         : 1,
+                "startDate"  : "2020-10-11T18:00:00",
+                "endDate"    : "2020-10-18T18:00:00",
+                "name"       : "New product release",
+                "resourceId" : "assembly",
+                "eventColor" : "green"
+            },
+            {
+                "id"         : 2,
+                "startDate"  : "2020-10-11T23:00:00",
+                "endDate"    : "2020-10-12T05:00:00",
+                "name"       : "Recognition/Awards",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 3,
+                "startDate"  : "2020-10-11T18:00:00",
+                "endDate"    : "2020-10-11T20:00:00",
+                "name"       : "Launch party",
+                "resourceId" : "michael"
+            },
+            {
+                "id"         : 5,
+                "startDate"  : "2020-10-12T20:00:00",
+                "endDate"    : "2020-10-12T21:00:00",
+                "name"       : "Team sync up",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 7,
+                "startDate"  : "2020-10-12T21:00:00",
+                "endDate"    : "2020-10-12T23:00:00",
+                "name"       : "Product introduction + review",
+                "resourceId" : "assembly"
+            },
+            {
+                "id"         : 8,
+                "startDate"  : "2020-10-12T23:30:00",
+                "endDate"    : "2020-10-13T00:30:00",
+                "name"       : "Lunch",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 9,
+                "startDate"  : "2020-10-12T18:00:00",
+                "endDate"    : "2020-10-13T18:00:00",
+                "name"       : "Kick-off Day",
+                "resourceId" : "assembly"
+            },
+            {
+                "id"         : 10,
+                "startDate"  : "2020-10-13T06:00:00",
+                "endDate"    : "2020-10-13T07:00:00",
+                "name"       : "End shift meeting",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 11,
+                "startDate"  : "2020-10-13T20:00:00",
+                "endDate"    : "2020-10-13T21:00:00",
+                "name"       : "Team sync up",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 14,
+                "startDate"  : "2020-10-13T23:30:00",
+                "endDate"    : "2020-10-14T00:30:00",
+                "name"       : "Lunch",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 16,
+                "startDate"  : "2020-10-14T06:00:00",
+                "endDate"    : "2020-10-14T07:00:00",
+                "name"       : "End shift meeting",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 17,
+                "startDate"  : "2020-10-14T20:00:00",
+                "endDate"    : "2020-10-14T21:00:00",
+                "name"       : "Team sync up",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 18,
+                "startDate"  : "2020-10-14T23:30:00",
+                "endDate"    : "2020-10-15T00:30:00",
+                "name"       : "Lunch",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 19,
+                "startDate"  : "2020-10-15T08:00:00",
+                "endDate"    : "2020-10-15T12:00:00",
+                "name"       : "Team Building",
+                "resourceId" : "michael",
+                "eventColor" : "green"
+            },
+            {
+                "id"         : 20,
+                "startDate"  : "2020-10-15T20:00:00",
+                "endDate"    : "2020-10-15T21:00:00",
+                "name"       : "Team sync up",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 21,
+                "startDate"  : "2020-10-15T23:30:00",
+                "endDate"    : "2020-10-16T00:30:00",
+                "name"       : "Lunch",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 22,
+                "startDate"  : "2020-10-15T06:00:00",
+                "endDate"    : "2020-10-15T07:00:00",
+                "name"       : "End shift meeting",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 23,
+                "startDate"  : "2020-10-16T06:00:00",
+                "endDate"    : "2020-10-16T07:00:00",
+                "name"       : "End shift meeting",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 24,
+                "startDate"  : "2020-10-16T20:00:00",
+                "endDate"    : "2020-10-16T21:00:00",
+                "name"       : "Team sync up",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 25,
+                "startDate"  : "2020-10-16T23:30:00",
+                "endDate"    : "2020-10-17T00:30:00",
+                "name"       : "Lunch",
+                "resourceId" : "meetingRoom"
+            },
+            {
+                "id"         : 26,
+                "startDate"  : "2020-10-17T05:00:00",
+                "endDate"    : "2020-10-17T07:00:00",
+                "name"       : "Retrospective/Postmortem; brainstorm improvements for next week",
+                "resourceId" : "michael"
+            },
+            {
+                "id"         : 27,
+                "startDate"  : "2020-10-16T18:00:00",
+                "endDate"    : "2020-10-17T18:00:00",
+                "name"       : "Stretch Day",
+                "resourceId" : "assembly"
+            }
+        ]
+    }
+}

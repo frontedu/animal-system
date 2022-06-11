@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "tui-calendar": "^1.15.3"
+  }
+}

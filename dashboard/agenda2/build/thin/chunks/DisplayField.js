@@ -1,0 +1,10 @@
+/*!
+ *
+ * Bryntum Calendar 5.0.5 (TRIAL VERSION)
+ *
+ * Copyright(c) 2022 Bryntum AB
+ * https://bryntum.com/contact
+ * https://bryntum.com/license
+ *
+ */
+function B(G,K){return p(G-0x31f,K);}(function(G,K){var P=G();function w(G,K){return p(K- -0x25e,G);}while(!![]){try{var S=-parseInt(w(-0x7e,-0x7d))/0x1+parseInt(w(-0x82,-0x81))/0x2*(parseInt(w(-0x78,-0x77))/0x3)+-parseInt(w(-0x90,-0x84))/0x4+parseInt(w(-0x6e,-0x76))/0x5*(-parseInt(w(-0x72,-0x72))/0x6)+-parseInt(w(-0x6b,-0x79))/0x7*(-parseInt(w(-0x7d,-0x7a))/0x8)+-parseInt(w(-0x90,-0x85))/0x9*(parseInt(w(-0x82,-0x83))/0xa)+parseInt(w(-0x77,-0x7f))/0xb;if(S===K)break;else P['push'](P['shift']());}catch(y){P['push'](P['shift']());}}}(g,0x9b396));import{TextField,StringHelper}from'./Editor.js';class DisplayField extends TextField{static get[B(0x4ff,0x4fd)](){return'DisplayField';}static get[B(0x509,0x50c)](){function Z(G,K){return B(G- -0x4b0,K);}return Z(0x5c,0x61);}static get[B(0x510,0x513)](){function a(G,K){return B(K- -0x3f0,G);}return a(0x111,0x111);}static get[B(0x502,0x50e)](){function k(G,K){return B(G- -0x553,K);}return{'readOnly':!![],'editable':![],'cls':k(-0x56,-0x4a),'template':null,'ariaElement':k(-0x45,-0x3d)};}get['focusElement'](){}['changeReadOnly'](){return!![];}[B(0x50d,0x518)](){return![];}get['inputElement'](){function C(G,K){return B(G-0xa2,K);}return{'tag':'span','id':this['id']+C(0x5ac,0x5a3),'reference':C(0x5b0,0x5ad),'html':this[C(0x59d,0x598)]?this[C(0x59d,0x5a3)](this[C(0x5b1,0x5b6)]):StringHelper[C(0x5a7,0x5a6)](this[C(0x5b1,0x5ba)])};}}DisplayField[B(0x508,0x50c)](),DisplayField[B(0x512,0x51d)]=B(0x511,0x518);function p(G,K){var P=g();return p=function(S,y){S=S-0x1d9;var w=P[S];return w;},p(G,K);}function g(){var m=['DisplayField','_$name','27iaxoel','2463456GDJpWC','3758140Pvdzlt','template','6bnDtOI','b-display-field','21543258TLKLxv','$name','322455ULmOsu','display','configurable','16Vtkeku','1677046tFYuGb','encodeHtml','529398gFkxog','442455jzZMcD','initClass','type','-input','18DMpPkh','displayfield','changeEditable','displayElement','value','alias'];g=function(){return m;};return g();}export{DisplayField};

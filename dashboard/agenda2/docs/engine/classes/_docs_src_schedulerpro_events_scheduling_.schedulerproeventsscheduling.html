@@ -1,0 +1,256 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SchedulerProEventsScheduling | scheduling-engine</title>
+	<meta name="description" content="Documentation for scheduling-engine">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">scheduling-engine</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_docs_src_schedulerpro_events_scheduling_.html">&quot;docs_src/schedulerpro_events_scheduling&quot;</a>
+				</li>
+				<li>
+					<a href="_docs_src_schedulerpro_events_scheduling_.schedulerproeventsscheduling.html">SchedulerProEventsScheduling</a>
+				</li>
+			</ul>
+			<h1>Class SchedulerProEventsScheduling</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#scheduler-pro-event-scheduling" id="scheduler-pro-event-scheduling" style="color: inherit; text-decoration: none;">
+							<h1>Scheduler Pro event scheduling</h1>
+						</a>
+						<a href="#manually-and-automatically-scheduled-events" id="manually-and-automatically-scheduled-events" style="color: inherit; text-decoration: none;">
+							<h2>Manually and automatically scheduled events</h2>
+						</a>
+						<p>An event can be scheduled either <strong>automatically</strong> (default) or <strong>manually</strong>. This is defined by the <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#manuallyscheduled">manuallyScheduled</a> event flag.
+							The difference between these two types is that automatically scheduled events are affected by the automatic rescheduling process
+							while manually scheduled are not.
+						Manually scheduled events are meant to be adjusted manually by a user.</p>
+						<a href="#automatic-event-scheduling" id="automatic-event-scheduling" style="color: inherit; text-decoration: none;">
+							<h2>Automatic event scheduling</h2>
+						</a>
+						<p>The Scheduler Pro scheduling engine updates start and end dates of automatically scheduled events based on their <em>constraints_, _dependencies</em> and working time settings.
+							This means that the <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#startdate">startDate</a> and <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#enddate">endDate</a> are revalidated and
+						might be recalculated as soon as the event is added or loaded to a project.</p>
+						<p>Events having no incoming dependencies nor constraints tend to keep their <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#startdate">start date</a> intact.
+							The only factor that could cause such events automatic rescheduling is changes affecting their working time
+						(happens for example when the event calendar or assignments are changed).</p>
+						<a href="#propagating-changes-through-event-dependencies" id="propagating-changes-through-event-dependencies" style="color: inherit; text-decoration: none;">
+							<h2>Propagating changes through event dependencies</h2>
+						</a>
+						<p>When an Event changes, its linked events (successors) will be rescheduled automatically.</p>
+						<p>How dependent events will be updated after a modification depends on the <a href="_lib_engine_quark_model_scheduler_pro_schedulerprodependencymixin_.schedulerprodependencymixin.html#type">dependency type</a>.
+						The Scheduler Pro engine supports the following four types of dependencies:</p>
+						<ul>
+							<li>Finish-to-Start (default)</li>
+							<li>Start-to-Start</li>
+							<li>Finish-to-Finish</li>
+							<li>Start-to-Finish</li>
+						</ul>
+						<a href="#finish-to-start" id="finish-to-start" style="color: inherit; text-decoration: none;">
+							<h3>Finish-to-Start</h3>
+						</a>
+						<img src="../media/dependency-fs.png" alt="Finish-to-Start dependency" class="b-">
+						<p>The default type of a dependency is &quot;Finish-to-Start&quot; (FS). This type of dependency restricts the dependent event
+						to not start earlier than the end date of the preceding event.</p>
+						<a href="#start-to-start" id="start-to-start" style="color: inherit; text-decoration: none;">
+							<h3>Start-to-Start</h3>
+						</a>
+						<img src="../media/dependency-ss.png" alt="Start-to-Start dependency" class="b-">
+						<p>With this dependency type, the succeeding event is delayed to not start earlier than the start of the preceding event.</p>
+						<a href="#finish-to-finish" id="finish-to-finish" style="color: inherit; text-decoration: none;">
+							<h3>Finish-to-Finish</h3>
+						</a>
+						<img src="../media/dependency-ff.png" alt="Finish-to-Finish dependency" class="b-">
+						<p>The succeeding event cannot finish before the completion of the preceding event.</p>
+						<a href="#start-to-finish" id="start-to-finish" style="color: inherit; text-decoration: none;">
+							<h3>Start-to-Finish</h3>
+						</a>
+						<img src="../media/dependency-sf.png" alt="Start-to-Finish dependency" class="b-">
+						<p>The finish of the succeeding event is constrained by the start of the preceding event. The successor cannot finish
+						before the predecessor starts.</p>
+						<a href="#dependency-lead-and-lag" id="dependency-lead-and-lag" style="color: inherit; text-decoration: none;">
+							<h3>Dependency lead and lag</h3>
+						</a>
+						<p>A <a href="_lib_engine_quark_model_scheduler_pro_schedulerprodependencymixin_.schedulerprodependencymixin.html">dependency</a> can have a <a href="_lib_engine_quark_model_scheduler_pro_schedulerprodependencymixin_.schedulerprodependencymixin.html#lag">lag (or lead)</a> value which
+						can delay the succeeding event by the number of <a href="_lib_engine_quark_model_scheduler_pro_schedulerprodependencymixin_.schedulerprodependencymixin.html#lagunit">lag units</a> specified.</p>
+						<img src="../media/dependency-lag.png" alt="Dependency lag" class="b-">
+						<p>Lead (or &quot;negative lag&quot;) will accelerate the succeeding event by the number of time units specified.</p>
+						<img src="../media/dependency-lead.png" alt="Dependency lead" class="b-">
+						<p><strong>Please note</strong>, the <a href="_lib_engine_quark_model_scheduler_pro_schedulerprodependencymixin_.schedulerprodependencymixin.html#lag">lag</a> value specifies the amount of <strong>working time</strong>. The
+							calendar controlling which time to use is defined by the <a href="_lib_engine_quark_model_scheduler_pro_schedulerprodependencymixin_.schedulerprodependencymixin.html#calendar">calendar</a> field. By
+						default, the successor calendar is used.</p>
+						<a href="#event-constraint-effect-on-the-scheduling" id="event-constraint-effect-on-the-scheduling" style="color: inherit; text-decoration: none;">
+							<h2>Event constraint effect on the scheduling</h2>
+						</a>
+						<p>An event constraint defines boundaries for the schedulable date range of an event and it is taken into account
+						when the engine schedules the event.</p>
+						<p>A constraint is a combination of two event properties: <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#constrainttype">constraintType</a> and <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#constraintdate">constraintDate</a>.
+							The date range specified by a constraint, restricts the event start / end dates to be <strong>not earlier than</strong>,
+						<strong>not later than</strong> or <strong>equal</strong> to the provided <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#constraintdate">constraintDate</a>.</p>
+						<p>When an event is manually dragged by a user in a Scheduler Pro chart,
+							the Scheduler Pro enforces the position by setting a constraint on the event.
+						It uses <a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#startnoearlierthan">Start no earlier than</a> (SNET) constraint when the event is moved by changing its <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#startdate">start date</a> (and <a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#finishnoearlierthan">Finish no earlier than</a> (FNET) constraint when the event is moved by changing its <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#enddate">end date</a>).</p>
+						<p>The way a constraint affects an event depends on its <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#constrainttype">type</a>. There are two group of
+						constraints available:</p>
+						<ul>
+							<li>Inflexible constraints.</li>
+							<li>Semi-flexible constraints.</li>
+						</ul>
+						<a href="#inflexible-constraints" id="inflexible-constraints" style="color: inherit; text-decoration: none;">
+							<h3>Inflexible constraints</h3>
+						</a>
+						<p>There are two constraints in this group <a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#muststarton">Must start on</a> (MSO) and <a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#mustfinishon">Must finish on</a> (MFO).
+						They force an event to start / finish exactly on the <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#constraintdate">date</a> provided.</p>
+						<a href="#semi-flexible-constraints" id="semi-flexible-constraints" style="color: inherit; text-decoration: none;">
+							<h3>Semi-flexible constraints</h3>
+						</a>
+						<p>These constraints share the same priority with event dependencies. They all work together respecting the event working time:</p>
+						<ul>
+							<li><a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#startnoearlierthan">Start no earlier than</a> (SNET) - restricts the event to start on or after the specified date.</li>
+							<li><a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#finishnoearlierthan">Finish no earlier than</a> (FNET) - restricts the event to finish on or after the specified date.</li>
+							<li><a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#startnolaterthan">Start no later than</a> (SNLT) - restricts the event to start before (or on) the specified date.</li>
+							<li><a href="../enums/_lib_engine_scheduling_types_.constrainttype.html#finishnolaterthan">Finish no later than</a> (FNLT) - restricts the event to finish before (or on) the specified date.</li>
+						</ul>
+						<p>Effectively, the event start/end dates are calculated as aggregated values taking into account both dependencies
+							and such constraints. The earliest start date for an event is computed as the latest of the earliest start allowed by
+						its constraint and the earliest start allowed by its dependencies.</p>
+						<p>An example: Event <em>A</em> has two incoming dependencies which don&#39;t allow it to start earlier than <em>01/18/2017</em> and the event
+							has a <em>SNET</em> constraint which forces it to start not earlier than <em>01/17/2017</em>. In this case, the resulting earliest
+							start date of the event is <em>01/18/2017</em>. If we change the constraint date to <em>01/19/2017</em> the resulting earliest start
+						date will become <em>01/19/2017</em>.</p>
+						<a href="#working-time-effect-on-the-scheduling" id="working-time-effect-on-the-scheduling" style="color: inherit; text-decoration: none;">
+							<h2>Working time effect on the scheduling</h2>
+						</a>
+						<p>An event <em>working time</em> is defined by combination of its own <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#effectivecalendar">calendar</a>
+							and the <a href="_lib_engine_quark_model_scheduler_pro_schedulerproresourcemixin_.schedulerproresourcemixin.html#effectivecalendar">assigned resource calendars</a>.
+							Technically an event can be performed in periods calculated as intersection of the <a href="_lib_engine_quark_model_scheduler_pro_schedulerproevent_.schedulerproevent.html#effectivecalendar">event calendar</a>
+						and some of <a href="_lib_engine_quark_model_scheduler_pro_schedulerproresourcemixin_.schedulerproresourcemixin.html#effectivecalendar">assigned resource calendars</a>.</p>
+						<p>The above means that an event could get rescheduled when it:</p>
+						<ul>
+							<li>changes its own calendar or its assigned resource calendars;</li>
+							<li>changes its assignments (adding/removing an assignment etc) since that might add or remove a calendar.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">SchedulerProEventsScheduling</span>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/_docs_src_schedulerpro_events_scheduling_.html">&quot;docs_<wbr>src/schedulerpro_<wbr>events_<wbr>scheduling&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="_docs_src_schedulerpro_events_scheduling_.schedulerproeventsscheduling.html" class="tsd-kind-icon">Scheduler<wbr>Pro<wbr>Events<wbr>Scheduling</a>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

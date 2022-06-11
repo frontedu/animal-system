@@ -1,0 +1,12 @@
+<bryntum-demo-header
+    link  = "../../../../../#example-frameworks-angular-angular-7"
+></bryntum-demo-header>
+
+<bryntum-calendar
+    [events]              = "events"
+    [resources]           = "resources"
+    [eventTooltipFeature] = "calendarConfig.features.eventTooltip"
+    [date]                = "calendarConfig.date"
+    [modes]               = "calendarConfig.modes"
+    (onCatchAll)          = "onCalendarEvents($event)"
+></bryntum-calendar>

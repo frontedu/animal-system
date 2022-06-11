@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="description" content="Shows how to preload a specific locale and localize the application."/>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Bryntum Calendar - Localization demo</title>
+	<script src="../_shared/browser/helper.js?459414"></script>
+	<link rel="stylesheet" href="../../build/calendar.stockholm.css?459414" data-bryntum-theme>
+	<link rel="stylesheet" href="../_shared/shared.css?459414">
+	<link rel="stylesheet" href="resources/app.css?459414">
+</head>
+
+<body>
+	<div id="container">
+	</div>
+	<!-- Using Ecma Modules bundle -->
+	<script src="locales/custom.locale.En.umd.js?459414"></script>
+	<script src="locales/custom.locale.Ru.umd.js?459414"></script>
+	<script src="locales/custom.locale.Nl.umd.js?459414"></script>
+	<script src="locales/custom.locale.SvSE.umd.js?459414"></script>
+	<script src="locales/custom.locale.De.umd.js?459414"></script>
+	<script data-default-locale="De" type="module" src="app.module.js?459414"></script>
+</body>
+
+</html>

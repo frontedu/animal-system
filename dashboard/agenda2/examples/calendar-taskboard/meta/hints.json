@@ -1,0 +1,13 @@
+{
+  ".b-weekview [data-header-date=\"2021-11-16\"]" : {
+    "title" : "Select a date to show in TaskBoard",
+    "content" : "TaskBoard shows all events which were scheduled for this date",
+    "align" : "t-b"
+  },
+
+  ".b-taskboard-card" : {
+    "title" : "Move to another column and change card status",
+    "content" : "Calendar shows task status icon",
+    "align" : "l-r"
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "rules": {
+        "no-new": "off",
+        "no-unused-vars": "off",
+        "prefer-const": "off"
+    },
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "bryntum": true
+    }
+}

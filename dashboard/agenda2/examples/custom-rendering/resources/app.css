@@ -1,0 +1,111 @@
+.b-event-body {
+  max-width: calc(100% - 20px);
+}
+
+.b-cal-invitees {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  font-size: 0.8em;
+}
+
+.b-allday .b-event-image {
+  display: none;
+}
+.b-allday .b-cal-invitees {
+  position: static;
+  margin-left: 0.3em;
+}
+
+.b-event-image {
+  max-width: 100%;
+  padding: 0.2em 0;
+}
+
+.b-dayview-day-detail .b-cal-event-desc {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.b-sch-event-tooltip .b-panel-content {
+  padding-right: 3em;
+}
+.b-sch-event-tooltip dl, .b-sch-event-tooltip dd, .b-sch-event-tooltip dt {
+  padding: 0;
+  margin: 0;
+}
+.b-sch-event-tooltip dt:not(:first-child) {
+  margin-top: 1em;
+}
+.b-sch-event-tooltip ul {
+  padding: 1em 0 0 1.2em;
+  margin: 0;
+}
+.b-sch-event-tooltip .b-event-image {
+  max-height: 100px;
+}
+
+.b-week-number-cell {
+  justify-content: center;
+  align-items: center;
+}
+.b-week-number-cell .b-week-name {
+  writing-mode: tb;
+  display: flex;
+  align-items: center;
+  transform: rotateZ(180deg);
+}
+
+.b-calendar .b-show-week-cb-label {
+  font-size: 1.2em;
+}
+
+.b-calendarrow .b-highlight-day {
+  font-size: 120%;
+}
+
+.hackathon-dayoff .b-cal-event .b-cal-event-icon:before {
+  content: "\f118";
+  font-size: 1em;
+  color: yellow;
+  webkit-font-smoothing: antialiased;
+  z-index: 1;
+  text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+  margin-left: 0.5em;
+}
+
+.b-cal-agenda-event-row .b-cal-event-wrap.b-with-image .b-cal-event {
+  align-items: flex-start;
+}
+.b-cal-agenda-event-row .b-cal-event-wrap.b-with-image .b-cal-event .b-cal-event-icon {
+  display: block;
+}
+.b-cal-agenda-event-row .b-cal-event-wrap.b-with-image .b-cal-event-desc {
+  align-items: flex-start;
+}
+.b-cal-agenda-event-row .b-cal-event-wrap.b-with-image .b-cal-event-body .b-event-name {
+  margin: 0 0 0.3em 0;
+}
+
+.b-fa-birthday-cake {
+  background: #2667c8;
+  padding: 0.5em;
+  border-radius: 50%;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-sidebar {
+  transition: min-width 0.3s, width 0.3s;
+}
+.b-sidebar .b-calendar-cell {
+  transition: width 0.3s, height 0.3s;
+}
+
+/*# sourceMappingURL=app.css.map */

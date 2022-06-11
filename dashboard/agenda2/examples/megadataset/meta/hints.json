@@ -1,0 +1,7 @@
+{
+    "button[data-ref=\"nextButton\"]": {
+        "align" : "t-b",
+        "title" : "Rapid event navigation",
+        "content": "Over 4,000 events each month retrieved and rendered with no perceptible lag"
+    }
+}

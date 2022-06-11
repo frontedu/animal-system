@@ -1,0 +1,9 @@
+.b-cal-event-icon {
+  display: none !important;
+}
+
+.b-cal-event .b-cal-event-icon {
+  order: 10;
+}
+
+/*# sourceMappingURL=app.css.map */

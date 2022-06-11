@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+        <bryntum-demo-header
+            link = "../../../../#example-frameworks-ionic-ionic-4"
+        ></bryntum-demo-header>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <bryntum-calendar
+        [events]              = "events"
+        [resources]           = "resources"
+        [eventTooltipFeature] = "calendarConfig.features.eventTooltip"
+        [date]                = "calendarConfig.date"
+        [modes]               = "calendarConfig.modes"
+        (onCatchAll)          = "onCalendarEvents($event)"
+    ></bryntum-calendar>
+</ion-content>

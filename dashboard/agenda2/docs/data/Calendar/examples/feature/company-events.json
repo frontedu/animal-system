@@ -1,0 +1,43 @@
+{
+    "success"    : true,
+    "resources"  : {
+        "rows" : [
+            {
+                "id"         : "bryntum",
+                "name"       : "Bryntum team",
+                "eventColor" : "#249fbc"
+            }
+        ]
+    },
+    "events" : {
+        "rows"    : [
+            {
+                "id"             : 1,
+                "startDate"      : "2020-03-02T11:00:00",
+                "endDate"        : "2020-03-02T12:00:00",
+                "name"           : "Monthly kickoff",
+                "description"    : "Plan release schedule for coming month",
+                "resourceId"     : "bryntum",
+                "recurrenceRule" : "FREQ=MONTHLY;BYDAY=MO;BYSETPOS=1"
+            },
+            {
+                "id"             : 2,
+                "startDate"      : "2020-03-03T14:00:00",
+                "endDate"        : "2020-03-03T15:00:00",
+                "name"           : "Scrum",
+                "description"    : "Sync allocation of work for next two days",
+                "resourceId"     : "bryntum",
+                "recurrenceRule" : "FREQ=WEEKLY;BYDAY=TU,TH"
+            },
+            {
+                "id"             : 3,
+                "startDate"      : "2020-03-06T18:00:00",
+                "endDate"        : "2020-03-06T19:00:00",
+                "name"           : "Happy hour",
+                "description"    : "Celebrate and relax after a week of hard work",
+                "resourceId"     : "bryntum",
+                "recurrenceRule" : "FREQ=WEEKLY;BYDAY=FR"
+            }
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+{
+    ".b-print-button" : {
+        "align" : "t-b",
+        "html"  : "Print the currently active view"
+    }
+}

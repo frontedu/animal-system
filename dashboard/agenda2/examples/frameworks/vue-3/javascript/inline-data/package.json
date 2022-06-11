@@ -1,0 +1,60 @@
+{
+  "name": "inline-data",
+  "description": "Inline data in Vue 3 Calendar",
+  "version": "5.0.5",
+  "author": {
+    "name": "Bryntum",
+    "url": "https://bryntum.com",
+    "email": "info@bryntum.com"
+  },
+  "license": "commercial",
+  "homepage": "https://bryntum.com",
+  "scripts": {
+    "serve": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vue-cli-service serve --mode=development",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vue-cli-service build --mode=production",
+    "start": "npm run serve",
+    "lint": "vue-cli-service lint",
+    "postinstall": "postinstall"
+  },
+  "postinstall": {
+    "node_modules/@bryntum/demo-resources/images/favicon.png": "copy public/favicon.png"
+  },
+  "dependencies": {
+    "@bryntum/calendar": "npm:@bryntum/calendar-trial@5.0.5",
+    "@bryntum/calendar-vue-3": "5.0.5",
+    "@bryntum/demo-resources": "1.1.0",
+    "vue": "~3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "~3.0.0",
+    "babel-eslint": "~10.1.0",
+    "cross-env": "~7.0.3",
+    "eslint": "~6.7.2",
+    "eslint-plugin-vue": "~7.0.0-0",
+    "postinstall": "~0.7.0",
+    "sass": "~1.42.0",
+    "sass-loader": "~8.0.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  }
+}

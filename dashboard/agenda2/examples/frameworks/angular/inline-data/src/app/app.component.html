@@ -1,0 +1,16 @@
+<bryntum-demo-header
+    link = "../../../../../#example-frameworks-angular-inline-data"
+></bryntum-demo-header>
+
+<bryntum-project-model
+    #project
+    [events] = "projectData.events"
+    [resources] = "projectData.resources"
+></bryntum-project-model>
+
+<bryntum-calendar
+    #calendar
+    [date] = "calendarConfig.date"
+    [modes] = "calendarConfig.modes"
+    [project] = "project"
+></bryntum-calendar>
