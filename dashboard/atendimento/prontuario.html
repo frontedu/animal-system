@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico" href="/assets/images/fav.ico">
     <link href="../output.css" rel="stylesheet">
+    <link rel="stylesheet" href="prontuario.css">
 </head>
 
 <body>
@@ -126,8 +127,150 @@
             </header>
             <div class="p-4">
                 <!-- Add content here, remove div below -->
-                <div class="border-4 border-dashed rounded h-96">
-                    <h1 class="mt-4 px-4">Prontuário - Conteúdo</h1>
+                <div class="border-4 border-dashed rounded px-4">
+
+                    <div id="container-titulo-principal">
+                        <h1 id="titulo-principal">Prontuário do Paciente</h1>
+                      </div>
+                
+                      <form action="">
+                        <section id="dados-paciente">
+                          <div>
+                            <label for="nome-paciente">Paciente: </label> <br>
+                            <input type="text" name="nome-paciente" id="nome-paciente" value="Lucky Mendes Silva" disabled />
+                          </div>
+                          <div>
+                            <label for="idade-paciente">Idade: </label> <br>
+                            <input type="text" name="idade-paciente" id="idade-paciente" value="2 anos e 6 meses" disabled />
+                          </div>
+                          <div>
+                            <label for="sexo-paciente">Sexo: </label> <br>
+                            <input type="text" name="sexo-paciente" id="sexo-paciente" value="femea" disabled />
+                          </div>
+                          <div>
+                            <label for="alimentacao-paciente">Alimentação: </label> <br>
+                            <input type="text" name="alimentacao-paciente" id="alimentacao-paciente" value="ração" disabled />
+                          </div>
+                          <div>
+                            <label for="nome-proprietario">Proprietário: </label> <br>
+                            <input type="text" name="nome-proprietario" id="nome-proprietario" value="Darccelio Silva" disabled />
+                          </div>
+                        </section>
+                
+                        <div>
+                          <button id="btn-iniciar-consulta">Iniciar Consulta</button>
+                          <button id="btn-historico">Histórico Animal</button>
+                        </div>
+                
+                        <section id="dados-anamnesia">
+                          <h2> <u> Anamnésia: </u> </h2>
+                          <label for="temperatura">
+                            Temperatura:
+                            <input type="text" name="temperatura" id="temperatura" />
+                            graus.</label> <br>
+                          <label for="batimento-cardiaco">Auscutação Cardiáca:
+                            <input type="text" name="batimento-cardiaco" id="batimento-cardiaco" />
+                            por minutos.</label> <br>
+                          <label for="mucosa">Cor da mucosa:
+                            <input type="text" name="mucosa" id="mucosa" /> .</label> <br>
+                          <label for="pressao-capilar">Tempo de pressão capilar (minutos):
+                            <input type="number" name="pressao-capilar" id="pressao-capilar" />
+                            .</label> <br>
+                        </section>
+                
+                        <section id="anotacoes-clinicas">
+                          <p><label for="anotacoes">Anotações Clínicas: </label> </p>
+                          <textarea name="anotacoes" id="anotacoes" rows="10" autocapitalize="characters" placeholder="Descreva aqui suas observações/orientações ....."></textarea>
+                        </section>
+                
+                        <section id="exames">
+                          <h2> <u> Síntese de Exames Clínicos Laboratoriais:</u></h2>
+                
+                          <select name="lista-exames" id="lista-exames" class="lista-exames"
+                            title="Clique para visualizar a relação de Exames Clínicos Veterinários">
+                            <option value="0">Selecione o exame</option>
+                            <option value="1">Exame 1</option>
+                            <option value="2">Exame 2</option>
+                            <option value="3">Exame 3</option>
+                            <option value="4">Exame 4</option>
+                            <option value="5">Exame 5</option>
+                          </select>
+                
+                          <input type="text" name="" id="" placeholder="Valor do resultado: " />
+                          <button class="btn-adicionar">Adicionar</button>
+                          <table>
+                            <thead>
+                              <tr>
+                                <th scrope="col" width="2%">#</th>
+                                <th scrope="col" width="9%">Tipo</th>
+                                <th scrope="col" width="54%">Exame</th>
+                                <th scrope="col" width="15%">Data Exame</th>
+                                <th scrope="col" width="10%">Referência</th>
+                                <th scrope="col" width="10%">Resultado</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>imagem</td>
+                                <td>Anticorpo Anti-Nuclear- ANA (canino, felino e equino)</td>
+                                <td>10/06/2022</td>
+                                <td>Negativo</td>
+                                <td>Postivo</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </section>
+                
+                        <section id="laudos">
+                          <h2> <u> Laudos / Exames Clínicos Laboratoriais: </u></h2>
+                
+                          <select name="lista-laudo-exames" id="lista-laudo-exames" class="lista-exames"
+                            title="Clique para visualizar a relação de Exames Clínicos Veterinários">
+                            <option value="0">Selecione o exame</option>
+                            <option value="1">Exame 1</option>
+                            <option value="2">Exame 2</option>
+                            <option value="3">Exame 3</option>
+                            <option value="4">Exame 4</option>
+                            <option value="5">Exame 5</option>
+                
+                          </select>
+                          <button class="btn-adicionar">Adicionar</button>
+                
+                          <table>
+                            <thead>
+                              <thead>
+                                <tr>
+                                  <th scrope="col" width="2%">#</th>
+                                  <th scrope="col" width="9%">Tipo</th>
+                                  <th scrope="col" width="54%">Exame</th>
+                                  <th scrope="col" width="15%">Data Exame</th>
+                                  <th scrope="col" width="10%">Referência</th>
+                                  <th scrope="col" width="10%">Resultado</th>
+                                </tr>
+                              </thead>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>Sangue</td>
+                                <td>ADH – Hormônio Antidiurético – Vasopressina -EXAME SUSPENSO POR TEMPO INDETERMINADO</td>
+                                <td>10/06/2022</td>
+                                <td>Negativo</td>
+                                <td>Postivo</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                
+                        </section>
+                
+                        <section id="container-receituario">
+                          <h2>Receita Médico Veterinário:</h2>
+                          <button class="btn-adicionar" id="btn-elaborar-receita">Elaborar Receita</button>
+                        </section>
+                
+                        <button id="btn-finalizar">Salvar e Finalizar</button>
+                      </form>
                 </div>
             </div>
         </div> <!-- Sidebar Backdrop -->
