@@ -25,7 +25,7 @@
     <nav class="py-4 px-3 px-lg-0 navbar navbar-expand-lg">
         <div class="container pb-0 pb-lg-2 px-2 px-lg-0">
             <a class="navbar-brand" href="/">
-                <img width="220" id="logo" alt="Logo da Líbero" src="assets/images/svg/Logo_AnimalSystem.svg">
+                <img width="220" id="logo" alt="Logo da AnimalSystem" src="assets/images/svg/Logo_AnimalSystem.svg">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
                 aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="recursos/">
+                        <a class="nav-link disabled" href="recursos/">
                             <div class="d-inline fs-5 pointer">Recursos</div>
                         </a>
                     </li>
@@ -58,11 +58,15 @@
                             <div class="d-inline fs-5 pointer">Entrar</div>
                         </a>
                     </li>
-                    <li class="nav-item position-relative">
-                        <a class="nav-link signs s2" href="/sign-up/">
+                    <li class="dropdown nav-item position-relative">
+                        <a class="nav-link signs s2" id="dropdownMenuButton1" href="#_" data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="d-inline fs-5 pointer">Registre-se</div>
                             <div class="moldura"></div>
                         </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="/sign-up/pessoa-fisica/">Pessoa física</a></li>
+                            <li><a class="dropdown-item" href="/sign-up/pessoa-juridica/">Pessoa Jurídica</a></li>
+                          </ul>
                     </li>
 
                 </ul>
@@ -79,7 +83,7 @@
             </div>
             <div class="col-md-8 col-xl-6">
                 <h1 class="mb-4">Sistema de Gestão moderno em Pet Shop</h1>
-                <a class="ms-2 position-relative text-decoration-none" href=" /sign-up/">Experimente grátis</a>
+                <a class="ms-2 position-relative text-decoration-none" href="/login/">Experimente grátis</a>
             </div>
         </div>
     </main>

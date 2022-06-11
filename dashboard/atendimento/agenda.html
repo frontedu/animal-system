@@ -6,7 +6,8 @@
     <title>Área do Parceiro — AnimalSystem</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico" href="/assets/images/fav.ico">
-    <link href="output.css" rel="stylesheet">
+    <link href="../output.css" rel="stylesheet">
+    <link rel="stylesheet" href="prontuario.css">
 </head>
 
 <body>
@@ -16,13 +17,13 @@
                 href="/dashboard/" class="flex items-center px-4 py-1"> <img src="/assets/images/svg/Logo_AnimalSystem.svg" alt="Logo do AnimalSystem"
                     class="w-48 mt-4 mb-5" /> </a>
             <nav class="text-sm font-medium text-gray-600" aria-label="Main Navigation"> <a
-                    class="flex items-center px-4 py-3 text-gray-900 transition bg-gray-100 cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                    class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
                     
-                    href="#"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-600 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"></path></svg> <span>Favoritos</span> </a>
-                <div x-data="collapse()">
-                    <div class="flex items-center justify-between px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
-                        role="button" x-spread="trigger">
-                        <div class="flex items-center"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg><span>Atendimento</span> </div> <svg :class="{ 'rotate-90': open }"
+                    href="/dashboard/"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"></path></svg> <span>Favoritos</span> </a>
+                <div x-data="collapse()"> 
+                    <div class="flex items-center justify-between px-4 py-3 text-gray-900 transition bg-gray-100 cursor-pointer group hover:bg-gray-100  hover:text-gray-900" role="button" x-spread="trigger" aria-expanded="true">
+                        <div class="flex items-center"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-600 transition group-hover:text-gray-600"
+                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg><span>Atendimento</span> </div> <svg :class="{ 'rotate-90': open }"
                             class="shrink-0 w-4 h-4 ml-2 transition transform" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
@@ -32,9 +33,9 @@
                     </div>
                     <div class="mb-4" x-spread="collapse" x-cloak> <a
                             class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
-                            href="atendimento/prontuario.html">Prontuário</a> <a class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900" href="#">Receituário</a> <a
-                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
-                            href="atendimento/agenda.html">Agenda</a></div>
+                            href="prontuario.html">Prontuário</a> <a class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900" href="#">Receituário</a> <a
+                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer bg-gray-100 text-gray-900"
+                            href="#">Agenda</a></div>
                 </div>
                 
                 
@@ -50,20 +51,21 @@
                         </svg>
                     </div>
                     <div class="mb-4" x-spread="collapse" x-cloak> <a
-                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
-                            href="#">Banho e Tosa</a> <a
-                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
-                            href="#">Vacina e Vermífugo</a> <a
-                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
-                            href="#">Exame</a>
-                            <a
-                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
-                            href="#">Taxi Pet</a> <a
-                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
-                            href="#">Cirurgia</a></div></div>
+                        class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                        href="#">Banho e Tosa</a> <a
+                        class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                        href="#">Vacina e Vermífugo</a> <a
+                        class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                        href="#">Exame</a>
+                        <a
+                        class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                        href="#">Taxi Pet</a> <a
+                        class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                        href="#">Cirurgia</a></div></div>
                 </div>
                 
-
+                
+                
                 <a
                     class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
                     href="#"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600"
@@ -83,7 +85,8 @@
                     <a
                     class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
                     href="#"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg><span>Clientes</span> </a>
-                
+                    
+                    
                     <a
                     class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
                     href="#"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600"
@@ -126,7 +129,7 @@
             <div class="p-4">
                 <!-- Add content here, remove div below -->
                 <div class="border-4 border-dashed rounded">
-                    <h1>Favoritos - Conteúdo</h1>
+                  <h1>Agenda - Conteúdo</h1>
                 </div>
             </div>
         </div> <!-- Sidebar Backdrop -->
@@ -135,10 +138,10 @@
     </section>
 
 
-
     <script src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
 </body>
+
 
 
 </html>
