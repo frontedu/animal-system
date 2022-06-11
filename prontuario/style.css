@@ -1,0 +1,295 @@
+html {
+  background: #FFEEFF;
+}
+
+:is(h1, h2, p, input, button, label, th, td) {
+  font-family: 'Open Sans', 'Roboto', 'Segoe UI', sans-serif;
+  color: #333333;
+
+}
+
+.container {
+  max-width: 918px;
+  flex-wrap: wrap;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #F4BED4;
+  padding: 0 13px;
+  box-sizing: border-box;
+}
+
+#container-titulo-principal {
+  border-bottom: 2px solid #F4BED4;
+  max-width: 100%;
+  margin: 15px auto;
+  text-align: center;
+}
+
+#titulo-principal {
+  font-size: 1.5rem;
+  margin: 0.3rem;
+}
+
+/* SESSÃO DADOS DO PACIENTE */
+
+#dados-paciente {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  /* margin: 0 13px; */
+  justify-content: space-between;
+}
+
+#dados-paciente div {
+  margin-right: 12px;
+}
+
+#dados-paciente div label {
+  font-size: 0.8rem;
+  margin: 5px 5px 10px 5px;
+}
+
+input,
+.lista-exames {
+
+  border: 1.4px solid #D8D9DA;
+  margin: 5px 0px 15px 0px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-shadow: 0px 1.41126px 1.41126px rgba(0, 0, 0, 0.075);
+  cursor: pointer;
+}
+
+input[type="text"]:disabled {
+  background: #f7f5f5db;
+  font-weight: bolder;
+  cursor: default;
+}
+
+#idade-paciente,
+#sexo-paciente {
+  max-width: 130px;
+}
+
+#nome-paciente,
+#nome-proprietario {
+  max-width: 300px;
+  width: 347px;
+}
+
+
+/* BOTÕES INICIAR CONSULTA / HISTÓRICO */
+
+#btn-iniciar-consulta {
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 190px;
+  margin: 10px 10px 5px 0;
+  padding: 5px 10px;
+  background: #FFEEFF;
+  border: 1px solid #F4BED4;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px 0px #f3acde;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#btn-iniciar-consulta:hover {
+  background-color: #FFFEFF;
+  border: 1px solid #B72F66;
+  transform: translateY(4px);
+}
+
+#btn-historico {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 10px 10px 5px 0;
+  width: 190px;
+  padding: 5px 5px;
+  background: #EEEEEE;
+  border: 1px solid #EEEEEE;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px 0px #00000062;
+  padding: 6px 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#btn-historico:hover {
+  background-color: #FFFEFF;
+  border: 1.41px solid #04040480;
+  transform: translateY(4px);
+}
+
+/* SESSÃO ANAMNESIA */
+
+#dados-anamnesia {
+  border: 1px solid #C4C4C4;
+  box-shadow: 0px 1.4112554788589478px 1.4112554788589478px 2px #DDDADA78;
+  border-radius: 10px;
+  background: #FFFFFF;
+  max-width: 100%;
+  margin: 10px auto 20px auto;
+  padding: 5px 18px;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+#dados-anamnesia label {
+  /* display: block; */
+  font-size: 0.8rem;
+}
+
+
+/* ANOTAÇÕES CLÍNICAS */
+
+#anotacoes-clinicas {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#anotacoes-clinicas p label {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+#anotacoes-clinicas textarea {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #D8D9DA;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 1.4112554788589478px 1.4112554788589478px 2px #DDDADA78;
+  font-size: 16px;
+  resize: none;
+}
+
+/* SÍNTESE DE EXAMES CLÍNICOS */
+
+#exames {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #D8D9DA;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 1.4112554788589478px 1.4112554788589478px 2px #DDDADA78;
+  margin-bottom: 20px;
+}
+
+.lista-exames {
+
+  min-width: 50%;
+  margin-right: 10px;
+}
+
+.btn-adicionar {
+  border: 1.41px solid #B72F66;
+  border-radius: 6px;
+  padding: 4px 16px 4px 16px;
+  font: .8rem;
+  color: #B72F66;
+  background: #FFFFFF;
+  box-shadow: 0px 1.4112554788589478px 1.4112554788589478px 0px #00000013;
+  filter: drop-shadow(0px 1.41126px 1.41126px rgba(0, 0, 0, 0.075));
+  height: 32px;
+  min-width: 104px;
+  transition: 0.4s;
+  margin-bottom: 10px;
+}
+
+.btn-adicionar:hover {
+  border: 1.41px solid #B72F66;
+  color: #FFFFFF;
+  background-color: #B72F66;
+  filter: drop-shadow(0px 1.41126px 1.41126px rgba(197, 110, 147, 0.075));
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #E5E5E5;
+  letter-spacing: 1px;
+  font-size: .6rem;
+  margin-bottom: 20px;
+  table-layout: fixed;
+}
+
+td,
+th {
+  border: 1px solid #E5E5E5;
+  padding: 10px 10px;
+  height: 1rem;
+  text-align: center;
+
+}
+
+tr>td {
+  background: #F8F8F8;
+  border: none;
+  font-size: 0.6rem;
+}
+
+tr>td:hover {
+  background-color: #F4BED4;
+  color: #FFFEFF;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+
+#laudos {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #D8D9DA;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 1.4112554788589478px 1.4112554788589478px 2px #DDDADA78;
+  margin-bottom: 20px;
+}
+
+#container-receituario {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #D8D9DA;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 1.4112554788589478px 1.4112554788589478px 2px #DDDADA78;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+#container-receituario h2 {
+  align-self: flex-start;
+}
+
+#btn-elaborar-receita {
+  align-self: flex-end;
+}
+
+#btn-finalizar {
+  border: none;
+  border-radius: 10px;
+  background-color: #B72F66;
+  color: #FFFFFF;
+  font-weight: 700;
+  height: 40px;
+  padding: 5px 45px 5px 15px;
+  margin-bottom: 20px;
+  align-self: flex-end;
+}
+
+#btn-finalizar:hover {
+  background: #FFFFFF;
+  border: 1px solid #B72F66;
+  color: #B72F66;
+  font-weight: 800;
+}
