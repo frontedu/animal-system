@@ -1,64 +1,85 @@
-$(document).ready(function() {
+var date = new Date();
+var d = date.getDate();
+var m = date.getMonth();
+var y = date.getFullYear();
+
+let events = [
+	{
+		id: 1,
+		title: 'Evento dia inteiro',
+		allDay: true,
+		start: new Date(y, m, 1),
+		className: 'success'
+	},
+	{
+		id: 2,
+		title: 'Tosa',
+		start: new Date(y, m, d-3, 16, 0),
+		allDay: false,
+		className: 'success'
+	},
+	{
+		id: 3,
+		title: 'Lavagem e tosa',
+		start: new Date(y, m, d+4, 16, 0),
+		allDay: false,
+		className: 'info'
+	},
+	{
+		id: 4,
+		title: 'Reunião',
+		start: new Date(y, m, d, 10, 30),
+		allDay: false,
+		className: 'info'
+	},
+	{
+		id: 5,
+		title: 'Almoço',
+		start: new Date(y, m, d, 12, 0),
+		end: new Date(y, m, d, 14, 0),
+		allDay: false,
+		className: 'info'
+	},
+	{
+		id: 6,
+		title: 'Festa de aniversário',
+		start: new Date(y, m, d+1, 19, 0),
+		end: new Date(y, m, d+1, 22, 30),
+		allDay: false,
+		className: 'important'
+	},
+	{
+		id: 7,
+		title: 'Clique para abrir um link externo',
+		start: new Date(y, m, 28),
+		end: new Date(y, m, 29),
+		url: 'https://ccp.cloudaccess.net/aff.php?aff=5188',
+		className: 'chill'
+	}
+]
+
+function adicionarEvento(e) {
+
+	let ultimoId = events[events.length - 1].id
+
+	let evento = { 
+		id: ultimoId + 1,
+		title: document.getElementById('event-title').value,
+		start: document.getElementById('start-date').value,
+		end: document.getElementById('end-date').value
+	}
+
+	console.log(evento)
+	events.push(evento)
+
+	$('#calendar').fullCalendar('renderEvent', evento, true);
+}
+
+function carregarEventos() {
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
-
-    let events = [
-        {
-            id: 1,
-            title: 'Evento dia inteiro',
-            allDay: true,
-            start: new Date(y, m, 1),
-            className: 'success'
-        },
-        {
-            id: 2,
-            title: 'Tosa',
-            start: new Date(y, m, d-3, 16, 0),
-            allDay: false,
-            className: 'success'
-        },
-        {
-            id: 3,
-            title: 'Lavagem e tosa',
-            start: new Date(y, m, d+4, 16, 0),
-            allDay: false,
-            className: 'info'
-        },
-        {
-            id: 4,
-            title: 'Reunião',
-            start: new Date(y, m, d, 10, 30),
-            allDay: false,
-            className: 'info'
-        },
-        {
-            id: 5,
-            title: 'Almoço',
-            start: new Date(y, m, d, 12, 0),
-            end: new Date(y, m, d, 14, 0),
-            allDay: false,
-            className: 'info'
-        },
-        {
-            id: 6,
-            title: 'Festa de aniversário',
-            start: new Date(y, m, d+1, 19, 0),
-            end: new Date(y, m, d+1, 22, 30),
-            allDay: false,
-            className: 'important'
-        },
-        {
-            id: 7,
-            title: 'Clique para abrir um link externo',
-            start: new Date(y, m, 28),
-            end: new Date(y, m, 29),
-            url: 'https://ccp.cloudaccess.net/aff.php?aff=5188',
-            className: 'chill'
-        }
-    ]
-    
 
     $('#external-events div.external-event').each(function() {
     
@@ -151,8 +172,10 @@ $(document).ready(function() {
         
         events: events		
     });
-    
-    
+}
+
+$(document).ready(function() {
+	carregarEventos();
 });
 
 (function($, undefined) {
