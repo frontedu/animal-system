@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico" href="/assets/images/fav.ico">
     <link href="../output.css" rel="stylesheet">
-    <link rel="stylesheet" href="receituario.css">
+    <link rel="stylesheet" href="vacinacao.css">
 </head>
 
 <body>
@@ -21,8 +21,8 @@
                     
                     href="/dashboard/"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"></path></svg> <span>Favoritos</span> </a>
                 <div x-data="collapse()"> 
-                    <div class="flex items-center justify-between px-4 py-3 text-gray-900 transition bg-gray-100 cursor-pointer group hover:bg-gray-100  hover:text-gray-900" role="button" x-spread="trigger" aria-expanded="true">
-                        <div class="flex items-center"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-600 transition group-hover:text-gray-600"
+                    <div class="flex items-center justify-between px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900" role="button" x-spread="trigger" aria-expanded="true">
+                        <div class="flex items-center"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600"
                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg><span>Atendimento</span> </div> <svg :class="{ 'rotate-90': open }"
                             class="shrink-0 w-4 h-4 ml-2 transition transform" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20" fill="currentColor">
@@ -33,16 +33,16 @@
                     </div>
                     <div class="mb-4" x-spread="collapse" x-cloak> <a
                             class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
-                            href="prontuario.html">Prontuário</a> <a class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer bg-gray-100 text-gray-900" href="#">Receituário</a> <a
+                            href="../atendimento/prontuario.html">Prontuário</a> <a class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900" href="../atendimento/receituario.html">Receituário</a> <a
                             class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
-                            href="agenda.html">Agenda</a></div>
+                            href="../atendimento/agenda.html">Agenda</a></div>
                 </div>
                 
                 
                 <div x-data="collapse()">
-                    <div class="flex items-center justify-between px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                    <div class="flex items-center justify-between px-4 py-3 text-gray-900 transition bg-gray-100 cursor-pointer group hover:bg-gray-100  hover:text-gray-900"
                         role="button" x-spread="trigger">
-                        <div class="flex items-center"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"></path></svg> <span>Procedimentos</span> </div> <svg :class="{ 'rotate-90': open }"
+                        <div class="flex items-center"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-600 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"></path></svg> <span>Procedimentos</span> </div> <svg :class="{ 'rotate-90': open }"
                             class="shrink-0 w-4 h-4 ml-2 transition transform" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
@@ -53,8 +53,8 @@
                     <div class="mb-4" x-spread="collapse" x-cloak> <a
                         class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
                         href="#">Banho e Tosa</a> <a
-                        class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
-                        href="../procedimentos/vacina.html">Vacina e Vermífugo</a> <a
+                        class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer bg-gray-100 text-gray-900"
+                        href="#">Vacina e Vermífugo</a> <a
                         class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
                         href="#">Exame</a>
                         <a
@@ -131,8 +131,8 @@
                 <div class="border-4 border-dashed rounded">
                     <main class="px-4">
                         <div id="container-titulo-principal">
-                          <h1 id="titulo-principal">Receituário</h1>
-                          <div><p> Rec. nº: <span> 1</span></p></div>  <!-- TODO: FAZER O CSS -->
+                          <h1 id="titulo-principal">Carteira de Vacina</h1>
+                         
                         </div>
                     
                         <form action="">
@@ -147,11 +147,11 @@
                             </div>
                             <div>
                               <label for="sexo-paciente">Sexo: </label> <br />
-                              <input type="text" name="sexo-paciente" id="sexo-paciente" value="femea" disabled />
+                              <input type="text" name="sexo-paciente" id="sexo-paciente" value="Macho" disabled />
                             </div>
                             <div>
                               <label for="peso">Peso (gr.): </label> <br />
-                              <input type="text" name="peso" id="peso" value="3.200" disabled />
+                              <input type="text" name="peso" id="peso" value="8.400" disabled />
                             </div>
                     
                             <div>
@@ -171,44 +171,33 @@
                           </section>
                     
                           <div>
-                            <button id="btn-receita-inteligente">Receita Inteligente</button>
-                            <button id="btn-receita-manual">Receita Manual</button>
+                            <button id="btn-receita-inteligente">Registrar Vacinação</button>
+                            <button id="btn-receita-manual">Relatório</button>
                           </div>
                     
+                          <section id="observacoes-clinicas">
+                            <p><label for="observacoes">Observações Clínicas: </label> </p>
+                            <textarea name="observacoes" id="observacoes" rows="5" autocapitalize="characters" placeholder="Informações complementares ....:"></textarea>
+                          </section>
+                    
                           <section id="medicamentos">
-                            <h2>Sugestão de Medicamentos:</h2>
-                    
-                            <!-- TODO: PENSAR EM COMO FAZER SUGESTÃO DE MEDICAMENTO POR DOENÇA -->
-                    
-                            <!-- <div>
-                              <label for="especie">Pesquise pela Doença: </label> <br />
-                              <input type="text" name="search-medicamentos-por-doenca" id="search-medicamentos-por-doenca"
-                                placeholder="Digite o nome ou parte do nome do medicamento ..." />
-                              <button class="btn-adicionar">Adicionar</button>
-                            </div> -->
+                            <h2>Registrar Vacina</h2>
                     
                             <div>
-                              <label for="search-medicamentos-por-doenca">Pesquise pelo nome: </label> <br />
-                              <input type="text" name="search-medicamentos-por-doenca" id="input-search-medicamentos-por-nome"
-                                placeholder="Digite o nome ou parte do nome do medicamento ..." />
-                              <button class="btn-adicionar">Adicionar</button>
-                            </div>
-                    
-                            <div>
-                              <label for="">Ou selecione aqui: </label> <br />
                               <select name="lista-medicamentos" id="lista-medicamentos" class="lista-medicamentos"
                                 title="Selecione um medicamento">
-                                <option value="0">Selecione um medicamento</option>
-                                <option value="1">Medicamento 1</option>
-                                <option value="2">Medicamento 2</option>
-                                <option value="3">Medicamento 3</option>
-                                <option value="4">Medicamento 4</option>
-                                <option value="5">Medicamento 5</option>
+                                <option value="0">Selecione a vacina:</option>
+                                <option value="1">Cão - V8</option>
+                                <option value="2">Cão - V10</option>
+                                <option value="3">Cão - Antirrábica</option>
+                                <option value="4">Felina - V4</option>
+                                <option value="5">Felina - V5</option>
+                                <option value="6">Felina - Antirrábica</option>
                               </select>
                               <button class="btn-adicionar">Adicionar</button>
                             </div>
                     
-                            <div id="detalhes-receita"">
+                            <div id="detalhes-medicamentos"">
                               <div>
                                 <label for="dosagem">Dosagem: </label> <br />
                                 <input type="text" name="dosagem" id="dosagem" value="2 comprimidos e 1/2" required/>
@@ -229,37 +218,34 @@
                               <thead>
                                 <thead>
                                   <tr>
-                                    <th scrope="col" width="2%">#</th>
-                                    <th scrope="col" width="38%">Medicamento</th>
-                                    <th scrope="col" width="15%">Apresentação</th>
-                                    <th scrope="col" width="15%">Dosagem</th>
-                                    <th scrope="col" width="15%">Frequência</th>
-                                    <th scrope="col" width="15%">Duração</th>
+                                    <th scrope="col" width="15%">Vacina</th>
+                                    <th scrope="col" width="15%">Fabricante</th>
+                                    <th scrope="col" width="15%">Lote nº</th>
+                                    <th scrope="col" width="15%">Dt Aplicação</th>
+                                    <th scrope="col" width="15%">Dt Próxima Aplicação</th>
+                                    <th scrope="col" width="15%">Vet Resp.</th>
+                                    <th scrope="col" width="15%">Nº CRMV</th>
                                   </tr>
                                 </thead>
                               </thead>
                               <tbody>
                                 <tr>
-                                  <td>1</td>
-                                  <td>Cloreto de potássio</td>
-                                  <td>Pomada</td>
-                                  <td>1.5</td>
-                                  <td>12h</td>
-                                  <td>10 dias</td>
+                                  <td>Cão - V8</td>
+                                  <td>Fábrica 1</td>
+                                  <td>1875740</td>
+                                  <td>15/01/2022</td>
+                                  <td>15/03/2022</td>
+                                  <td>Veterinário Fulano Silva</td>
+                                  <td>MG/123563-4s</td>
                                 </tr>
                               </tbody>
-                            </table>
-                    
-                            <section id="observacoes-clinicas">
-                              <p><label for="observacoes">Observações Clínicas: </label> </p>
-                              <textarea name="observacoes" id="observacoes" rows="10" autocapitalize="characters" placeholder="Informações complementares ....:"></textarea>
-                            </section>
+                            </table>       
                     
                           </section>
                           
                           <div class="container-btn-controles">
                             <button id="btn-salvar">Salvar</button>
-                            <button class="btn-adicionar" id="btn-imprimir">Imprimir</button>
+                            <button class="btn-adicionar" id="btn-imprimir">Agendar Vacinas</button>
                             <button class="btn-adicionar" id="btn-sair">Sair</button>
                           </div>
                     
