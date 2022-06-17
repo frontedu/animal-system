@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico" href="/assets/images/fav.ico">
     <link href="../output.css" rel="stylesheet">
-    <link rel="stylesheet" href="prontuario.css">
+    <link rel="stylesheet" href="receituario.css">
 </head>
 
 <body>
@@ -32,8 +32,8 @@
                         </svg>
                     </div>
                     <div class="mb-4" x-spread="collapse" x-cloak> <a
-                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer bg-gray-100 text-gray-900"
-                            href="#">Prontuário</a> <a class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900" href="receituario.html">Receituário</a> <a
+                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                            href="prontuario.html">Prontuário</a> <a class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer bg-gray-100 text-gray-900" href="#">Receituário</a> <a
                             class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
                             href="agenda.html">Agenda</a></div>
                 </div>
@@ -128,150 +128,143 @@
             </header>
             <div class="p-4">
                 <!-- Add content here, remove div below -->
-                <div class="border-4 border-dashed rounded px-4">
-
-                    <div id="container-titulo-principal">
-                        <h1 id="titulo-principal">Prontuário do Paciente</h1>
-                      </div>
-                
-                      <form action="">
-                        <section id="dados-paciente">
-                          <div>
-                            <label for="nome-paciente">Paciente: </label> <br>
-                            <input type="text" name="nome-paciente" id="nome-paciente" value="Lucky Mendes Silva" disabled />
-                          </div>
-                          <div>
-                            <label for="idade-paciente">Idade: </label> <br>
-                            <input type="text" name="idade-paciente" id="idade-paciente" value="2 anos e 6 meses" disabled />
-                          </div>
-                          <div>
-                            <label for="sexo-paciente">Sexo: </label> <br>
-                            <input type="text" name="sexo-paciente" id="sexo-paciente" value="femea" disabled />
-                          </div>
-                          <div>
-                            <label for="alimentacao-paciente">Alimentação: </label> <br>
-                            <input type="text" name="alimentacao-paciente" id="alimentacao-paciente" value="ração" disabled />
-                          </div>
-                          <div>
-                            <label for="nome-proprietario">Proprietário: </label> <br>
-                            <input type="text" name="nome-proprietario" id="nome-proprietario" value="Darccelio Silva" disabled />
-                          </div>
-                        </section>
-                
-                        <div>
-                          <button id="btn-iniciar-consulta">Iniciar Consulta</button>
-                          <button id="btn-historico">Histórico Animal</button>
+                <div class="border-4 border-dashed rounded">
+                    <main class="px-4">
+                        <div id="container-titulo-principal">
+                          <h1 id="titulo-principal">Receituário</h1>
+                          <div><p> Rec. nº: <span> 1</span></p></div>  <!-- TODO: FAZER O CSS -->
                         </div>
-                
-                        <section id="dados-anamnesia">
-                          <h2> <u> Anamnésia: </u> </h2>
-                          <label for="temperatura">
-                            Temperatura:
-                            <input type="text" name="temperatura" id="temperatura" />
-                            graus.</label> <br>
-                          <label for="batimento-cardiaco">Auscutação Cardiáca:
-                            <input type="text" name="batimento-cardiaco" id="batimento-cardiaco" />
-                            por minutos.</label> <br>
-                          <label for="mucosa">Cor da mucosa:
-                            <input type="text" name="mucosa" id="mucosa" /> .</label> <br>
-                          <label for="pressao-capilar">Tempo de pressão capilar (minutos):
-                            <input type="number" name="pressao-capilar" id="pressao-capilar" />
-                            .</label> <br>
-                        </section>
-                
-                        <section id="anotacoes-clinicas">
-                          <p><label for="anotacoes">Anotações Clínicas: </label> </p>
-                          <textarea name="anotacoes" id="anotacoes" rows="10" autocapitalize="characters" placeholder="Descreva aqui suas observações/orientações ....."></textarea>
-                        </section>
-                
-                        <section id="exames">
-                          <h2> <u> Síntese de Exames Clínicos Laboratoriais:</u></h2>
-                
-                          <select name="lista-exames" id="lista-exames" class="lista-exames"
-                            title="Clique para visualizar a relação de Exames Clínicos Veterinários">
-                            <option value="0">Selecione o exame</option>
-                            <option value="1">Exame 1</option>
-                            <option value="2">Exame 2</option>
-                            <option value="3">Exame 3</option>
-                            <option value="4">Exame 4</option>
-                            <option value="5">Exame 5</option>
-                          </select>
-                
-                          <input type="text" name="" id="" placeholder="Valor do resultado: " />
-                          <button class="btn-adicionar">Adicionar</button>
-                          <table>
-                            <thead>
-                              <tr>
-                                <th scrope="col" width="2%">#</th>
-                                <th scrope="col" width="9%">Tipo</th>
-                                <th scrope="col" width="54%">Exame</th>
-                                <th scrope="col" width="15%">Data Exame</th>
-                                <th scrope="col" width="10%">Referência</th>
-                                <th scrope="col" width="10%">Resultado</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>1</td>
-                                <td>imagem</td>
-                                <td>Anticorpo Anti-Nuclear- ANA (canino, felino e equino)</td>
-                                <td>10/06/2022</td>
-                                <td>Negativo</td>
-                                <td>Postivo</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </section>
-                
-                        <section id="laudos">
-                          <h2> <u> Laudos / Exames Clínicos Laboratoriais: </u></h2>
-                
-                          <select name="lista-laudo-exames" id="lista-laudo-exames" class="lista-exames"
-                            title="Clique para visualizar a relação de Exames Clínicos Veterinários">
-                            <option value="0">Selecione o exame</option>
-                            <option value="1">Exame 1</option>
-                            <option value="2">Exame 2</option>
-                            <option value="3">Exame 3</option>
-                            <option value="4">Exame 4</option>
-                            <option value="5">Exame 5</option>
-                
-                          </select>
-                          <button class="btn-adicionar">Adicionar</button>
-                
-                          <table>
-                            <thead>
+                    
+                        <form action="">
+                          <section id="dados-paciente">
+                            <div>
+                              <label for="nome-paciente">Paciente: </label> <br />
+                              <input type="text" name="nome-paciente" id="nome-paciente" value="Lucky Mendes Silva Lucky Mendes Silva Lucky Mendes Silva " disabled />
+                            </div>
+                            <div>
+                              <label for="idade-paciente">Idade: </label> <br />
+                              <input type="text" name="idade-paciente" id="idade-paciente" value="2 anos e 6 meses" disabled />
+                            </div>
+                            <div>
+                              <label for="sexo-paciente">Sexo: </label> <br />
+                              <input type="text" name="sexo-paciente" id="sexo-paciente" value="femea" disabled />
+                            </div>
+                            <div>
+                              <label for="peso">Peso (gr.): </label> <br />
+                              <input type="text" name="peso" id="peso" value="3.200" disabled />
+                            </div>
+                    
+                            <div>
+                              <label for="especie">Espécie: </label> <br />
+                              <input type="text" name="especie" id="especie" value="Canina" disabled />
+                            </div>
+                    
+                            <div>
+                              <label for="raca">Raça: </label> <br />
+                              <input type="text" name="raca" id="raca" value="Sem raça definida - SRDC" disabled />
+                            </div>
+                    
+                            <div>
+                              <label for="nome-proprietario">Proprietário: </label> <br />
+                              <input type="text" name="nome-proprietario" id="nome-proprietario" value="Darccelio Silva" disabled />
+                            </div>
+                          </section>
+                    
+                          <div>
+                            <button id="btn-receita-inteligente">Receita Inteligente</button>
+                            <button id="btn-receita-manual">Receita Manual</button>
+                          </div>
+                    
+                          <section id="medicamentos">
+                            <h2>Sugestão de Medicamentos:</h2>
+                    
+                            <!-- TODO: PENSAR EM COMO FAZER SUGESTÃO DE MEDICAMENTO POR DOENÇA -->
+                    
+                            <!-- <div>
+                              <label for="especie">Pesquise pela Doença: </label> <br />
+                              <input type="text" name="search-medicamentos-por-doenca" id="search-medicamentos-por-doenca"
+                                placeholder="Digite o nome ou parte do nome do medicamento ..." />
+                              <button class="btn-adicionar">Adicionar</button>
+                            </div> -->
+                    
+                            <div>
+                              <label for="search-medicamentos-por-doenca">Pesquise pelo nome: </label> <br />
+                              <input type="text" name="search-medicamentos-por-doenca" id="input-search-medicamentos-por-nome"
+                                placeholder="Digite o nome ou parte do nome do medicamento ..." />
+                              <button class="btn-adicionar">Adicionar</button>
+                            </div>
+                    
+                            <div>
+                              <label for="">Ou selecione aqui: </label> <br />
+                              <select name="lista-medicamentos" id="lista-medicamentos" class="lista-medicamentos"
+                                title="Selecione um medicamento">
+                                <option value="0">Selecione um medicamento</option>
+                                <option value="1">Medicamento 1</option>
+                                <option value="2">Medicamento 2</option>
+                                <option value="3">Medicamento 3</option>
+                                <option value="4">Medicamento 4</option>
+                                <option value="5">Medicamento 5</option>
+                              </select>
+                              <button class="btn-adicionar">Adicionar</button>
+                            </div>
+                    
+                            <div id="detalhes-receita"">
+                              <div>
+                                <label for="dosagem">Dosagem: </label> <br />
+                                <input type="text" name="dosagem" id="dosagem" value="2 comprimidos e 1/2" required/>
+                              </div>
+                    
+                              <div>
+                                <label for="frequencia">Frequência: </label> <br />
+                                <input type="text" name="frequencia" id="frequencia" value="3 vezes ao dia" required/>
+                              </div>
+                    
+                              <div>
+                                <label for="duracao">Duração: </label> <br />
+                                <input type="text" name="duracao" id="duracao" value="10 dias" required/>
+                              </div>
+                            </div>
+                    
+                            <table>
                               <thead>
-                                <tr>
-                                  <th scrope="col" width="2%">#</th>
-                                  <th scrope="col" width="9%">Tipo</th>
-                                  <th scrope="col" width="54%">Exame</th>
-                                  <th scrope="col" width="15%">Data Exame</th>
-                                  <th scrope="col" width="10%">Referência</th>
-                                  <th scrope="col" width="10%">Resultado</th>
-                                </tr>
+                                <thead>
+                                  <tr>
+                                    <th scrope="col" width="2%">#</th>
+                                    <th scrope="col" width="38%">Medicamento</th>
+                                    <th scrope="col" width="15%">Apresentação</th>
+                                    <th scrope="col" width="15%">Dosagem</th>
+                                    <th scrope="col" width="15%">Frequência</th>
+                                    <th scrope="col" width="15%">Duração</th>
+                                  </tr>
+                                </thead>
                               </thead>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>1</td>
-                                <td>Sangue</td>
-                                <td>ADH – Hormônio Antidiurético – Vasopressina -EXAME SUSPENSO POR TEMPO INDETERMINADO</td>
-                                <td>10/06/2022</td>
-                                <td>Negativo</td>
-                                <td>Postivo</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                
-                        </section>
-                
-                        <section id="container-receituario">
-                          <h2>Receita Médico Veterinário:</h2>
-                          <button class="btn-adicionar" id="btn-elaborar-receita">Elaborar Receita</button>
-                        </section>
-                
-                        <button id="btn-finalizar">Salvar e Finalizar</button>
-                      </form>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Cloreto de potássio</td>
+                                  <td>Pomada</td>
+                                  <td>1.5</td>
+                                  <td>12h</td>
+                                  <td>10 dias</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                    
+                            <section id="observacoes-clinicas">
+                              <p><label for="observacoes">Observações Clínicas: </label> </p>
+                              <textarea name="observacoes" id="observacoes" rows="10" autocapitalize="characters" placeholder="Informações complementares ....:"></textarea>
+                            </section>
+                    
+                          </section>
+                          
+                          <div class="container-btn-controles">
+                            <button id="btn-salvar">Salvar</button>
+                            <button class="btn-adicionar" id="btn-imprimir">Imprimir</button>
+                            <button class="btn-adicionar" id="btn-sair">Sair</button>
+                          </div>
+                    
+                        </form>
+                      </main>
                 </div>
             </div>
         </div> <!-- Sidebar Backdrop -->
@@ -283,6 +276,7 @@
     <script src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
 </body>
+
 
 
 </html>
