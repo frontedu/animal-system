@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Área do Parceiro — AnimalSystem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="/assets/images/fav.ico">
+    <link href="../output.css" rel="stylesheet">
+    <link rel="stylesheet" href="prontuario.css">
+</head>
+
+<body>
+    <section class="min-h-screen bg-gray-100" x-data="{ sideBar: false }">
+        <nav class="fixed top-0 left-0 z-20 h-full pb-10 overflow-x-hidden overflow-y-auto transition origin-left transform bg-white border-r w-60 md:translate-x-0"
+            :class="{ '-translate-x-full' : !sideBar, 'translate-x-0' : sideBar }" @click.away="sideBar = false"> <a
+                href="/dashboard/" class="flex items-center px-4 py-1"> <img src="/assets/images/svg/Logo_AnimalSystem.svg" alt="Logo do AnimalSystem"
+                    class="w-48 mt-4 mb-5" /> </a>
+            <nav class="text-sm font-medium text-gray-600" aria-label="Main Navigation"> <a
+                    class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                    
+                    href="/dashboard/"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"></path></svg> <span>Favoritos</span> </a>
+                <div x-data="collapse()"> 
+                    <div class="flex items-center justify-between px-4 py-3 text-gray-900 transition bg-gray-100 cursor-pointer group hover:bg-gray-100  hover:text-gray-900" role="button" x-spread="trigger" aria-expanded="true">
+                        <div class="flex items-center"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-600 transition group-hover:text-gray-600"
+                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg><span>Atendimento</span> </div> <svg :class="{ 'rotate-90': open }"
+                            class="shrink-0 w-4 h-4 ml-2 transition transform" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="mb-4" x-spread="collapse" x-cloak> <a
+                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer bg-gray-100 text-gray-900"
+                            href="#">Prontuário</a> <a class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900" href="receituario.html">Receituário</a> <a
+                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                            href="agenda.html">Agenda</a></div>
+                </div>
+                
+                
+                <div x-data="collapse()">
+                    <div class="flex items-center justify-between px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                        role="button" x-spread="trigger">
+                        <div class="flex items-center"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"></path></svg> <span>Procedimentos</span> </div> <svg :class="{ 'rotate-90': open }"
+                            class="shrink-0 w-4 h-4 ml-2 transition transform" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="mb-4" x-spread="collapse" x-cloak> <a
+                        class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                        href="#">Banho e Tosa</a> <a
+                        class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                        href="../procedimentos/vacina.html">Vacina e Vermífugo</a> <a
+                        class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                        href="#">Exame</a>
+                        <a
+                        class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                        href="#">Taxi Pet</a> <a
+                        class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                        href="#">Cirurgia</a></div></div>
+                </div>
+                
+                
+                
+                <a
+                    class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                    href="#"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 49" fill="currentColor">
+                        <path d="M39.041,36.843c2.054,3.234,3.022,4.951,3.022,6.742c0,3.537-2.627,5.252-6.166,5.252
+                        c-1.56,0-2.567-0.002-5.112-1.326c0,0-1.649-1.509-5.508-1.354c-3.895-0.154-5.545,1.373-5.545,1.373
+                        c-2.545,1.323-3.516,1.309-5.074,1.309c-3.539,0-6.168-1.713-6.168-5.252c0-1.791,0.971-3.506,3.024-6.742
+                        c0,0,3.881-6.445,7.244-9.477c2.43-2.188,5.973-2.18,5.973-2.18h1.093v-0.001c0,0,3.698-0.009,5.976,2.181
+                        C35.059,30.51,39.041,36.844,39.041,36.843z M16.631,20.878c3.7,0,6.699-4.674,6.699-10.439S20.331,0,16.631,0
+                        S9.932,4.674,9.932,10.439S12.931,20.878,16.631,20.878z M10.211,30.988c2.727-1.259,3.349-5.723,1.388-9.971
+                        s-5.761-6.672-8.488-5.414s-3.348,5.723-1.388,9.971C3.684,29.822,7.484,32.245,10.211,30.988z M32.206,20.878
+                        c3.7,0,6.7-4.674,6.7-10.439S35.906,0,32.206,0s-6.699,4.674-6.699,10.439C25.507,16.204,28.506,20.878,32.206,20.878z
+                        M45.727,15.602c-2.728-1.259-6.527,1.165-8.488,5.414s-1.339,8.713,1.389,9.972c2.728,1.258,6.527-1.166,8.488-5.414
+                        S48.455,16.861,45.727,15.602z"/>
+                    </svg> <span>Pets</span> </a>
+                    
+                    <a
+                    class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                    href="#"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg><span>Clientes</span> </a>
+                    
+                    
+                    <a
+                    class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                    href="#"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                        clip-rule="evenodd" />
+                </svg><span>Configurações</span> </a>
+                    
+                    <a
+                    class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900" href="/"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg> <span>Sair</span> </a>
+            </nav>
+        </nav>
+        <div class="ml-0 transition md:ml-60">
+            <header class="flex items-center justify-between w-full px-4 bg-white border-b h-14"> <button
+                    class="block btn btn-light md:hidden" @click.stop="sideBar = true"> <span
+                        class="sr-only">Menu</span> <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd" />
+                    </svg> </button>
+                <div class="hidden -ml-3 form-icon md:block w-96"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg> <input class="border-0 form-input" placeholder="Localize de forma rápida..." /> </div>
+                    
+                <div class="flex items-center">
+                    <a href="#" class="flex text-gray-500"> <svg class="shrink-0 w-5 h-5"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+                        </svg> </a>
+                        
+                        <a href="#" class="ml-4 avatar avatar-sm"> <img src="/assets/images/avatar.png"
+                            alt="Photo of Praveen Juge" /> </a> </div>
+                            
+            </header>
+            <div class="p-4">
+                <!-- Add content here, remove div below -->
+                <div class="border-4 border-dashed rounded px-4">
+
+                    <div id="container-titulo-principal">
+                        <h1 id="titulo-principal">Prontuário do Paciente</h1>
+                      </div>
+                
+                      <form action="">
+                        <section id="dados-paciente">
+                          <div>
+                            <label for="nome-paciente">Paciente: </label> <br>
+                            <input type="text" name="nome-paciente" id="nome-paciente" value="Lucky Mendes Silva" disabled />
+                          </div>
+                          <div>
+                            <label for="idade-paciente">Idade: </label> <br>
+                            <input type="text" name="idade-paciente" id="idade-paciente" value="2 anos e 6 meses" disabled />
+                          </div>
+                          <div>
+                            <label for="sexo-paciente">Sexo: </label> <br>
+                            <input type="text" name="sexo-paciente" id="sexo-paciente" value="femea" disabled />
+                          </div>
+                          <div>
+                            <label for="alimentacao-paciente">Alimentação: </label> <br>
+                            <input type="text" name="alimentacao-paciente" id="alimentacao-paciente" value="ração" disabled />
+                          </div>
+                          <div>
+                            <label for="nome-proprietario">Proprietário: </label> <br>
+                            <input type="text" name="nome-proprietario" id="nome-proprietario" value="Darccelio Silva" disabled />
+                          </div>
+                        </section>
+                
+                        <div>
+                          <button id="btn-iniciar-consulta">Iniciar Consulta</button>
+                          <button id="btn-historico">Histórico Animal</button>
+                        </div>
+                
+                        <section id="dados-anamnesia">
+                          <h2> <u> Anamnésia: </u> </h2>
+                          <label for="temperatura">
+                            Temperatura:
+                            <input type="text" name="temperatura" id="temperatura" />
+                            graus.</label> <br>
+                          <label for="batimento-cardiaco">Auscutação Cardiáca:
+                            <input type="text" name="batimento-cardiaco" id="batimento-cardiaco" />
+                            por minutos.</label> <br>
+                          <label for="mucosa">Cor da mucosa:
+                            <input type="text" name="mucosa" id="mucosa" /> .</label> <br>
+                          <label for="pressao-capilar">Tempo de pressão capilar (minutos):
+                            <input type="number" name="pressao-capilar" id="pressao-capilar" />
+                            .</label> <br>
+                        </section>
+                
+                        <section id="anotacoes-clinicas">
+                          <p><label for="anotacoes">Anotações Clínicas: </label> </p>
+                          <textarea name="anotacoes" id="anotacoes" rows="10" autocapitalize="characters" placeholder="Descreva aqui suas observações/orientações ....."></textarea>
+                        </section>
+                
+                        <section id="exames">
+                          <h2> <u> Síntese de Exames Clínicos Laboratoriais:</u></h2>
+                
+                          <select name="lista-exames" id="lista-exames" class="lista-exames"
+                            title="Clique para visualizar a relação de Exames Clínicos Veterinários">
+                            <option value="0">Selecione o exame</option>
+                            <option value="1">Exame 1</option>
+                            <option value="2">Exame 2</option>
+                            <option value="3">Exame 3</option>
+                            <option value="4">Exame 4</option>
+                            <option value="5">Exame 5</option>
+                          </select>
+                
+                          <input type="text" name="" id="" placeholder="Valor do resultado: " />
+                          <button class="btn-adicionar">Adicionar</button>
+                          <table>
+                            <thead>
+                              <tr>
+                                <th scrope="col" width="2%">#</th>
+                                <th scrope="col" width="9%">Tipo</th>
+                                <th scrope="col" width="54%">Exame</th>
+                                <th scrope="col" width="15%">Data Exame</th>
+                                <th scrope="col" width="10%">Referência</th>
+                                <th scrope="col" width="10%">Resultado</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>imagem</td>
+                                <td>Anticorpo Anti-Nuclear- ANA (canino, felino e equino)</td>
+                                <td>10/06/2022</td>
+                                <td>Negativo</td>
+                                <td>Postivo</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </section>
+                
+                        <section id="laudos">
+                          <h2> <u> Laudos / Exames Clínicos Laboratoriais: </u></h2>
+                
+                          <select name="lista-laudo-exames" id="lista-laudo-exames" class="lista-exames"
+                            title="Clique para visualizar a relação de Exames Clínicos Veterinários">
+                            <option value="0">Selecione o exame</option>
+                            <option value="1">Exame 1</option>
+                            <option value="2">Exame 2</option>
+                            <option value="3">Exame 3</option>
+                            <option value="4">Exame 4</option>
+                            <option value="5">Exame 5</option>
+                
+                          </select>
+                          <button class="btn-adicionar">Adicionar</button>
+                
+                          <table>
+                            <thead>
+                              <thead>
+                                <tr>
+                                  <th scrope="col" width="2%">#</th>
+                                  <th scrope="col" width="9%">Tipo</th>
+                                  <th scrope="col" width="54%">Exame</th>
+                                  <th scrope="col" width="15%">Data Exame</th>
+                                  <th scrope="col" width="10%">Referência</th>
+                                  <th scrope="col" width="10%">Resultado</th>
+                                </tr>
+                              </thead>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>Sangue</td>
+                                <td>ADH – Hormônio Antidiurético – Vasopressina -EXAME SUSPENSO POR TEMPO INDETERMINADO</td>
+                                <td>10/06/2022</td>
+                                <td>Negativo</td>
+                                <td>Postivo</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                
+                        </section>
+                
+                        <section id="container-receituario">
+                          <h2>Receita Médico Veterinário:</h2>
+                          <button class="btn-adicionar" id="btn-elaborar-receita">Elaborar Receita</button>
+                        </section>
+                
+                        <button id="btn-finalizar">Salvar e Finalizar</button>
+                      </form>
+                </div>
+            </div>
+        </div> <!-- Sidebar Backdrop -->
+        <div class="fixed inset-0 z-10 w-screen h-screen bg-black bg-opacity-25 md:hidden" x-show.transition="sideBar"
+            x-cloak></div>
+    </section>
+
+
+    <script src="/assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
+</body>
+
+
+</html>

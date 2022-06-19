@@ -1,0 +1,205 @@
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Área do Parceiro — AnimalSystem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="/assets/images/fav.ico">
+    <link href="output.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="min-h-screen bg-gray-100" x-data="{ sideBar: false }">
+        <nav class="fixed top-0 left-0 z-20 h-full pb-10 overflow-x-hidden overflow-y-auto transition origin-left transform bg-white border-r w-60 md:translate-x-0"
+            :class="{ '-translate-x-full' : !sideBar, 'translate-x-0' : sideBar }" @click.away="sideBar = false"> <a
+                href="/dashboard/" class="flex items-center px-4 py-1"> <img src="/assets/images/svg/Logo_AnimalSystem.svg" alt="Logo do AnimalSystem"
+                    class="w-48 mt-4 mb-5" /> </a>
+            <nav class="text-sm font-medium text-gray-600" aria-label="Main Navigation"> <a
+                    class="flex items-center px-4 py-3 text-gray-900 transition bg-gray-100 cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                    
+                    href="#"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-600 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"></path></svg> <span>Favoritos</span> </a>
+                <div x-data="collapse()">
+                    <div class="flex items-center justify-between px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                        role="button" x-spread="trigger">
+                        <div class="flex items-center"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg><span>Atendimento</span> </div> <svg :class="{ 'rotate-90': open }"
+                            class="shrink-0 w-4 h-4 ml-2 transition transform" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="mb-4" x-spread="collapse" x-cloak> <a
+                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                            href="atendimento/prontuario.html">Prontuário</a> <a class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900" href="atendimento/receituario.html">Receituário</a> <a
+                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                            href="atendimento/agenda.html">Agenda</a></div>
+                </div>
+                
+                
+                <div x-data="collapse()">
+                    <div class="flex items-center justify-between px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                        role="button" x-spread="trigger">
+                        <div class="flex items-center"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"></path></svg> <span>Procedimentos</span> </div> <svg :class="{ 'rotate-90': open }"
+                            class="shrink-0 w-4 h-4 ml-2 transition transform" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="mb-4" x-spread="collapse" x-cloak> <a
+                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                            href="#">Banho e Tosa</a> <a
+                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                            href="procedimentos/vacina.html">Vacina e Vermífugo</a> <a
+                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                            href="#">Exame</a>
+                            <a
+                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                            href="#">Taxi Pet</a> <a
+                            class="flex items-center py-2 pl-12 pr-4 transition cursor-pointer hover:bg-gray-100 hover:text-gray-900"
+                            href="#">Cirurgia</a></div></div>
+                </div>
+                
+
+                <a
+                    class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                    href="#"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 49" fill="currentColor">
+                        <path d="M39.041,36.843c2.054,3.234,3.022,4.951,3.022,6.742c0,3.537-2.627,5.252-6.166,5.252
+                        c-1.56,0-2.567-0.002-5.112-1.326c0,0-1.649-1.509-5.508-1.354c-3.895-0.154-5.545,1.373-5.545,1.373
+                        c-2.545,1.323-3.516,1.309-5.074,1.309c-3.539,0-6.168-1.713-6.168-5.252c0-1.791,0.971-3.506,3.024-6.742
+                        c0,0,3.881-6.445,7.244-9.477c2.43-2.188,5.973-2.18,5.973-2.18h1.093v-0.001c0,0,3.698-0.009,5.976,2.181
+                        C35.059,30.51,39.041,36.844,39.041,36.843z M16.631,20.878c3.7,0,6.699-4.674,6.699-10.439S20.331,0,16.631,0
+                        S9.932,4.674,9.932,10.439S12.931,20.878,16.631,20.878z M10.211,30.988c2.727-1.259,3.349-5.723,1.388-9.971
+                        s-5.761-6.672-8.488-5.414s-3.348,5.723-1.388,9.971C3.684,29.822,7.484,32.245,10.211,30.988z M32.206,20.878
+                        c3.7,0,6.7-4.674,6.7-10.439S35.906,0,32.206,0s-6.699,4.674-6.699,10.439C25.507,16.204,28.506,20.878,32.206,20.878z
+                        M45.727,15.602c-2.728-1.259-6.527,1.165-8.488,5.414s-1.339,8.713,1.389,9.972c2.728,1.258,6.527-1.166,8.488-5.414
+                        S48.455,16.861,45.727,15.602z"/>
+                    </svg> <span>Pets</span> </a>
+                    
+                    <a
+                    class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                    href="#"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg><span>Clientes</span> </a>
+                
+                    <a
+                    class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+                    href="#"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                        clip-rule="evenodd" />
+                </svg><span>Configurações</span> </a>
+                    
+                    <a
+                    class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900" href="/"> <svg class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg> <span>Sair</span> </a>
+            </nav>
+        </nav>
+        <div class="ml-0 transition md:ml-60">
+            <header class="flex items-center justify-between w-full px-4 bg-white border-b h-14"> <button
+                    class="block btn btn-light md:hidden" @click.stop="sideBar = true"> <span
+                        class="sr-only">Menu</span> <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd" />
+                    </svg> </button>
+                <div class="hidden -ml-3 form-icon md:block w-96"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg> <input class="border-0 form-input" placeholder="Localize de forma rápida..." /> </div>
+                    
+                <div class="flex items-center">
+                    <a href="#" class="flex text-gray-500"> <svg class="shrink-0 w-5 h-5"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+                        </svg> </a>
+                        
+                        <a href="#" class="ml-4 avatar avatar-sm"> <img src="/assets/images/avatar.png"
+                            alt="Photo of Praveen Juge" /> </a> </div>
+                            
+            </header>
+            <div class="p-4">
+                <!-- Add content here, remove div below -->
+                <div class="border-4 border-dashed rounded">
+                    
+  <section class="p-6 my-6 text-dark-600">
+    <div class="container grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4">
+      <div class="flex p-4 space-x-4 rounded-lg md:space-x-6 bg-white text-dark-600">
+        <div class="flex justify-center p-2 align-middle rounded-lg sm:p-4 bg-[#33C4C4]">
+
+          <svg fill="currentColor" class="h-9 w-9 text-gray-100" version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40"><style></style><path fill-rule="evenodd" d="m255.2 40c9.2 0 18.7 0.4 21.1 0.9 2.3 0.5 8.3 1.7 13.2 2.6 4.9 0.9 13.7 3.3 19.5 5.2 5.8 1.9 15.9 6.2 22.5 9.5 11.1 5.6 12.7 6.1 21.5 7 5.2 0.5 14.7 2 21 3.4 6.3 1.5 15.3 4 20 5.6 4.7 1.6 13 5.2 18.5 7.8 5.5 2.7 14.7 8 20.5 11.9 5.8 3.8 14.6 10.5 19.5 14.8 4.9 4.4 12.4 11.9 16.5 16.9 4.2 4.9 9.9 12.3 12.6 16.4 2.8 4.1 7.2 11.3 9.7 16 2.5 4.7 6.1 12.6 8 17.5 2 4.9 4.7 12.8 6 17.5 1.4 4.7 3.4 14.1 4.6 21 1.8 10.8 2.1 16.7 2.1 43 0 27.5-0.2 31.3-2 38.5-1.2 4.4-3.8 11.1-5.8 15-2.3 4.4-6.5 9.7-11.2 14.5-5.7 5.7-9.6 8.6-16 11.8-4.7 2.3-11.9 5-16 5.8-5.3 1.1-10 1.4-16 1-4.7-0.4-9.8-0.8-11.5-0.9-2.7-0.2-3 0.1-3.7 4.3-0.4 2.5-1.8 7.4-2.9 11-1.2 3.6-3.5 9.2-5.2 12.5-1.6 3.3-4.8 8.7-7 12-2.2 3.3-7.2 9.2-11.1 13.1-3.9 3.9-10 9-13.6 11.4-3.6 2.4-10.1 6.1-14.5 8.2-4.4 2-12.4 4.8-17.8 6-9.8 2.3-9.9 2.3-13.6 7.3-2.1 2.8-6.7 7.9-10.2 11.4-3.5 3.5-9.5 8.6-13.4 11.3-3.9 2.7-10.1 6.6-14 8.5-3.9 2-10.1 4.7-14 6-3.9 1.3-11.1 3.3-16 4.3-6 1.4-12.8 2-20.5 2-7.7 0-14.5-0.6-20.5-1.9-4.9-1.1-12.4-3.2-16.5-4.7-4.1-1.4-10.4-4.1-14-5.9-3.6-1.8-9.6-5.6-13.5-8.3-3.8-2.7-9.9-7.9-13.4-11.3-3.6-3.5-8.1-8.6-10.2-11.4-3.7-5-3.8-5-13.6-7.2-6.6-1.5-13.2-4-20.3-7.5-5.8-2.9-13.2-7.4-16.5-9.9-3.3-2.5-8.5-7.3-11.5-10.5-3-3.3-7.3-8.6-9.4-11.9-2.2-3.3-5.7-9.6-7.7-14-2.1-4.4-4.7-11.8-5.9-16.5-1.1-4.7-2.1-8.6-2.3-8.8-0.1-0.1-2.9 0.2-6.2 0.8-3.3 0.5-8.5 1-11.5 1-3 0-8.6-0.7-12.5-1.5-3.8-0.8-10.8-3.4-15.5-5.7-6.5-3.2-10.3-6-16-11.8-4.9-4.9-8.8-9.9-11.2-14.5-2-3.9-4.6-10.4-5.7-14.5-1.9-6.8-2.1-10.2-2.1-37.7 0-22.6 0.4-33 1.6-41 0.9-6 2.6-14.9 3.9-19.8 1.2-4.9 3.9-13.5 6-19 2-5.5 6-14.3 8.7-19.5 2.8-5.2 7.3-12.9 10.1-17 2.8-4.1 8.5-11.5 12.7-16.4 4.1-4.9 11.6-12.5 16.5-16.9 5-4.3 13.7-11 19.5-14.8 5.8-3.9 15-9.2 20.5-11.9 5.5-2.6 14.7-6.4 20.5-8.4 5.8-1.9 15-4.4 20.5-5.5 5.5-1.1 14.5-2.5 20-3.1 5.5-0.5 10.5-1.4 11-1.9 0.6-0.5 4.6-2.7 9-4.9 4.4-2.2 11.4-5.4 15.5-7 4.1-1.7 12-4.2 17.5-5.6 5.5-1.4 13.2-3 17-3.6 3.9-0.6 7.2-1.3 7.4-1.6 0.2-0.2 8-0.4 17.3-0.4zm-27.7 35c-2.7 0.7-8.6 2.3-13 3.7-4.4 1.3-12.1 4.4-17 6.7-4.9 2.3-13.3 7.1-18.5 10.6-5.3 3.6-13.9 10.9-19.5 16.5-6.1 6-12.7 14-16.7 20-3.7 5.5-8.5 13.8-10.6 18.5-2.2 4.7-5.1 12.1-6.5 16.5-1.4 4.4-3.2 12.1-4.1 17-0.9 5.1-3.4 39.1-5.7 78.5-4 66.6-4.1 69.8-2.5 77.5 0.9 4.8 3.2 11.4 5.7 16.5 3.3 6.5 6.1 10.3 11.8 16.1 5.5 5.5 9.8 8.6 15.6 11.6 4.4 2.2 11.6 4.8 16 5.8 6 1.3 10.3 1.6 17 1.2 4.9-0.3 11.9-1.5 15.5-2.6 3.6-1.1 9.4-3.7 13-5.8 3.5-2.1 9.2-6.5 12.5-9.8 3.4-3.3 7.4-8.2 9-11 1.7-2.7 4-7.2 5.1-10l2.1-5c-11-13.2-16.3-20.4-18.9-24.5-2.6-4.1-5.6-10-6.8-13-1.2-3-2.4-8.4-2.7-12-0.4-4.4 0-8.6 1.1-12.7 0.9-3.5 2.8-8.7 4.3-11.5 1.4-2.9 5-7.8 7.8-10.8 2.9-3 7.9-6.9 11.1-8.7 3.3-1.7 8.6-3.9 11.9-4.7 3.3-0.9 8.5-1.6 11.5-1.6 3 0 8.2 0.7 11.5 1.6 3.3 0.8 8.6 3 11.9 4.7 3.2 1.8 8.2 5.7 11.1 8.7 2.9 3 6.7 8.4 8.4 12 1.7 3.6 3.7 9.4 4.3 13 0.9 4.8 0.9 8.2 0.2 13-0.7 3.7-2.7 9.7-4.8 14-2.1 4.1-5.7 10.2-8.1 13.5-2.3 3.3-6.7 8.9-9.8 12.5l-5.5 6.5c2.9 7.4 5 11.4 6.4 13.8 1.5 2.3 4.6 6.5 6.9 9.2 2.3 2.8 7.3 7.1 11.1 9.7 3.8 2.5 8.9 5.5 11.4 6.6 2.5 1.1 8 2.7 12.3 3.6 4.2 0.9 10.3 1.6 13.5 1.6 3.1 0 8.8-0.7 12.7-1.5 3.9-0.8 10.8-3.4 15.5-5.7 6.4-3.2 10.4-6.1 16-11.8 5.7-5.6 8.6-9.6 11.8-16 2.7-5.2 4.9-11.6 5.9-16.5 1.5-7.7 1.4-10.9-2.6-78-2.3-38.5-4.8-73.8-5.7-78.5-0.8-4.7-3-13-4.8-18.5-1.9-5.5-4.9-13.1-6.9-17-1.9-3.8-6.2-11.1-9.5-16-3.3-4.9-9.5-12.8-13.8-17.4-4.4-4.6-12.4-11.7-17.9-15.9-5.6-4.2-14.8-9.8-21-12.8-6.1-2.9-13.9-6.2-17.5-7.4-3.6-1.2-10.6-3-15.5-4.1-5.6-1.2-14.3-2.1-23-2.4-7.7-0.2-17.1 0-21 0.5-3.8 0.5-9.2 1.4-12 2zm-132 45.9c-2.7 1.9-8.6 6.4-13 10.1-4.4 3.6-11.2 10.4-15.1 15.1-3.9 4.6-8.9 11.1-11.1 14.4-2.2 3.3-6.1 10.1-8.5 15-2.5 5-6 13.1-7.7 18-1.8 5-4.2 13.5-5.4 19-1.9 9.1-2.1 12.9-2.2 43 0 32.2 0.1 33.1 2.2 37.5 1.3 2.5 3.6 6.1 5.1 8 1.6 1.9 5.5 4.9 8.8 6.7 3.8 2.1 8 3.5 11.9 3.9 4.2 0.5 7.6 0.2 11.5-0.9 3-0.9 6.3-2.2 7.3-2.9 1.7-1.2 2.2-6.6 5.3-58.8 2.3-38.5 4.1-61.5 5.4-69.5 1.1-6.6 3.8-17.2 5.9-23.5 2.1-6.3 6-15.8 8.6-21 2.6-5.2 7.2-13.2 10.1-17.7 3-4.6 5.4-8.5 5.4-8.8 0-0.3-0.3-0.5-0.7-0.5-0.5 0-4.8 2.2-9.8 4.8-4.9 2.6-11.2 6.2-14 8.1zm301.4-4.4c2.7 3.9 7.1 11.5 9.8 17 2.8 5.5 6.3 13.4 7.7 17.5 1.5 4.1 3.8 11.8 5.1 17 1.3 5.2 2.9 13.1 3.5 17.5 0.6 4.4 2.6 33.4 4.5 64.5 3 51.3 3.5 56.6 5.2 57.8 1 0.7 4.3 2 7.3 2.9 3.9 1.1 7.3 1.4 11.5 0.9 3.9-0.4 8.1-1.8 11.9-3.9 3.2-1.8 7-4.6 8.4-6.2 1.3-1.6 3.6-5.2 5.1-8l2.6-5c-0.1-63.1-0.3-66.9-2.2-76-1.2-5.5-3.6-14-5.3-19-1.8-4.9-5.6-13.7-8.6-19.5-3.1-5.8-8.1-14.1-11.2-18.4-3.1-4.4-9.8-12-14.8-17-5-5-12.6-11.7-17-14.8-4.3-3.1-12.2-7.9-17.5-10.7-5.3-2.8-9.9-4.8-10.2-4.3-0.3 0.4 1.6 3.9 4.2 7.7zm-153.6 169.4c-1.2 1.7-2.6 4.8-2.9 6.9-0.5 3 0 5 3 10.7 2 3.9 5.6 9.3 8.1 12l4.5 5c7-7.7 10.6-13.1 12.6-17 3-5.7 3.5-7.7 3-10.7-0.3-2.1-1.8-5.2-3.3-7-1.6-1.7-4.3-3.7-6-4.5-1.8-0.7-4.8-1.3-6.5-1.3-1.8 0.1-4.8 0.7-6.7 1.4-1.9 0.7-4.5 2.7-5.8 4.5zm-1.8 112c-3.3 3.1-8.7 7.4-12 9.5-3.3 2.2-9.7 5.7-14.2 7.8-4.6 2.1-9 3.8-9.8 3.8-0.8 0-1.4 0.6-1.2 1.3 0.2 0.6 3.9 3.6 8.3 6.5 4.3 2.9 10.4 6.2 13.4 7.3 3 1.1 8.2 2.8 11.5 3.7 4.1 1.2 9.9 1.7 18.5 1.6 9.9 0 14.1-0.5 20.5-2.3 4.4-1.2 11.4-4 15.5-6.2 4.1-2.1 9.2-5.2 11.3-6.9 2-1.6 3.7-3.4 3.7-4 0-0.6-0.4-1-1-1-0.5 0-4.7-1.7-9.2-3.8-4.6-2.1-11-5.6-14.3-7.8-3.3-2.1-8.7-6.4-12-9.5-3.3-3.1-7.8-7.9-10-10.8-2.2-2.8-4.3-5.1-4.6-5.1-0.3 0-2.3 2.3-4.5 5.1-2.1 2.9-6.6 7.7-9.9 10.8zm-49.7-213.9c1.7 0 4.7 0.6 6.5 1.3 1.7 0.8 4.4 2.8 6 4.5 1.5 1.8 3 4.9 3.3 7 0.3 2 0.3 5.3-0.1 7.2-0.4 2-2.3 5-4.4 7.1q-3.6 3.7-7.6 4.4c-2.2 0.4-5.6 0.4-7.5 0-2-0.4-5-2.3-7.1-4.4q-3.7-3.6-4.4-7.6c-0.4-2.2-0.4-5.5-0.1-7.2 0.3-1.8 1.7-4.7 2.9-6.4 1.3-1.8 3.9-3.8 5.8-4.5 1.9-0.7 4.9-1.3 6.7-1.4zm128 0c1.7 0 4.7 0.6 6.5 1.3 1.7 0.8 4.4 2.8 6 4.5 1.5 1.8 3 4.9 3.3 7 0.3 2 0.3 5.3-0.1 7.2-0.4 2-2.3 5-4.4 7.1q-3.6 3.7-7.6 4.4c-2.2 0.4-5.6 0.4-7.5 0-2-0.4-5-2.3-7.1-4.4q-3.7-3.6-4.4-7.6c-0.4-2.2-0.4-5.5-0.1-7.2 0.3-1.8 1.7-4.7 2.9-6.4 1.3-1.8 3.9-3.8 5.8-4.5 1.9-0.7 4.9-1.3 6.7-1.4z"/></svg>
+
+
+
+
+        </div>
+        <div class="flex flex-col justify-center align-middle">
+          <p class="text-3xl font-bold leading-none">112</p>
+          <p>Pets atendidos</p>
+        </div>
+      </div>
+      <div class="flex p-4 space-x-4 rounded-lg md:space-x-6 bg-white text-dark-600">
+        <div class="flex justify-center p-2 align-middle rounded-lg sm:p-4 bg-[#33C4C4]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="h-9 w-9 text-gray-100">
+            <path d="M256,16C123.452,16,16,123.452,16,256S123.452,496,256,496,496,388.548,496,256,388.548,16,256,16ZM403.078,403.078a207.253,207.253,0,1,1,44.589-66.125A207.332,207.332,0,0,1,403.078,403.078Z"></path>
+            <path d="M256,384A104,104,0,0,0,360,280H152A104,104,0,0,0,256,384Z"></path>
+            <polygon points="205.757 228.292 226.243 203.708 168 155.173 109.757 203.708 130.243 228.292 168 196.827 205.757 228.292"></polygon>
+            <polygon points="285.757 203.708 306.243 228.292 344 196.827 381.757 228.292 402.243 203.708 344 155.173 285.757 203.708"></polygon>
+          </svg>
+        </div>
+        <div class="flex flex-col justify-center align-middle">
+          <p class="text-3xl font-bold leading-none">75</p>
+          <p>Novos clientes</p>
+        </div>
+      </div>
+      <div class="flex p-4 space-x-4 rounded-lg md:space-x-6 bg-white text-dark-600">
+        <div class="flex justify-center p-2 align-middle rounded-lg sm:p-4 bg-[#33C4C4]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="h-9 w-9 text-gray-100">
+            <path d="M425.706,142.294A240,240,0,0,0,16,312v88H160V368H48V312c0-114.691,93.309-208,208-208s208,93.309,208,208v56H352v32H496V312A238.432,238.432,0,0,0,425.706,142.294Z"></path>
+            <rect width="32" height="32" x="80" y="264"></rect>
+            <rect width="32" height="32" x="240" y="128"></rect>
+            <rect width="32" height="32" x="136" y="168"></rect>
+            <rect width="32" height="32" x="400" y="264"></rect>
+            <path d="M297.222,335.1l69.2-144.173-28.85-13.848L268.389,321.214A64.141,64.141,0,1,0,297.222,335.1ZM256,416a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,416Z"></path>
+          </svg>
+        </div>
+        <div class="flex flex-col justify-center align-middle">
+          <p class="text-3xl font-bold leading-none">172%</p>
+          <p>Crescimento</p>
+        </div>
+      </div>
+      <div class="flex p-4 space-x-4 rounded-lg md:space-x-6 bg-white text-dark-600">
+        <div class="flex justify-center p-2 align-middle rounded-lg sm:p-4 bg-[#33C4C4]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="h-9 w-9 text-gray-100">
+            <path d="M454.423,278.957,328,243.839v-8.185a116,116,0,1,0-104,0V312H199.582l-18.494-22.6a90.414,90.414,0,0,0-126.43-13.367,20.862,20.862,0,0,0-8.026,33.47L215.084,496H472V302.08A24.067,24.067,0,0,0,454.423,278.957ZM192,132a84,84,0,1,1,136,65.9V132a52,52,0,0,0-104,0v65.9A83.866,83.866,0,0,1,192,132ZM440,464H229.3L79.141,297.75a58.438,58.438,0,0,1,77.181,11.91l28.1,34.34H256V132a20,20,0,0,1,40,0V268.161l144,40Z"></path>
+          </svg>
+        </div>
+        <div class="flex flex-col justify-center align-middle">
+          <p class="text-3xl font-bold leading-none">26 horas</p>
+          <p>Tempo economizado</p>
+        </div>
+      </div>
+    </div>
+  </section>
+                </div>
+            </div>
+        </div> <!-- Sidebar Backdrop -->
+        <div class="fixed inset-0 z-10 w-screen h-screen bg-black bg-opacity-25 md:hidden" x-show.transition="sideBar"
+            x-cloak></div>
+    </section>
+
+
+
+    <script src="/assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
+</body>
+
+
+</html>
