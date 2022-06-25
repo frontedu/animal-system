@@ -90,27 +90,62 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("modalArtesanal").classList.toggle("escondido")
     })
 
+    function validateForm() {
+      let title = document.getElementById("title-event").value;
+      let start_date = document.getElementById("start-date-event").value;
+      let start_time = document.getElementById("start-time-event").value;
+      let end_date = document.getElementById("end-date-event").value;
+      let end_time = document.getElementById("end-time-event").value;
+
+      if(title == "" || start_date == "" || start_time == "" || end_date == "" || end_time == "") {
+          alert("Preencha todos os campos!");
+          return false;
+      } else {
+          return true;
+      }
+    }
+
     function saveEvent() {
-      var event = {
-        title: document.getElementById("title-event").value,
-        start: document.getElementById("start-event").value,
-        end: document.getElementById("end-event").value
-      };
 
-      console.log(event)
+      let isValid = validateForm();
 
-      events.push(event);
+      if(isValid == true) {
+        let start_date = document.getElementById("start-date-event").value;
+        let start_time = document.getElementById("start-time-event").value;
 
-      document.getElementById("modalArtesanal").classList.toggle("escondido");
-      resetFormValues();
+        let end_date = document.getElementById("end-date-event").value;
+        let end_time = document.getElementById("end-time-event").value;
 
-      initCalendar();
+        let start_formatted = start_date + "T" + start_time + ":00";
+        let end_formatted = end_date + "T" + end_time + ":00";
+
+        console.log(start_time)
+        console.log(end_time)
+
+        var event = {
+          title: document.getElementById("title-event").value,
+          start: start_formatted,
+          end: end_formatted
+        };
+
+        console.log(event)
+
+        events.push(event);
+
+        document.getElementById("modalArtesanal").classList.toggle("escondido");
+        resetFormValues();
+
+        initCalendar();
+      }
+
     }
 
     function resetFormValues() {
       document.getElementById("title-event").value = "";
-      document.getElementById("start-event").value = "";
-      document.getElementById("end-event").value = "";
+      document.getElementById("start-date-event").value = "";
+      document.getElementById("start-time-event").value = "";
+      document.getElementById("end-date-event").value = "";
+      document.getElementById("end-time-event").value = "";
     }
 
     function initCalendar() {
