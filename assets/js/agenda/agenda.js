@@ -59,16 +59,58 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     ];
 
-    document.getElementById("adicionarEvento").addEventListener("click", adicionarEvento)
+    // document.getElementById("adicionarEvento").addEventListener("click", adicionarEvento)
+    // let openModalTailwindBtn = document.getElementById("openModalTailwind");
 
-    function adicionarEvento() {
-      events.push({
-        title: 'Teste',
-        start: '2022-06-19',
-        end: '2022-06-19'
-      })
+    // function configurarBtn() {
+    //   openModalTailwindBtn.setAttribute("data-modal-toggle", "defaultModal");
+    //   openModalTailwindBtn.setAttribute("data-modal-target", "defaultModal");
+    // }
+    // configurarBtn();
+
+    // function adicionarEvento() {
+    //   events.push({
+    //     title: 'Teste',
+    //     start: '2022-06-19',
+    //     end: '2022-06-19'
+    //   })
+
+    //   initCalendar();
+    // }
+
+    document.getElementById("saveEvent").addEventListener("click", saveEvent)
+
+    document.getElementById("closeModal").addEventListener("click", () => {
+        document.getElementById("modalArtesanal").classList.toggle("escondido")
+    })
+
+    let openModalArtesanal   = document.getElementById("openModalArtesanal");
+    
+    openModalArtesanal.addEventListener("click", function() {
+        document.getElementById("modalArtesanal").classList.toggle("escondido")
+    })
+
+    function saveEvent() {
+      var event = {
+        title: document.getElementById("title-event").value,
+        start: document.getElementById("start-event").value,
+        end: document.getElementById("end-event").value
+      };
+
+      console.log(event)
+
+      events.push(event);
+
+      document.getElementById("modalArtesanal").classList.toggle("escondido");
+      resetFormValues();
 
       initCalendar();
+    }
+
+    function resetFormValues() {
+      document.getElementById("title-event").value = "";
+      document.getElementById("start-event").value = "";
+      document.getElementById("end-event").value = "";
     }
 
     function initCalendar() {

@@ -1,9 +1,0 @@
-{
-    "delay" : 200,
-
-    ".b-weekview .b-cal-event-wrap[data-event-id=\"17\"]" : {
-        "title" : "Drag an event",
-        "content" : "A confirmation dialog protects the actual data change operation",
-        "align" : "t-b"
-    }
-}

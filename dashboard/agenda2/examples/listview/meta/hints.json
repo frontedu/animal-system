@@ -1,8 +1,0 @@
-{
-    ".b-grid-header-text-content" : {
-        "html"  : "Right-click to see extra columns generated from defined fields.<p>Also to select the time range that the list shows"
-    },
-    ".b-grid-row[data-index=\"3\"] .b-grid-cell div" : {
-        "html"  : "Custom renderer added for the name column"
-    }
-}
