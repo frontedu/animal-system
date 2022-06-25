@@ -131,7 +131,7 @@
                 <div class="border-4 border-dashed rounded">
                     <main class="px-4">
                         <div id="container-titulo-principal">
-                          <h1 id="titulo-principal">Carteira de Vacina</h1>
+                          <h1 id="titulo-principal">Carteira de Vacina e Vermífugo</h1>
                          
                         </div>
                     
@@ -181,12 +181,12 @@
                           </section>
                     
                           <section id="medicamentos">
-                            <h2>Registrar Vacina</h2>
+                            <h2>Registrar Aplicação: </h2>
                     
                             <div>
                               <select name="lista-medicamentos" id="lista-medicamentos" class="lista-medicamentos"
                                 title="Selecione um medicamento">
-                                <option value="0">Selecione a vacina:</option>
+                                <option value="0">Selecione a Vacina / Vermífugo:</option>
                                 <option value="1">Cão - V8</option>
                                 <option value="2">Cão - V10</option>
                                 <option value="3">Cão - Antirrábica</option>
@@ -197,21 +197,28 @@
                               <button class="btn-adicionar">Adicionar</button>
                             </div>
                     
-                            <div id="detalhes-medicamentos"">
+                            <div id="detalhes-medicamentos">
                               <div>
-                                <label for="dosagem">Dosagem: </label> <br />
-                                <input type="text" name="dosagem" id="dosagem" value="2 comprimidos e 1/2" required/>
+                                <label for="fabricante">Fabricante: </label> <br />
+                                <input type="text" name="fabricante" id="fabricante" required/>
                               </div>
                     
                               <div>
-                                <label for="frequencia">Frequência: </label> <br />
-                                <input type="text" name="frequencia" id="frequencia" value="3 vezes ao dia" required/>
+                                <label for="lote">Lote: </label> <br />
+                                <input type="text" name="lote" id="lote" required/>
                               </div>
                     
                               <div>
-                                <label for="duracao">Duração: </label> <br />
-                                <input type="text" name="duracao" id="duracao" value="10 dias" required/>
+                                <label for="data-aplicacao">Data Aplicação: </label> <br />
+                                <input type="date" name="data-aplicacao" id="duracao" required/>
                               </div>
+
+                              <div>
+                                <label for="data-proxima-aplicacao">Próxima Aplicação: </label> <br />
+                                <input type="date" name="data-proxima-aplicacao" id="data-proxima-aplicacao" 
+                                required/>
+                              </div>
+
                             </div>
                     
                             <table>

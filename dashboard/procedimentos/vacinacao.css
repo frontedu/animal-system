@@ -11,7 +11,7 @@ main {
   margin: 0 auto;
 }
 
-input[type="text"] {
+input[type="text"], input[type="date"]  {
   border: 1.4px solid #D8D9DA;
   /* margin: 5px 0px 15px 0px; */
   border-radius: 6px;
@@ -222,6 +222,25 @@ form input[type="text"]:disabled {
   background-color: #B72F66;
   filter: drop-shadow(0px 1.41126px 1.41126px rgba(197, 110, 147, 0.075));
 }
+
+#detalhes-medicamentos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+#detalhes-medicamentos div {
+  margin: 6px 12px 6px 0;
+  box-sizing:content-box;
+}
+
+#detalhes-medicamentos div label {
+  font-size: 0.8rem;
+  margin: 8px auto;
+}
+
 
 table {
   width: 100%;
