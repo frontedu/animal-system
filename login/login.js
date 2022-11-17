@@ -57,4 +57,37 @@ $(document).ready(() => {
     $("#confirmacao-envio").css("display", "none")
   })
 
+  async function login(event) {
+    let emailInput = $("#login-email-input").val()
+    let senhaInput = $("#login-senha-input").val()
+    let msgError   = '';
+
+    if(emailInput == null || emailInput == '') {
+      msgError = 'Por favor, preencha o campo de E-mail';
+    } else if(senhaInput == null || senhaInput == '') {
+      msgError = 'Por favor, preencha o campo de Senha';
+    } else {
+      let objLogin = {
+        email: emailInput,
+        senha: senhaInput
+      };
+
+      let rawResponse = await fetch('http://localhost:3000/login', {
+        method: 'POST', 
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(objLogin),
+      })
+
+      let response = await rawResponse.json();
+
+      if(response != null) {
+        localStorage.setItem('logged', response.auth);
+      }
+    }
+  }
+
+  $("#login-button").on("click", login)
+
 });
