@@ -81,11 +81,51 @@ $(document).ready(() => {
       })
 
       let response = await rawResponse.json();
+      console.log(response)
 
       if(response != null) {
-        localStorage.setItem('logged', response.auth);
+        if(response.auth != null) {
+          localStorage.setItem('logged', response.auth);
+        }
+
+        if(response.error) {
+          showSnackbar(response.error, 'error')
+        } else {
+          showSnackbar('Autenticado com sucesso! Redirecionando...', 'success');
+          setTimeout(() => {
+            window.location.href = '/dashboard/';
+          }, 1500);
+        }
       }
     }
+
+    if(msgError != '') {
+      showSnackbar(msgError, 'error')
+    }
+  }
+
+  function showSnackbar(message, type = 'info') {
+    const toast     = document.getElementById('toast');
+    const toastBody = toast.querySelector('.toast-body');
+
+    toast.classList.remove('visible');
+    toastBody.classList.remove('info');
+    toastBody.classList.remove('success');
+    toastBody.classList.remove('error');
+
+    toastBody.innerHTML = message;
+
+    if(['info', 'success', 'error'].includes(type)) {
+      toastBody.classList.add(type);
+    } else {
+      toastBody.classList.add('info');
+    }
+
+    toast.classList.add('visible');
+    
+    setTimeout(() => {
+      toast.classList.remove('visible');
+    }, 3000);
   }
 
   $("#login-button").on("click", login)
